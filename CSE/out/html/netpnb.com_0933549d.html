@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8">
+<title>We’ve Moved</title>
+<style>
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8f0;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  header {
+    background-color: #a20c39; /* PNB maroon */
+    padding: 1rem;
+    text-align: center;
+  }
+  header img {
+    max-height: 100px; /* Increased from 60px to make it bigger */
+  }
+  .container {
+    max-width: 600px;
+    margin: 5% auto;
+    padding: 2rem;
+    border: 2px solid #a20c39;
+    border-radius: 8px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  h1 {
+    color: #a20c39;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  a {
+    color: #a20c39;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .note {
+    font-size: 0.9rem;
+    color: #777;
+  }
+  .counter {
+    font-weight: bold;
+    color: #a20c39;
+    font-size: 1.3rem;
+  }
+</style>
+<script>
+  let counter = 10;
+  function updateCounter() {
+    document.getElementById("countdown").textContent = counter;
+    counter--;
+    if (counter < 0) {
+      window.location.href = "https://ibanking.pnb.bank.in";
+    } else {
+      setTimeout(updateCounter, 1000);
+    }
+  }
+  window.onload = updateCounter;
+</script>
+</head>
+<body>
+  <header>
+    <img src="PNB_Logo.png" alt="Punjab National Bank Logo">
+  </header>
+  <div class="container">
+    <h1>Punjab National Bank Internet Banking is moved to new domain !</h1>
+    <p>Our new website is <a href="https://ibanking.pnb.bank.in">https://ibanking.pnb.bank.in</a></p>
+    <p class="note">Redirecting in <span id="countdown" class="counter">10</span> seconds…</p>
+  </div>
+
+
+</body></html>

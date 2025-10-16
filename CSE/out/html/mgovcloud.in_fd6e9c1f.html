@@ -1,0 +1,1790 @@
+<!DOCTYPE html><html lang="en" class="notranslate" dir="ltr"><head><meta name="IE_Compatible" http-equiv="X-UA-Compatible" content="IE=edge">
+
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=2.0">
+    <meta name="description" content="signin">
+		<style type="text/css">
+			.signin_box {
+				width: 500px;
+				height: auto;
+				box-sizing: border-box;
+				padding: 50px 50px;
+				border-radius: 2px;
+				transition: all .1s ease-in-out;
+				float: left;
+				overflow-y: auto;
+				display: table-cell;
+			}
+			@media (min-width: 600px) and (max-width: 1024px) {
+				.signin_box {   
+					width: 100%;
+					border-right: none;
+			    }
+			}
+			@media only screen and (max-width: 600px) {
+				.signin_box {   
+					width: 100%;
+				    padding: 0px 30px;
+				    height: auto;
+				    border-right: none;
+			    }
+			}
+			body{margin: 0px;}
+			.load-bg{top:0px}
+			.darkmode .load-bg{background-color: #191A23}
+			.line_loader{transform: scale(1);}
+			
+			:root {
+			  --blue:  #2483C5 ;
+			}
+		</style>
+<link href="https://static.nimbusmgovcloud.in/iam/v2/components/css/zohoPuvi.c86bbb480e4a4fbc379fd8e7298bbde5.css" rel="stylesheet" type="text/css" integrity="sha384-MTms4XFa6VYI3Vzfg+NZooEs6UTes4LoQzO8UoTNwNG/H11FWcNa/Zjk7MImGEQb" crossorigin="anonymous"><script src="https://static.nimbusmgovcloud.in/iam/v2/components/tp_pkg/jquery-3.7.1.min.2c872dbe60f4ba70fb85356113d8b35e.js" type="text/javascript" integrity="sha384-1H217gwSVyLSIfaLxHbE7dRb3v4mYCKbpQvzx0cegeju1MVsGrX5xXxAvs/HgeFs" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/tp_pkg/xregexp-all.min.17207ceac5ac7416f9ceaf6f3d1c1d18.js" type="text/javascript" defer="" integrity="sha384-dwi094TR2dMb4nhtPSH1tXC5gwO6mhT2bIbFtK87UVHgs02lQtaGfW3X3NEK5LW5" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/tp_pkg/u2f-api.5efcbd46fc391c7d06fabef02b162563.js" type="text/javascript" defer="" integrity="sha384-7QJ5Y5LxidEJF6Lb15Rx+xUw8MZkRh31s+MY4xLYiLcdUrEWHgsEzfLUt6/nmz5l" crossorigin="anonymous"></script>        <script src="https://static.nimbusmgovcloud.in/ichat/js/Sep_18_2025_11532389_wmsliteapi.js" integrity="sha384-gvW7Y2RBiW1njKT7Sfh5g/o7o1c92XDc61ZbeM35YAYCASWdWiiI/pou5uVOaURP" crossorigin="anonymous" type="text/javascript" defer=""></script>
+        <script type="text/javascript" src="/encryption/script"></script>
+<script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/security.32a0b4b40f7bc7ac859e05a7b6f11882.js" type="text/javascript" integrity="sha384-O9PuZBUii6mvQ5ypJyClYTOEbaVZpdovkkAI8qlmVbYFtoJd1w3l+M7pL1DIePoC" crossorigin="anonymous"></script>		<meta name="robots" content="noindex, nofollow">
+        <script type="text/javascript" nonce="">
+        	var serviceUrl,serviceName=undefined;
+				serviceUrl = 'https:\/\/accounts.mgovcloud.in\/home';
+				escapeServiceUrlHash();
+			var csrfParam= "iamcsrcoo";
+			var csrfCookieName = "iamcsr";
+			var resetPassUrl = 'https://accounts.mgovcloud.in/password';
+			var resetIPUrl = 'https://accounts.mgovcloud.in/resetip';
+			var queryString = window.location.search.substring(1);
+			var signup_url =  getSignupUrl();
+			var signinParams= getSigninParms();
+			var isMobile = parseInt('0');
+			var loginID = "";
+			var isCaptchaNeeded ="false";
+			var UrlScheme = "ZOA";
+			var iamurl="https://accounts.mgovcloud.in";
+			var displayname = "Accounts";
+			var reqCountry="IN";
+			var cookieDomain=".mgovcloud.in";
+			var iam_reload_cookie_name="_z_identity";
+			var isDarkMode = parseInt("0");
+			var isMobileonly = 0;
+			var uriPrefix = '';
+			var isClientPortal = parseInt("0");
+			var contextpath = "";
+			var enableServiceBasedBanner = parseInt('0');
+			var CC = '';
+			var isShowFedOptions = parseInt('0');			
+			var accounts_support_contact_email_id = 'helpdesk-email@gov.in';
+			var isneedforGverify = Boolean("");
+			var trySmartSignin = parseInt('0');
+			var docHead = document.head || document.getElementsByTagName("head" )[0] || document.documentElement;
+			var passkeyURL = 'https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/troubleshooting/sign-in/articles/passkey-sign-in-failed-on-mac';
+			var isPreview = false;
+			var suspisious_login_link = 'https://help.zoho.com/portal/en/kb/accounts/faqs-troubleshooting/faqs/sign-in/articles/additional-verification-during-sign-in';
+			var canShowResetIP='true';
+			var otp_length = 7;
+			var totp_size= 6;
+			var signin_info_urls, current_dc, signin_info_uri, multidc_origin_uri, state_param;
+			var isWindowLoaded = false;
+			var emailOnlySignin =  false;
+			var sjclFilePath = "https://static.nimbusmgovcloud.in/iam/v2/components/tp_pkg/sjcl.c34b81d9a619f2cd9f09bf75eb160625.js";
+			var wmsSRIValues = {"wmsbar.css":"sha384-v/37gfeauMVwQuXjgm8vA3l5KzmMKJj8UW/biTpbMpbRztjYPjmT2F0TWc9lVp/8","fr.js":"sha384-okXPf8wjhNF25DngYYbofFRdLdJ866va2FoPkvY5NFIqbo/fCbiiIasvKXCNcUsJ","ro.js":"sha384-Jx6FgMBqI/EycgbzoE4ZlDYDvu1MDGvduQa1twJo1aoY13Wo7j2IzBNFvunWLxWz","sv.js":"sha384-1VUmwFZ+8yt5HXLo51oblnekhKMdUrexAfy/ll8Bt3bYMTPBNkN89wU7br1UX63e","et.js":"sha384-ooANT7uQ6KdgjX8OaBxTlfn29aa+L5ppJWOBikTeNAbDFpidUNpAE6rnZU/EU00L","pl.js":"sha384-Quuuc6ezZk2r+Z+Y9pw4k1dFZzIQd6paJ16NHQ0s8uqe5yFmWsEcZKQi+TWqr3DN","hu.js":"sha384-Z3/Qyc7ekigbU6Vcbh+FPmzZDhVoJ3XeNtJ1d+ItPqCTn9l+uwS6S2J+bV4i3ihG","cs.js":"sha384-/nsrAQzAXupLXgtw6oX3CA2AC7YvR2K7tt0L6/fQf8C884jxG39HhsLFvtZsWDzY","ko.js":"sha384-/qO/atdkkvvfDtOkgugM88QferoELW/jPaDyMltAgj7Z0VaAxR/o8fjqA6oXmboS","th.js":"sha384-kyFkux+stLgfB5SS+k1rA4OZikWicuXC5N1bHU4vFNAdSbbFT9M0bPPiEYJNRu+G","es.js":"sha384-0rUw9G8kMqwWzQ2aKwyPQPRtayu8vFeEQZBbbgvS4UuT/CGBmhpJxWY3MV/LFUuz","pubsubapi.js":"sha384-1Yv0zGr30RSOOjwgcabw5z6DbOfzX14o+/7QjKnQm8/aGiSg5qj93FOLxWkTKOPW","annotator.js":"sha384-OanGtIZg7h787s7FeYCe8n4Q45QkbKEv26RiLSuocDeumBLpolaDZEQsuhQ1h6k3","zh_tw.js":"sha384-q2M4JeNwg0qEumNb/whiexrmEFoI1Sk41/T7uQH/L+EbQSeqZr8RIpdsQdLZSoWh","fi.js":"sha384-HrGQPfFHFprYtaEO6PTWeI+7dNb/nQ1LskQRUYpvRTbsWRhdVYLuN61sN5uPthdo","psconnect.js":"sha384-XltvPipGSquMTtIgPHIKqMpXmG0v8KwPHqCoLMlNrS05HrGIrRjx6XOY4zsxE5aq","it.js":"sha384-guCo5+hvQE4YFoyGldHtJcqUbbs9gf/m/cp9BVjh12TZFJNfrNO3HoEi+488TVoK","nl.js":"sha384-7Rt5J4kf39fYBc+AMxe9aINsUxSpfYqe0H72fk/4elc2rS3qx2Iczt27RGVQnVLj","ar.js":"sha384-5Pg53+kvEnewNEdPD4ajAwI8XWgLeek3mWyC/0YkDIEwjEsyeRDl7hdgQHPyq8Q/","ru.js":"sha384-BjMniG9S/XawaqXadxrWelu4GqWfzByxmc72Jq7WGkvUdq0EviFp/03iiRoG26FG","zh.js":"sha384-PkYNc1D8lOwa9qj9BO7D3aDrvDGPmXiQB2KeEXUlg07acnnChe2mWpA10kprbQdr","ta.js":"sha384-snQXz2VSWNmwxdCB6YgwOXy7SuyrAPeUHWOsnF6Dtjh+y4eO2Q4A4Y6YNpMqb69f","da.js":"sha384-y1UsrWkh3wCTn20c9L57gpg0W7rGkjoQH6vFXHJkNe/OfdDjAx165hXJVxGIH+1j","pex.js":"sha384-2HtSHb8ygMPS/f1kg1QkJnDBi7PrDya34UshOF0lXyqt4xOAFpygk6mPE4nWEp9O","hr.js":"sha384-enBvhsmn4USH6DHpeILu5jgt393xwzr0gO8DpMcg4H7Li1thRxsP8YjdDXmnBdbi","tr.js":"sha384-L6fv7daP2qfMWtLlwQSVeDftT2EZbEmb1GCftNjMbD5pIJPeOsTkh8qpIh0j+o08","sk.js":"sha384-lbwUSrODDSDKTC3eo7YfsNNZ2xY0JmeQHWAYG3wNbJx1kzUHGN2ae+dWQC4d3nAm","annotator.css":"sha384-C4vXzWbCZfPDMR02H6YRAYcraXn8VR16u+L28VvBd+Gq47VYZ0v8zrHtGhEcvIxq","zohomaps.css":"sha384-izVmC3JI2X6pY619g1c1cau8iCGDFKx0mdN6y3gzIwnee48/OASki4GRe9zfgayQ","de.js":"sha384-aH0cXK8PKzQklU5yCBw+1liUJY1+uP03O3G/7xR0/qxYNbhEBEqw9YrrqsvJnAXE","json2.min.js":"sha384-3c1dceIGdekW+gFEQusxzWDXKeA7O0W7gHY5NJVd8pBuR0C4zve+WZYbQZ/5dSFl","uk.js":"sha384-8BCCMU9v9osP0E5nEKf57swBBMxidCBS0jl19h1LuWPhq2b4DfJGlBOY3AHk4k/g","wmsbarimpl.js":"sha384-/9hIeAm6TzPWycrETG81VddRM5dTUkGs/Whe7xHoak+BdIF05645Qh8dcaIMSQ/Q","lt.js":"sha384-IpJNQjVd+PAbCxJVpErJdNEma85g2ACPknQ9rTvhDStb5QS8K92X+vVKTXUdcyd/","ca.js":"sha384-Pm85m9Vf/TRBJIvT7B4754JTW1JIYNhci30ZIYfAh/mqRYyN8ZySTHI9kKQtwfwY","wmsbridge.js":"sha384-oC1oI4zlFyDBTGqgf9rnxLrXINBMXfeOm16E2pHYRFvFQBebM6oKVqhqz32WO9gt","el.js":"sha384-n+xgO+DClEuzPFINcrnuaQMoNzxuKRuZGJLzqY6n5a67R5WVRJuo8n9q8N8toveP","en.js":"sha384-iLOaPWiBglKm+c19/t/kfBFhz/dd+WRbzqrPE+ytQVYlwILWrwtAB2tgzyPefQQ2","zohomaps.js":"sha384-hYTc87fdIOWOyV8u7d/dTHaiQHfUui+NEBb6hpPVWIS2sPdFVdCTpymN1obKtLXb","nb.js":"sha384-TnXDxMM+rmjng7hYE4soeq8UeKHy2tpDOsKmtSuo2T5KsdTnSTOVAFsJl+IR+Z81","wmsliteapi.js":"sha384-gvW7Y2RBiW1njKT7Sfh5g/o7o1c92XDc61ZbeM35YAYCASWdWiiI/pou5uVOaURP","wmsbar.js":"sha384-NGHA0gvV2XM0WUUsiKNAjCWklZN0TPjKiPqAJxkjpFyMxXzKkDffuhobsSngXrC3","pt.js":"sha384-n36PnVF0XXk+/GHj5Zr3ZkFdUu/J9ip62aq3VMBcuC0whmpNThgJ2coc4jsOcBc5","vi.js":"sha384-8WFAnEYx1ZKhACcks0bHUzsyGOMFgKnEde4PZn2in2HfSBTx91JzhDgSfLsJWs4X","ja.js":"sha384-QfD4YG95UtACr+AMTAzVssf2GTbV1rLn7/eOnLR52+HdWRE/mwr8RTuj6vrLs/U8"};
+			var resIntegrity = {};
+			var usermanual = 'https://www.mgovcloud.in/mail/help/onboarding-guide.html';
+				resIntegrity = {"https://static.nimbusmgovcloud.in/iam/v2/components/js/flagIcons.f41ade4e6ef135c0557bcafdf9dc17fa.js":"sha384-pafPYGLU32zOLWgp2durFzzUFJsJKwhnh7xCNRWCtQ+8um9JkBKAWp5udI1JMyhp","https://static.nimbusmgovcloud.in/iam/v2/components/js/wmsliteimpl.efaa4455019a9d4ba555e47c8a86ed1f.js":"sha384-q2ibggHHysLJK+Kq7o/YD8yca6A9SxrS23oOhxwOkG9rhZ3Q5hGgM0kP/sn7+STv","https://static.nimbusmgovcloud.in/iam/v2/components/js/splitField.4f9032f7364f82f01a3a97fa6ab6a192.js":"sha384-4pBdv9AczEoVWP0xxBd58ITkcdQTVUR6LOTpnVnidFsZpOQcEtkO4X/qHNUeMEYX","https://static.nimbusmgovcloud.in/iam/v2/components/css/password_expiry.8634fa96c3b07a682f307d3ba2204885.css":"sha384-uh+ArLs3XqbyTrM2hqNAuMSzBK/Hb7k4Y5CxXPj4Psvu4hPL/wVUcior9/QkEMJK","https://static.nimbusmgovcloud.in/iam/v2/components/js/NIC/signin.20ef63fd0233b67f65dd8aebed034039.js":"sha384-Og7IIodSlGmpyvZ0Y9YVcclP8nX561+2Uf2QooFrPqhV0Fxm5/x+JpTCoqHU7VTU","https://static.nimbusmgovcloud.in/iam/v2/components/js/uvselect.19ecbae3dd105e8144bcc69a71134d09.js":"sha384-nkDTX4mUV3D5ZpPOPtSz199wJ7+eQnpVxDkvB7OmUjUyCmL1Hrhl2v//YCCIw0SO","https://static.nimbusmgovcloud.in/iam/v2/components/css/signinicon.d41d8cd98f00b204e9800998ecf8427e.css":"sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb","https://static.nimbusmgovcloud.in/iam/v2/components/js/NIC/password_expiry.aeba594cc75e106b02ae56ef1b88751a.js":"sha384-FKzzjO960jGUEy52mIIlcJaK2plRXonYqgpXKHWU03KqAWy8Q6h3BsKUtbETNs04","https://static.nimbusmgovcloud.in/iam/v2/components/css/flagIcons.a2ded49f8f36a9242b0b897d3d3ec1fc.css":"sha384-sHJM+RuyRjp8QDKPy0ByQS/89iUEQDLT0m83GZr5TRu4N7CgzHcwGWe3QYYVpZc8","https://static.nimbusmgovcloud.in/iam/v2/components/js/webauthn.06df631fdc240bea0a9a7bbfb0c075c7.js":"sha384-hZpkdKHCiRVwOr+pn3OmFPVeWAR0MsZ1HLszAS59CBWZAVVxDYKh/3yAx6NGkWEL","https://static.nimbusmgovcloud.in/iam/v2/components/css/NIC/signin.ce535eb4c0315c6c9dab81e54d4b5656.css":"sha384-1pzTgdPFDLG2uZl2qTGivyegKQwsf5g8hqPYSO5ALg9hnfj1MGEl/N7ya5f7WL87","https://static.nimbusmgovcloud.in/iam/v2/components/js/common_unauth.225bb7b863d719422ccfb9529107e36d.js":"sha384-E56xmz0g5Zt2wVHvXaCenW8touZIf3jDTMxNcGqRujjSpweZ0o+MjY8TqDwL/aHo","https://static.nimbusmgovcloud.in/iam/v2/components/css/uv_unauthStatic.c5cbb141f12897f0e635da46b598fa72.css":"sha384-VfCTbceqqIW41R1WpkkfzHt7obW7nf0FQ+Nfi1dpWC+TsXEfyOyMBd/b1lwDYutf","https://static.nimbusmgovcloud.in/iam/v2/components/css/uvselect.d9f6ec36a7d8095603d552d7306cc0bc.css":"sha384-femRNrlVNZR6Ami808JjMUtAG35daIOnVObS5DvpudAXktkWXpoeJycx8eseUaBy"};		
+			resIntegrity[sjclFilePath] = "sha384-wq7I0ty00NDSOsan533/c2Y5fyLQxwriNCZF/AwJmdjKdx08/i1ZtaM0Lhx6TkeQ";
+			var isMobilenumberOnly = false;
+			var servLang = "en";
+			var NIC_support_email = "helpdesk-email@gov.in";
+			var NIC_support_mobile = "18005719646";
+			var NIC_chatbot_url = "https://mail.mgovcloud.in/getChatBotConfig.do";
+			var hideMobileDownload = Boolean("");
+			var hideUVFlag = false;
+			var contact_card_details = '[ { "contact_name": "ZScaler", "timing_type": 1, "card_email": "support-zta@supportgov.in", "card_phone": "011-2430 5068" }, { "contact_name": "Pehchaan", "timing_type": 1, "card_email": "support-parichay@nic.in", "card_phone": "011-2290 2494" }, { "contact_name": "E-forms", "timing_type": 1, "card_email": "eforms@nic.in", "card_phone": "011-2290 2451" }, { "contact_name": "Gov Drive", "timing_type": 1, "card_email": "support-govdrive@nic.in", "card_phone": "011-2290 2486" } ]';
+			window.onload = function() {
+				windowLoaded();
+				return false;
+			}
+			window.onRaiseTicketClose = function() {
+				$(".signin_container").show();
+				if(isMobile){
+					$(".CS_container").show();
+				}
+				return false;
+			};
+			
+			
+			function includeScript(url, callback, excatch) {
+				var script = document.createElement("script"); 
+				script.src = url; 
+				if(resIntegrity && resIntegrity[url]) {
+					script.integrity = resIntegrity[url];
+					script.crossOrigin = "anonymous"; //No I18N
+				}
+				if(excatch){
+					script.onerror = function() {
+						callback();
+					};
+				}
+				if (callback) { 
+					script.onload = script.onreadystatechange = function() { 
+						if (!this.readyState || this.readyState === "loaded" || this.readyState === "complete") {
+							callback(); 
+							script.onload = script.onreadystatechange = null; // To avoid calling repeatedly in IE 
+						}
+					};
+				}
+				docHead.appendChild(script); 
+			};
+			function windowLoaded(){
+				if(isWindowLoaded){
+					onZAScriptLoad();
+				}
+				isWindowLoaded = true;
+			}
+			function onZAScriptLoad(){
+				I18N.load({
+					"IAM.ZOHO.ACCOUNTS" : 'NIC Accounts',
+					"IAM.ERROR.ENTER_PASS" : 'Please enter your password',
+					"IAM.SIGNIN.ERROR.CAPTCHA.REQUIRED" : 'Please enter the CAPTCHA.',
+					"IAM.NEW.SIGNIN.INVALID.OTP.MESSAGE.EMPTY" : 'Please enter the OTP',
+					"IAM.SIGN_IN" : 'Sign in', 
+					"IAM.NEW.SIGNIN.VERIFY" : 'Verify',
+					"IAM.GOOGLE.AUTHENTICATOR" : 'OTP Authenticator',
+					"IAM.NEW.SIGNIN.TOTP" : 'Enter time-based OTP',
+					"IAM.NEW.SIGNIN.TOTP.HEADER" : 'A time-based one-time password has been generated in OneAuth.',
+					"IAM.NEW.SIGNIN.VERIFY.PUSH" : 'Verify push notification',
+					"IAM.NEW.SIGNIN.VERIFY.CODE" : 'Enter TOTP',
+					"IAM.NEW.SIGNIN.TOUCHID.TITLE" : 'Verify Touch ID',
+					"IAM.NEW.SIGNIN.QR.CODE" : 'Scan QR code',
+					"IAM.NEW.SIGNIN.FACEID.TITLE" : 'Verify Face ID',
+					"IAM.NEW.SIGNIN.ENTER.EMAIL.OR.MOBILE" : 'Please enter your email address',
+					"IAM.NEW.SIGNIN.OTP.SENT.DEVICE" : 'OTP sent to your mobile device',
+					"IAM.NEW.SIGNIN.OTP.SENT" : 'OTP sent to <span>{0}</span>',
+					"IAM.VERIFY.CODE" : 'Enter OTP',
+					"IAM.NEW.SIGNIN.TOUCHID.HEADER" : 'Use Touch ID in OneAuth to sign in to your account',
+					"IAM.NEW.SIGNIN.FACEID.HEADER" : 'Use Face ID in OneAuth to sign in to your account',
+					"IAM.PUSH.RESEND.NOTIFICATION" : 'Resend push notification',
+					"IAM.RESEND.PUSH.MSG" : 'Push notification sent to your device',
+					"IAM.NEXT" : 'Next',
+					"IAM.NEW.SIGNIN.ENTER.VALID.BACKUP.CODE" : 'Incorrect backup code. Please try again.',
+					"IAM.NEW.SIGNIN.INVALID.OTP.MESSAGE.NEW" : 'Please enter the OTP sent to your mobile number',
+					"IAM.NEW.SIGNIN.FEDERATED.USER.ERROR" : 'Please use social sign-in',
+					"IAM.TFA.USE.BACKUP.CODE" : 'Use backup verification code',
+					"IAM.NEW.SIGNIN.CANT.ACCESS" : 'Can&#39;t access your device?',
+					"IAM.NEW.SIGNIN.USING.OTP" : 'Sign in using OTP',
+					"IAM.SIGNIN.KEEP.ME" : 'Remember me',
+					"IAM.BACKUP.VERIFICATION.CODE" : 'Backup verification code',
+					"IAM.NEW.SIGNIN.BACKUP.HEADER" : 'Backup verification codes are 12-digit codes that are given to you when you set up multi-factor authentication.',
+					"IAM.NEW.SIGNIN.FEDERATED.LOGIN.TITLE" : 'Sign in using',
+					"IAM.NEW.SIGNIN.KEEP.ACCOUNT.SECURE" : 'Keep your account secure',
+					"IAM.NEW.SIGNIN.ONEAUTH.INFO.HEADER" : 'Gov OneAuth is our new in-house multi-factor authentication app. Shield your NIC account with <a style="color:#309FF4;text-decoration:none;" href="{0}" target="_blank" rel="noreferrer" >OneAuth</a> now.',
+					"IAM.HOME.WELCOMEPAGE.SIGNUP.NOW" : 'Don&#39;t have a NIC account? <span class="blue_link signuptrigger">Sign up now</span>',
+					"IAM.ERROR.GENERAL" : 'An error occurred. Please try again later.',
+					"IAM.NEW.SIGNIN.MFA.SMS.HEADER" : 'Enter the OTP sent to {0}',
+					"IAM.NEW.SIGNIN.YUBIKEY.TITLE" : 'Verify your security key',
+					"IAM.NEW.SIGNIN.YUBIKEY.HEADER.NEW" : 'Please insert a configured security key into your computer. When the security key starts blinking, tap on its disc.',
+					"IAM.NEW.SIGNIN.YUBIKEY.HEADER.NEW.FOR.MOBILE" : 'If your security key supports NFC, tap it against the NFC detection area of your device. Else, insert the security key into your device and tap on its disc when it blinks.',
+					"IAM.TFA.TRUST.BROWSER.QUESTION" : 'Trust this browser?',
+					"IAM.NEW.SIGNIN.TRUST.HEADER.TOTP" : 'We won&#39;t ask you to verify your account with <b>TOTP Authenticator</b> on this browser for the next <b>{0}</b> days.',
+					"IAM.NEW.SIGNIN.TRUST.HEADER.OTP" : 'We won&#39;t ask you to verify your account with an <b>OTP</b> on this browser for the next <b>{0}</b> days.',
+					"IAM.NEW.SIGNIN.TRUST.HEADER.TOUCHID" : 'We won&#39;t ask you to verify your account with <b>Touch ID</b> on this browser for the next <b>{0}</b> days.',
+					"IAM.NEW.SIGNIN.TRUST.HEADER.FACEID" : 'We won&#39;t ask you to verify your account with <b>Face ID</b> on this browser for the next <b>{0}</b> days.',
+					"IAM.NEW.SIGNIN.TRUST.HEADER.YUBIKEY" : 'We won&#39;t ask you to verify your account with <b>security key</b> on this browser for the next <b>{0}</b> days.',
+					"IAM.NEW.SIGNIN.TRUST.HEADER.SCANQR" : 'We won&#39;t ask you to verify your account with <b>Scan QR</b> on this browser for the next <b>{0}</b> days.',
+					"IAM.NEW.SIGNIN.TRUST.HEADER.PUSH" : 'We won&#39;t ask you to verify your account with a <b>push notification</b> on this browser for the next <b>{0}</b> days.',
+					"IAM.TRUST" : 'Trust',
+					"IAM.NOTNOW" : 'Not now',
+					"IAM.EXCEPTION.RELOAD": 'Retry',
+					"IAM.RECOVERY.MOBILE.LABEL" : 'Get a verification code on my phone',
+					"IAM.MOBILE.OTP.SENT" : 'A one-time password was sent to your mobile number. Verify the code below.',
+					"IAM.NEW.SIGNIN.PROBLEM.SIGNIN" : 'Problem signing in?',
+					"IAM.NEW.SIGNIN.PASSWORD.TITLE" : 'Sign in with password',
+					"IAM.NEW.SIGNIN.PASSWORD.HEADER" : 'Use your NIC account password to sign in',
+					"IAM.NEW.SIGNIN.SAML.TITLE" : 'Sign in with {0}',
+					"IAM.NEW.SIGNIN.SAML.HEADER" : 'You will be redirected to {0}',
+					"IAM.NEW.SIGNIN.TRY.ANOTHERWAY" : 'Sign in another way',
+					"IAM.NEW.SIGNIN.OTP.TITLE" : 'Sign in via mobile number',
+					"IAM.NEW.SIGNIN.VERIFY.VIA.YUBIKEY" : 'Verify via security key',
+					"IAM.NEW.SIGNIN.VERIFY.VIA.YUBIKEY.DESC" : 'Please insert a configured security key into your computer. Tap the disc on security key when it starts blinking.',
+					"IAM.NEW.SIGNIN.VERIFY.VIA.AUTHENTICATOR" : 'Authenticator app',
+					"IAM.NEW.SIGNIN.SMS.MODE" : 'SMS Verification',
+					"IAM.NEW.SIGNIN.VERIFY.VIA.ONEAUTH.DESC" : 'Verify your sign in via <b>{0}</b> using the OneAuth app installed on your device <b>{1}</b>',
+					"IAM.NEW.SIGNIN.VERIFY.VIA.ONEAUTH" : 'OneAuth',
+					"IAM.NEW.SIGNIN.OTP.HEADER" : 'A one-time password will be sent to <b>{0}</b>',
+					"IAM.NEW.SIGNIN.VERIFY.VIA.AUTHENTICATOR.DESC" : 'Enter the time-based OTP from your authenticator app here.',
+					"IAM.NEW.SIGNIN.TRY.ANOTHERWAY":'Sign in another way',
+					"IAM.NEW.SIGNIN.QR.HEADER":'Scan the QR code using OneAuth to sign in to your account',
+					"IAM.NEW.SIGNIN.MFA.PUSH.HEADER":'Accept the push notification in OneAuth to sign in',
+					"IAM.NEW.SIGNIN.WAITING.APPROVAL":'Waiting for approval',
+					"IAM.PHONE.ENTER.VALID.MOBILE_NUMBER":'Please enter a valid mobile number',
+					"IAM.NEW.SIGNIN.YUBIKEY.ERROR.DEVICEINELIGIBLE":'Security key verification failed. Please try again.',
+					"IAM.NEW.SIGNIN.YUBIKEY.ERROR.UNSUPPORTED":'This browser does not support security key authentication. Please try again with a different browser. <a href="https://help.zoho.com/portal/en/kb/articles/troubleshoot-mfa-issues">Learn more</a>',
+					"IAM.NEW.SIGNIN.YUBIKEY.ERROR.BADREQUEST":'Please try again with your registered URL.',
+					"IAM.SIGNIN.ERROR.USEREMAIL.NOT.EXIST":'Please verify your email address and try again.',
+					"IAM.NEW.SIGNIN.MFA.TOTP.HEADER":'Enter the MFA OTP generated on your authenticator app',
+					"IAM.PASSWORD.VERIFICATION":'Password Verification',
+					"IAM.NEW.SIGNIN.MFA.PASSWORD.DESC":'Verify sign-in via your NIC account password',
+					"IAM.NEW.SIGNIN.SERVICE.NAME.TITLE":'to access <span>{0}</span>',
+					"IAM.SIGNIN.ERROR.CAPTCHA.INVALID":'Incorrect CAPTCHA. Please try again.',
+					"IAM.SIGNIN.ERROR.INVALID.VERIFICATION.CODE":'Incorrect OTP. Please try again.',
+					"IAM.RESETPASS.PASSWORD.MIN.NO.WITH":'{0} characters',
+					"IAM.RESET.PASSWORD.POLICY.MINSPECIALCHAR.ONLY":'{0} symbol(s)',
+					"IAM.RESET.PASSWORD.POLICY.MINNUMERICCHAR.ONLY":'{0} number(s)',
+					"IAM.RESETPASS.PASSWORD.MIN.NO.WITH":'{0} characters',
+					"IAM.PASSWORD.POLICY.HEADING":'Include at least',
+					"IAM.RESETPASS.PASSWORD.MIN":'{0} characters with',
+					"IAM.RESETPASS.PASSWORD.MIN":'{0} characters with',
+					"IAM.INCLUDE":'Include',
+					"IAM.NEW.SIGNIN.PASSWORD.EXPIRED.ORG.DESC":'Your organization policy requires you to change your password every {0} days.',
+					"IAM.NEW.SIGNIN.PASSWORD.EXPIRED.ORG.DESC.NOW":'Your organization policy requires you to change your password now.',
+					"IAM.ERROR.ENTER.NEW.PASS":'Please enter new password',
+					"IAM.ERROR.PASS.LEN":'Password cannot be less than {0} characters',
+					"IAM.ERROR.PASSWORD.MAXLEN":'Password cannot be more than {0} characters',
+					"IAM.PASSWORD.POLICY.LOGINNAME":'Password cannot be same as your username',
+					"IAM.ERROR.WRONG.CONFIRMPASS":'Wrong password confirmation',
+					"IAM.NEW.SIGNIN.PASS.EXPIRY.SUCCESS.DESC":'Sign-in with your new password to access NIC services.',
+					"IAM.NEW.SIGNIN.PASS.EXPIRY.SUCCESS.TITLE":'Password updated',
+					"IAM.NEW.SIGNIN.PASS.EXPIRY.SUCCESS.BUTTON":'Signin now',
+					"IAM.NEW.SIGNIN.TITLE.RANDOM":'Refresh CAPTCHA',
+					"IAM.PLEASE.CONNECT.INTERNET":'No network found. Please connect to Internet',
+					"IAM.NEW.SIGNIN.RESEND.OTP":'Resend OTP',
+					"IAM.TFA.RESEND.OTP.COUNTDOWN":'Resend in <span>60</span>s',
+					"IAM.NEW.SIGNIN.PASS.PHRASE.TITLE":'Sign in via passphrase',
+					"IAM.NEW.SIGNIN.PASS.PHRASE.DESC":'Enter the passphrase you&#39;ve set up in your OneAuth app.',
+					"IAM.NEW.SIGNIN.MFA.PASSPHRASE.HEADER":'Sign in using passphrase',
+					"IAM.NEW.SIGNIN.MFA.PASSPHRASE.DESC":'Use passphrase to sign in to your OneAuth app',
+					"IAM.NEW.SIGNIN.PASSPHRASE.RECOVER.HEADER":'Enter the passphrase you created to sign in to your OneAuth app.',
+					"IAM.NEW.SIGNIN.BACKUP.RECOVER.HEADER":'Enter the backup verification code you generated from your NIC account.',
+					"IAM.NEW.SIGNIN.PASSPHRASE.RECOVER.TITLE":'Passphrase',
+					"IAM.NEW.SIGNIN.MORE.FEDRATED.ACCOUNTS.TITLE":'Sign in using linked accounts',
+					"IAM.NEW.SIGNIN.MORE.FEDRATED.ACCOUNTS.DESC":'Use your linked accounts to access your NIC account',
+					"IAM.NEW.SIGNIN.IDENTITY.PROVIDER.TITLE":'Sign in using your <span style="text-transform: capitalize;">{0}</span> account.',
+					"IAM.NEW.SIGNIN.TRY.ANOTHERWAY.HEADER":'Alternate verification',
+					"IAM.NEW.SIGNIN.ENTER.VALID.PASSPHRASE.CODE":'Please enter the passphrase',
+					"IAM.NEW.SIGNIN.RIGHT.PANEL.VERIFY.SCANQR":'Scan the QR code displayed on signin page using your OneAuth app',
+					"IAM.NEW.SIGNIN.RIGHT.PANEL.ALLOW.SCANQR":'Open your OneAuth and tap <b>View SCAN</b>',
+					"IAM.NEW.SIGNIN.RIGHT.PANEL.VERIFY.TOTP":'Open your OneAuth and tap <b>Sign in another way</b>',
+					"IAM.NEW.SIGNIN.RIGHT.PANEL.ALLOW.TOTP":'Enter the OTP on sign-in page',
+					"IAM.NEW.SIGNIN.JWT.TITLE":'Sign in with JWT',
+					"IAM.SIGNIN.REMOVE.DOMAIN":'Remove domain',
+					"IAM.NEW.SIGNIN.INVALID.EMAIL.MESSAGE.NEW":'Please enter the OTP sent to your email address',
+					"IAM.NEW.SIGNIN.EMAIL.TITLE":'Sign in via email address',
+					"IAM.NEW.SIGNIN.RESEND.PUSH":'Resend Push',
+					"IAM.NEW.SIGNIN.RESEND.PUSH.COUNTDOWN":'Resend Push <span></span>s',
+					"IAM.NEW.SIGNIN.PUSH.RND.DESC":'Accept the push notification you received from OneAuth and tap the number you see here to approve your sign-in.',
+					"IAM.NO.RESULT.FOUND":'No result found',
+					"IAM.SEARCHING":'Search...',
+					"IAM.WEBAUTHN.ERROR.NotAllowedError":'Either you didn&#39;t allow this operation, or it got timed out. Please try again.',
+					"IAM.WEBAUTHN.ERROR.InvalidStateError":'This security key is already registered with this account.',
+					"IAM.WEBAUTHN.ERROR.BrowserNotSupported" : 'This browser doesn&#39;t support the Webauthn/FIDO2 protocol. Please try again with a supported browser.',
+					"IAM.WEBAUTHN.ERROR.AUTHENTICATION.ErrorOccurred":'An error occurred while authenticating security key. Please contact {0}.',
+					"IAM.WEBAUTHN.ERROR.AUTHENTICATION.PASSKEY.ErrorOccurred":'An error occurred while authenticating Passkey. Please contact {0}.',
+					"IAM.SIGNIN.ERROR.YUBIKEY.VALIDATION.FAILED":'Security key validation failed. Please try again.',
+					"IAM.WEBAUTHN.ERROR.NotAllowedError":'Either you didn&#39;t allow this operation, or it got timed out. Please try again.',
+					"IAM.WEBAUTHN.ERROR.AUTHENTICATION.InvalidStateError":'This security key is not registered with this account. Please try again with a registered security key.',
+					"IAM.WEBAUTHN.ERROR.AUTHENTICATION.PASSKEY.InvalidStateError":'This Passkey is not registered with this account. Please try again with a registered Passkey.',
+					"IAM.WEBAUTHN.ERROR.AUTHENTICATION.InvalidResponse":'Invalid response from security key. If you can&#39;t sign in another way, contact {0}.',
+					"IAM.WEBAUTHN.ERROR.AUTHENTICATION.PASSKEY.InvalidResponse":'Invalid response from Passkey. If you can&#39;t sign in another way, contact {0}.',
+					"IAM.PASS_POLICY.HEADING" : 'Password must contain:',
+					"IAM.PASS_POLICY.MIN_MAX" : 'Between {0} and {1} characters',
+					"IAM.PASS_POLICY.SPL" : 'At least {0} special characters',
+					"IAM.PASS_POLICY.SPL_SING" : 'At least 1 special character',
+					"IAM.PASS_POLICY.NUM" : 'At least {0} numbers',
+					"IAM.PASS_POLICY.NUM_SING" : 'At least 1 number',
+					"IAM.PASS_POLICY.CASE" : 'Both upper and lower case letters',
+					"IAM.NEW.SIGNIN.VERIFY.EMAIL.DESC" : 'Please enter your registered email address <b>{0}</b> to receive the OTP.',
+					"IAM.NEW.SIGNIN.VERIFY.EMAIL.TITLE" : 'Sign-in via email OTP',
+					"IAM.NEW.SIGNIN.VERIFY.EMAIL.OTP.TITLE" : 'An OTP has been sent to the email address <b>{0}</b>. Please enter the OTP you received to sign in.',
+					"IAM.NEW.SIGNIN.ENTER.EMAIL.ADDRESS" : 'Please enter your email address',
+					"IAM.NEW.SIGNIN.FEDERATED.LOGIN.TITLE" : 'Sign in using',
+					"IAM.NEW.SIGNIN.PASSWORDLESS.OTP.VERIFY.TITLE" : 'OTP via {0}',
+					"IAM.NEW.SIGNIN.PASSWORDLESS.EMAIL.VERIFY.TITLE" : 'Email via {0}',
+					"IAM.NEW.SIGNIN.PASSWORDLESS.PROBLEM.SIGNIN.HEADER" : 'To verify your identity, you have to verify both password (or equivalent) and MFA (or equivalent) to get access to your NIC account.',
+					"IAM.WEBAUTHN.ERROR.UnknownError" : 'Something went wrong. Try again after some time. If the issue persists, restart your browser and try again.<br>For further assistance, contact support@zohoaccounts.com.',
+					"IAM.WEBAUTHN.ERROR.HELP.HOWTO" : '<a href={0} style="color:#2696eb;text-decoration:none;" target=_blank rel=noreferrer >How to resolve?</a>',
+					"IAM.WEBAUTHN.ERROR.TYPE.ERROR" : 'Passkey sign-in failed due to an issue. Please use other modes to sign in.',
+					"IAM.NEW.SIGNIN.CONTACT.ADMIN.TITLE" : 'Contact Administrator',
+					"IAM.NEW.SIGNIN.CONTACT.ADMIN.DESC" : 'If you&#39;re unable to sign in, you can contact your administrator <b>{0}</b> for assistance. <a href="{1}" target="_blank" rel="noreferrer" style="color:#0091FF;text-decoration: none;font-weight:500">Learn more</a>',
+					"IAM.EMAIL.VERIFICATION" : 'Email Verification',
+					"IAM.AC.CHOOSE.OTHER_MODES.MOBILE.HEADING" : 'Verify via mobile number',
+					"IAM.AC.CHOOSE.OTHER_MODES.EMAIL.HEADING" : 'Verify via email address',
+					"IAM.AC.CHOOSE.OTHER_MODES.DEVICE.HEADING" : 'Verify via device',
+					"IAM.NEW.SIGNIN.WHY.VERIFY" : '<a href={0} style="color:#2696eb;text-decoration:none;" target=_blank rel=noreferrer >Why do I need to verify?</a>',
+					"IAM.EMPTY.BACKUPCODE.ERROR" : 'Please enter a backup code',
+					"IAM.SIGNIN.AMFA.VERIFICATION.HEADER" : 'Verification options',
+					"IAM.SIGNIN.VIEW.OTHER.OPTION" : 'View other options',
+					"IAM.NEW.SIGNIN.USING.MOBILE.OTP" : 'Sign in using SMS OTP',
+					"IAM.NEW.SIGNIN.USING.EMAIL.OTP" : 'Sign in using email OTP',
+					"IAM.NEW.GENERAL.SENDING.OTP" : 'Sending OTP',
+					"IAM.SIGNIN.OTP.THRESHOLD.LIMIT2" : '<p style="color:#626262;display:inline-block;margin:0px;">{0} attempts left.</p>',
+					"IAM.SIGNIN.OTP.THRESHOLD.LIMIT.ENDS" : '<p style="color:#626262;display:inline-block;margin:0px;">No more attempts</p>',
+					"IAM.SIGNIN.OTP.THRESHOLD.MFA.LIMIT2" : '<p style="color:#626262;display:inline-block;margin:0px;">You have {0} attempts left.</p>',
+					"IAM.SIGNIN.OTP.MAX.COUNT.MFA.LIMIT.ENDS" : '<p style="color:#626262;display:inline-block;margin:0px;">No more resend attempts left.</p>',
+					"IAM.TFA.LEARN.MORE" : 'Learn more',
+					"IAM.ERROR.VALID.OTP" : 'Please enter a valid OTP',
+					"IAM.FEDERATED.SIGNUP.CREATE.DATA.CENTER.TITLE" : 'Data Center',
+					"IAM.SIGNIN.OTP.THRESHOLD.LIMIT1" : '<p style="color:#626262;display:inline-block;margin:0px;">1 attempt left.</p>',
+					"IAM.SIGNIN.OTP.THRESHOLD.MFA.LIMIT1" : '<p style="color:#626262;display:inline-block;margin:0px;">You have 1 attempt left.</p>',
+					"IAM.NEW.SIGNIN.OTP.SENT.RESEND" : 'OTP sent again to {0}',
+					"IAM.NEW.SIGNIN.EMAIL.ADDRESS.OR.MOBILE" : 'Email address or mobile number',
+					"IAM.VERIFY.IDENTITY" : 'Verify your identity',
+					"IAM.NEW.SIGNIN.INVALID.LOOKUP.IDENTIFIER" : 'Invalid email address. Check if you are entering it correctly.',
+					"IAM.SIGNIN.ERROR.CAPTCHA.INVALID" : 'Incorrect CAPTCHA. Please try again.',
+					"IAM.NEW.SIGNIN.PASSWORD" : 'Enter password',
+					"IAM.LDAP.PASSWORD.PLACEHOLDER" : 'Enter LDAP password',
+					"IAM.NEW.SIGNIN.WITH.LDAP" : 'Sign in with LDAP',
+					"IAM.NEW.SIGNIN.LDAP.HEADER" : 'Use your LDAP password to sign in.',
+					"IAM.NEW.PASSWORD.EXPIRY.HEAD" : 'Change Password',
+					"IAM.NEW.PASSWORD.EXPIRY.ONE.TIME.DESC" : 'Your current password is a one-time password provided by your administrator. Set a new password now.',
+					"IAM.NEW.PASSWORD.EXPIRY.DESC" : 'Its been {0} days since you last changed your password. As per your organization&#39;s password policy, you need to set a new password now.',
+					"IAM.NEW.PASSWORD.EXPIRY.POLICY.UPDATED.DESC" : 'Your current password is not compliant with your organization&#39;s password policy. Please set a new password.',
+					"IAM.NEW.PASSWORD.NOT.MATCHED.ERROR.MSG" : 'The passwords don&#39;t match. Please try again.',
+					"IAM.PASSWORD.CONFIRM.PASSWORD" : 'Please enter confirm password',
+					"IAM.NEW.PASSWORD.EXPIRY.POLICY.SESSION.TERMINATED" : 'Sessions Terminated',
+					"IAM.NEW.PASSWORD.EXPIRY.PASSWORD.CHANGED.DESC" : 'Your account <b>{0}</b> password has been changed successfully. Please sign-in with your new password to access your account.',
+					"IAM.NEW.PASSWORD.EXPIRY.PASSWORD.CHANGED" : 'Password Changed',
+					"NIC.TOTP.CONTENT" : '???NIC.TOTP.CONTENT???',
+					"NIC.TRY.TOTP" : 'Try Time-based OTP',
+					"NIC.TRY.SMS.OTP" : 'Try SMS OTP',
+					"NIC.BACKUP.VERIFICATION.CODE.CONTENT" : 'Enter the 12 digit backup verification code to by-pass your TFA.',
+					"IAM.RELOGIN.TRY.OTHER.OPTIONS" : 'Try other options',
+					"NIC.USER.MANUAL" : 'User Manual',
+					"NIC.SUBMIT.EMAIL.ADDRESS" : 'Submit email address',
+					"NIC.MOBILE.CONTACT.US" : 'Call us at the mobile number {0}',
+					"NIC.EMAIL.CONTACT.US" : 'Email to us at {0}',
+					"NIC.EMAIL.CONTACT.US" : 'Email to us at {0}',
+					"NIC.BACK.ARIA" : 'Return to previous page',
+					"NIC.PROBLEM.SIGIN.ARIA" : 'Alternate sign-in options',
+					"NIC.SMS.VERIFICATION.ARIA" : 'SMS verification option. A one-time password will be sent to the mobile number {0}.',
+					"NIC.BACKUP.VERIFICATION.CODE.CONTENT" : 'Enter the 12 digit backup verification code to by-pass your TFA.',
+					"NIC.SUBMIT.BVC" : 'Submit backup code',
+					"NIC.SUBMIT.PASSPHRASE" : 'Submit passphrase',
+					"NIC.ENTERED.EMAIL.ADDRESS" : 'The entered email address {0}',
+					"NIC.SUBMIT.OTP" : 'Submit OTP',
+					"NIC.RESEND.OTP.AIRA" : 'Resend OTP in {0}s if its not received',
+					"NIC.SUBMIT.PASSWORD" : 'Submit password',
+					"NIC.ONEAUTH.DEVICE.ARIA" : 'Your authenticator device {0}',
+					"NIC.SCAN.QR.TOVERYFY.INSTEAD" : 'Scan QR code to verify instead',
+					"NIC.SHOW.PASSWORD" : 'Show the entered password',
+					"NIC.HIDE.PASSWORD" : 'Hide the entered password',
+					"NIC.PASSPHRASE.SHOW" : 'Show entered passphrase',
+					"NIC.PASSPHRASE.HIDE" : 'Hide entered passphrase',
+					"IAM.ERROR.INVALID_PHONE" : 'Please enter valid phone / mobile number',
+					"IAM.CANTACT.DELEGATED.ADMIN.SHOW" : 'Show DA details',
+					"IAM.CANTACT.DELEGATED.ADMIN.OTP.DESC" : 'Enter the OTP sent to your mobile number {0}.',
+					"IAM.CONTACT.DELEGATED.ADMIN.DISPLAY.CONTENT" : 'Contact your delegated admin using the details below.',
+					"IAM.CANTACT.DELEGATED.ADMIN" : 'Know your DA',
+					"IAM.CANTACT.DELEGATED.ADMIN.DESC" : 'Provide your email address and the mobile number associated with the account to view your department&#39;s Delegated Administrator details.',
+					"NIC.SET.PASSWORD.FOR.NO.MODE" : 'Your account does not have a password. Set one now to sign in and access your account.',
+					"NIC.ONLINE.ERROR.MESSAGE" : 'Sorry, we are unable to process your request at the moment. Please try again. If the issue persists, contact us at {0}.',
+					"IAM.TFA.MOBILE.NUMBER.LISTING" : 'Select your mobile number for verification',
+					"IAM.NEW.SIGNIN.OTP.HEADER.WHATSAPP" : 'A one-time password will be sent via WhatsApp to {0}',
+					"IAM.NEW.SIGNIN.OTP.VERIFICATION" : 'OTP verification',
+					"IAM.NEW.SIGNIN.OTP.SENT.WHATSAPP" : 'OTP sent to <span>{0}</span> via WhatsApp',
+					"IAM.NEW.SIGNIN.OTP.SENT.WHATSAPP.RESEND" : 'OTP sent again to <span>{0}</span> via WhatsApp',
+					"IAM.RESEND.OTP.VIA" : 'Resend OTP via',
+					"IAM.MOBILE.NUMBER.VERIFICATION" : 'Mobile Number Verification',
+					"IAM.RESEND.OTP.MULTI.MEDIUM.COUNTDOWN.SMS" : 'SMS in <span>60</span>s',
+					"IAM.RESEND.OTP.MULTI.MEDIUM.COUNTDOWN.WHATSAPP" : 'WhatsApp in <span>60</span>s',
+					"IAM.SMS" : 'SMS',
+					"IAM.WHATSAPP" : 'WhatsApp',
+			});
+			
+			if(!document.getElementById("i18n_onclick_handler")){
+				var i18n_checkbox = document.createElement("input");
+				i18n_checkbox.type = "checkbox";				//no i18n
+				i18n_checkbox.id = "i18n_onclick_handler";		//no i18n
+				i18n_checkbox.style.display = "none";					//no i18n
+				document.querySelector("body").appendChild(i18n_checkbox);		//no i18n
+				document.getElementById("i18n_onclick_handler").addEventListener("change",function(){
+					if($("label[class*='iamMoveToSignin']").is(":visible")){
+						if(iamMoveToSignin){
+							iamMoveToSignin(document.querySelector("label[class*='iamMoveToSignin']").getAttribute("data-link"),document.querySelector("label[class*='iamMoveToSignin']").getAttribute("data-id"));	//no i18n
+						}	
+					}else if($("label[class*='goToForgotPassword']").is(":visible")){
+						if(goToForgotPassword){
+							goToForgotPassword();
+						}
+					}else if($("label[class*='showVerify']").is(":visible")){
+						if(showVerify){
+							showVerify();
+						}
+					}
+				});
+			}	
+			
+				$.fn.focus=function(){ 
+					if(this.length){
+						$(this)[0].focus();
+					}
+					return $(this);
+				}
+				/* Event listener Handling starts */
+
+				$('.fed_div').click(function() {
+					createandSubmitOpenIDForm($(this).attr('value').toString());
+				});
+				$('.input[type="password"]').focus(function() {
+					this.value = this.value;
+				});
+				$('.Notyou').on("click keydown",function(event) {
+					if(event.keyCode == 13 || event.type === "click"){
+						var isResetIP = $(this).hasClass("resetip_change");
+						resetForm(isResetIP);
+					}
+				});
+				$('.showproblemsignin').on("click keydown",function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						showproblemsignin();
+				});
+				$('.optionmod').on("click keydown",function(event) {
+					if(event.keyCode == 13 || event.type === "click"){
+						if($(this).hasClass("toggle_active")){
+							return false;
+						}
+						$("#verify_totp_container").is(":visible") ? tryAnotherway('qr') : tryAnotherway('totp');
+					}
+				});
+				$('.show_hide_password').on("click keyup",function(event) {
+					if(event.keyCode == 32 || event.type === "click")
+						showHidePassword();
+				});
+				$('.showBackupVerificationCode').on("click keydown", function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						showBackupVerificationCode();
+				});
+				$('.signinusepassword').on("click keydown", function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						showPassword();
+				});
+				$('.showmoresigininoption').click(function() {
+					if($(this).hasClass("getbackemailverify")){
+						showmoresigininoption('getbackemailverify');
+						return false;
+					}
+					showmoresigininoption();
+				});
+				$('.changeRecoverOption').click(function() {
+					if($(this).hasClass("recovery_passphrase")){
+						changeRecoverOption('passphrase')
+						return false;
+					}
+					changeRecoverOption('recoverycode');
+				});
+				$('.error_help,.topErrClose').click(function() {
+					closeTopErrNotification();
+				});
+				$('#smartsigninbtn').click(function() {
+					openSmartSignInPage();
+				});
+				/* $('.topErrClose').click(function() {
+					closeTopErrNotification();
+				}); */
+				$('.login_another').click(function() {
+					goToUserLogin();
+				});
+				$('.doaminat').click(function() {
+					enableDomain();
+				});
+				$('.signinwithfedoneauth').click(function() {
+					showMoreFedOptions();
+				});
+				$('#signinwithotp').on("click keydown",function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						showAndGenerateOtp();
+				});
+				$('#blueforgotpassword,.setpassword_redirection,#Set_password_btn').click(function() {
+					var isResetIP = $(this).hasClass("resetipreset");
+					goToForgotPassword();
+				});
+				$('.devices').click(function() {
+					updateIcon();
+				});
+				$('.hideEmailOTPInitiate').click(function() {
+					hideEmailOTPInitiate();
+				});
+				$('.tryanother').on("click keydown",function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						showTryanotherWay();
+				});
+				$('.rnd_resend').click(function(event) {
+					submitsignin($('#login'),event);
+				});
+				$('.externaluser_container_submit').click(function() {
+					handleLookupDetails(JSON.stringify(deviceauthdetails),true);
+				});
+				$('#resendotp').on("click keydown",function(event) {
+					if($(this).hasClass("DAresend")){
+						DAresendOTP();
+					}
+					if(event.keyCode == 13 || event.type === "click"){
+						generateOTP(true);
+						clearCommonError('otp');
+						clearFieldValue('otp');
+						return false;
+					}
+				});
+				$(".DAresend").on("click keydown", function(event){
+					if(event.keyCode == 13 || event.type === "click"){
+						DAresendOTP();
+						clearCommonError('otp');
+						clearFieldValue('otp');
+						return false;
+					}
+				})
+				$('.resendotpC').on("click keydown", function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						generateOTP(true);
+				});
+				$('.reloadcaptcha').on("click keydown", function(event) {
+					if(event.keyCode == 32 || event.type === "click"){
+						if($(this).hasClass("icon-Reload")){
+							changeHip();
+							return false;
+						}
+						changeHip('bcaptcha_img','bcaptcha');
+					}
+					
+				});
+				$('#openoneauth').click(function() {
+					QrOpenApp();
+				});								
+				$('#signinwithotponeauth').click(function() {
+					showAndGenerateOtp('otp');
+				});
+				$('#passlessemailverify').click(function() {
+					showAndGenerateOtp('email');
+				});
+				$('#hideTryanotherWay').click(function() {
+					hideTryanotherWay();
+				});
+				$('#hideBackupOptions').click(function() {
+					hideBackupOptions();
+				});
+				$('#goBackToProblemSignin').click(function() {
+					goBackToProblemSignin();
+				});
+				$('#passphraseRecover').on("click keydown", function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						showPassphraseContainer();
+				});
+				$('#showIDPs').click(function() {
+					showMoreIdps();
+				});
+				$('.zohosignin').click(function() {
+					showZohoSignin();
+				});
+				$('.hideBkCodeRedirection').click(function() {
+					hideBkCodeRedirection();
+				});
+				$('.trustdevice').click(function() {
+					var istrust = $(this).hasClass("trustbtn");
+					updateTrustDevice(istrust);
+				});
+				$('#restict_btn').click(function() {
+					window.location.reload();
+				});
+				$("input,.textbox_otp").keydown(function(){
+					clearCommonError($(this).attr("id").toLowerCase());
+				});
+				/* $(".textbox_otp").keydown(function(){
+					clearCommonError($(this).attr("name").toLowerCase());
+				}); */
+				$("#login").submit(function(event){
+					submitsignin(this,event);
+					return false;
+				});
+				$("#backup_container").submit(function(){
+					verifyBackupCode();
+					return false;
+				});
+				$("#emailcheck_container").submit(function(){
+					verifyEmailValid();
+					return false;
+				});
+				$("#emailverify_container").submit(function(){
+					verifyEmailOTP();
+					return false;
+				});
+				$("#country_code_select").change(function(){
+				    changeCountryCode();
+				}); 
+				$(".service_language").change(function(){
+					changeServiceLang('#top_lang');
+				}); 
+				$("#domaincontainer").change(function(){
+				    handleDomainChange();
+				}); 
+				$(".secondary_devices").change(function(){
+				    changeSecDevice(this);
+				}); 
+				$(".navbar").on("click keydown",function(event){
+					if(event.keyCode == 13 || event.type === "click")
+						opennavigation();
+				});
+				$(".other_contact").on("click keydown", function(){
+					if(event.keyCode == 13 || event.type === "click")
+						opencontactdetails();
+				});
+				$(".NIC_close").click(function(){
+					closenavigation();
+				});
+				$(".NIC_close").keypress(function(event){
+					if(event.keyCode == 13)
+						closenavigation();
+				});
+				$(".navbarRedirection").on("click keydown",function(event){
+					if(event.keyCode == 13 || event.type === "click"){
+						if($(this).attr("data-redirect") && $(this).attr("data-redirect") == "iamrecovery"){
+							goToForgotPassword();
+							return false;
+						}
+						navbarRedirection($(this).attr("data-val"));
+					}
+				});
+				$(".NIC_raise_ticket").click(function(){
+					$(".signin_container").hide();
+					window.showRaiseTicket();
+					if(isMobile){
+  				 		$(".CS_container").hide();
+  					}
+				});
+				$('.show_hide_Confpassword').on("click keydown",function(event) {
+					if(event.keyCode == 13 || event.type === "click")
+						showHidePassword($(this).attr("data-id"));
+				});
+				$('.checkbox_div').click(function() {
+					checkboxEvent();
+				});
+				$('.oneAuthLable').click(function() {
+					checkboxEvent();
+				});
+				$('#terminate_session_skip').click(function() {
+					skipterminate();
+				});
+				$('.ppsuccess_button').click(function() {
+					window.location.reload();
+					return false;
+				});
+				$('#npassword_container input').click(function() {
+					setPassword(event);
+				});
+				$('.npassinput').on("input", function() {
+					validateCP();
+				});
+				$('.npassinput').on("keydown", function() {
+					clearCommonError($(this).attr('data-val'));
+					event.stopPropagation();
+				});
+				$('#terminate_session_form').on("submit", function() {
+					send_terminate_session_request(this);
+				});
+				$('#goto_resetIP').on('click', function() {
+					  goToForgotPassword(true);
+				});
+				$('.Notyou').on('click', function(){
+					resetForm();
+				});
+				$("#top_lang").on("focus", function(){
+					$(".language").css("border-color","#ffffff").css("border-radius","5px");
+				});
+				$("#top_lang").on("blur", function(){
+					$(".language").css("border-color","transparent");
+				});
+				$(".close_migration").on("click keydown",function(){
+				    if(event.keyCode == 13 || event.type === "click"){
+				    	$(".migrration_banner_container").css("bottom", "-200px");
+				    	if(isMobile){
+				    		$(".migrration_banner_container").css("bottom", "-400px");
+				    		$(".migrration_banner_container").hide(1000);
+				    	}
+				    	$(".CS_container").css("margin-bottom", "50px");
+				    }
+				});
+				$('#contactDA,#contactDAMobile').on('click', function(){
+					loadContactDA();
+					$(".nopassword_container").hide();
+				});
+				$('.backtosignin').on('click', function(){
+					backtosignin();
+				});
+				$("#DAContact").submit(function(event){
+					submitDAContact(this,event);
+					return false;
+				});
+				$("#DAContactOTP").submit(function(event){
+					submitOTP(this,event);
+					return false;
+				});
+				$("#DAC_email").on("input", function(){
+					clearCommonError("DAC_email");
+				});
+				$("#DAC_mobile").on("input", function(){
+					clearCommonError("DAC_mobile");
+				});
+				$(".setpassword_close").on("click", function(){
+					$(".nopassword_container").hide();
+				})
+				$(".contact_content").on("click keydown",function(event){
+					if(event.keyCode == 13 || event.type === "click"){
+						if($(".NIChelp_2").is(":visible")&& !$(".NIChelp_2").hasClass("opacity0")){
+							hideNIChelpguide();
+						}else{
+							showNIChelpguide();
+						}
+						event.stopPropagation();
+					}
+				});
+				$(".contact_content").on("click", function(){
+					  var rect = isMobile ? document.querySelector(".Mobi_cs_container .contact_content").getBoundingClientRect() : document.querySelector(".NIC_contactus .contact_content").getBoundingClientRect();
+					  $(".webview").css("left", isMobile ? rect.left : rect.left-80 + "px");
+					  $(".webview").css("top", isMobile ? rect.top+25 : rect.top+30 + "px");
+				});
+				$(".contact_all").on("click", function(){
+					$(".contact_navigation").removeClass("Navigation_bar_show");
+				});
+				$("#mnvSmsBtn, #mnvWaBtn").on("click keydown", function(event) {
+					if(event.keyCode == 13 || event.type === "click"){
+						confirmOtpMedium(this.id === "mnvSmsBtn" ? "sms" : "whatsapp");// No I18N
+					}
+				});
+				$(".otp-medium-option").on("click keydown", function(event) {
+					if(event.keyCode == 13 || event.type === "click"){
+						resendMediumOTP(this.id.endsWith("whatsapp") ? "whatsapp" : "sms");// No I18N
+					}
+				});
+				$(".DA_Notyou").click(function(){
+                    $("#DAContactOTP").hide();
+                    $("#DAContact").show();
+                    $("#DACbtn span, #DACbtnOTP span").removeClass("zeroheight");
+                    $("#DACbtn, #DACbtnOTP").removeClass('changeloadbtn');
+                    $("#DACbtn, #DACbtnOTP").attr("disabled", false);
+					$("#DAContactOTP #otp").val("");
+					clearCommonError("DAC_email");
+					clearCommonError("DAC_mobile");
+                });
+				/* Event listener Handling ends */
+				$("#nextbtn").removeAttr("disabled");
+					hiderightpanel();
+				onSigninReady();
+				
+				return false;
+			}
+			function escapeServiceUrlHash() {
+				var locationUrl = window.location.href;
+				var tmpserviceurl = serviceUrl;
+				try {
+					if(locationUrl.indexOf('serviceurl=') !== -1) {
+						var surl = decodeURIComponent(locationUrl.substring(locationUrl.indexOf('serviceurl=')+11));
+						if((surl.indexOf('#') !== -1) && (serviceUrl.indexOf('#') == -1)) {
+							if(surl.indexOf('&') !== -1) {
+								surl = surl.substr(0, surl.indexOf('&'));
+							}
+							serviceUrl = surl;	
+						}
+					}
+				}catch (e) {
+					serviceUrl = tmpserviceurl;
+				}
+			}
+			function zaOnLoadHandler() {
+				var cssURLs,jsURLs;
+					cssURLs = "https://static.nimbusmgovcloud.in/iam/v2/components/css/NIC/signin.ce535eb4c0315c6c9dab81e54d4b5656.css,https://static.nimbusmgovcloud.in/iam/v2/components/css/signinicon.d41d8cd98f00b204e9800998ecf8427e.css,https://static.nimbusmgovcloud.in/iam/v2/components/css/uvselect.d9f6ec36a7d8095603d552d7306cc0bc.css,https://static.nimbusmgovcloud.in/iam/v2/components/css/flagIcons.a2ded49f8f36a9242b0b897d3d3ec1fc.css,https://static.nimbusmgovcloud.in/iam/v2/components/css/uv_unauthStatic.c5cbb141f12897f0e635da46b598fa72.css,https://static.nimbusmgovcloud.in/iam/v2/components/css/password_expiry.8634fa96c3b07a682f307d3ba2204885.css";		
+					jsURLs = "https://static.nimbusmgovcloud.in/iam/v2/components/js/webauthn.06df631fdc240bea0a9a7bbfb0c075c7.js,https://static.nimbusmgovcloud.in/iam/v2/components/js/uvselect.19ecbae3dd105e8144bcc69a71134d09.js,https://static.nimbusmgovcloud.in/iam/v2/components/js/flagIcons.f41ade4e6ef135c0557bcafdf9dc17fa.js,https://static.nimbusmgovcloud.in/iam/v2/components/js/common_unauth.225bb7b863d719422ccfb9529107e36d.js,https://static.nimbusmgovcloud.in/iam/v2/components/js/NIC/signin.20ef63fd0233b67f65dd8aebed034039.js,https://static.nimbusmgovcloud.in/iam/v2/components/js/wmsliteimpl.efaa4455019a9d4ba555e47c8a86ed1f.js,https://static.nimbusmgovcloud.in/iam/v2/components/js/splitField.4f9032f7364f82f01a3a97fa6ab6a192.js,https://static.nimbusmgovcloud.in/iam/v2/components/js/NIC/password_expiry.aeba594cc75e106b02ae56ef1b88751a.js";		
+				// Include CSS
+				if(cssURLs) {
+					cssURLs = cssURLs.split(","); 
+					for(var i = 0, len = cssURLs.length; i < len; i++) {
+						var style = document.createElement("link");
+						style.href = cssURLs[i]; 
+						style.rel = "stylesheet"; 
+						if(resIntegrity && resIntegrity[cssURLs[i]]) {
+							style.integrity = resIntegrity[cssURLs[i]];
+							style.crossOrigin = "anonymous";	// No I18N
+						}
+						docHead.appendChild(style); 
+					}
+				}
+				
+				// Synchronously Include Scripts
+				if(jsURLs) {
+					jsURLs = jsURLs.split(","); 
+					var scriptIdx = 0; 
+					(function _jsOnLoad() {
+						if (scriptIdx == jsURLs.length) { // Last script, all scripts were loaded. So, call the users handler.  
+							windowLoaded();
+						}else{
+							var jsURL = jsURLs[scriptIdx++]; 
+							if((jsURL.indexOf("jquery-3_5_1.min") != -1 && window.I18N)) { // Don't include jQuery, If it is already included in the page.
+								 _jsOnLoad(); 
+							} else { 
+								includeScript(jsURL, _jsOnLoad); 
+							}
+						}
+					})();
+				}
+			};
+			zaOnLoadHandler();
+			function getSignupUrl(){
+					var signupurl= "https://accounts.mgovcloud.in/register?";
+						signupurl += "servicename=" + encodeURIComponent('AaaServer');
+						signupurl += "&serviceurl="+encodeURIComponent(serviceUrl);
+					return signupurl; 
+			}
+			function getSigninParms(){
+				var params = "cli_time=" + new Date().getTime();
+					serviceName=encodeURIComponent('AaaServer');
+					params += "&servicename=" + encodeURIComponent('AaaServer');
+					params += "&serviceurl="+encodeURIComponent(serviceUrl);
+				return params;
+			}
+			function getRecoveryURL(){
+			 	var tmpResetPassUrl = resetPassUrl;
+					tmpResetPassUrl += "?servicename=" + encodeURIComponent('AaaServer');
+					tmpResetPassUrl += "&serviceurl="+encodeURIComponent(serviceUrl);
+				return tmpResetPassUrl;
+			}
+			
+			function getIPRecoveryURL(){
+			 	var tmpResetIPUrl = resetIPUrl;
+					tmpResetIPUrl += "?servicename=" + euc('AaaServer');
+					tmpResetIPUrl += "&serviceurl="+encodeURIComponent(serviceUrl);
+				return tmpResetIPUrl;
+			}
+		</script><link href="https://static.nimbusmgovcloud.in/iam/v2/components/css/NIC/signin.ce535eb4c0315c6c9dab81e54d4b5656.css" rel="stylesheet" integrity="sha384-1pzTgdPFDLG2uZl2qTGivyegKQwsf5g8hqPYSO5ALg9hnfj1MGEl/N7ya5f7WL87" crossorigin="anonymous"><link href="https://static.nimbusmgovcloud.in/iam/v2/components/css/signinicon.d41d8cd98f00b204e9800998ecf8427e.css" rel="stylesheet" integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb" crossorigin="anonymous"><link href="https://static.nimbusmgovcloud.in/iam/v2/components/css/uvselect.d9f6ec36a7d8095603d552d7306cc0bc.css" rel="stylesheet" integrity="sha384-femRNrlVNZR6Ami808JjMUtAG35daIOnVObS5DvpudAXktkWXpoeJycx8eseUaBy" crossorigin="anonymous"><link href="https://static.nimbusmgovcloud.in/iam/v2/components/css/flagIcons.a2ded49f8f36a9242b0b897d3d3ec1fc.css" rel="stylesheet" integrity="sha384-sHJM+RuyRjp8QDKPy0ByQS/89iUEQDLT0m83GZr5TRu4N7CgzHcwGWe3QYYVpZc8" crossorigin="anonymous"><link href="https://static.nimbusmgovcloud.in/iam/v2/components/css/uv_unauthStatic.c5cbb141f12897f0e635da46b598fa72.css" rel="stylesheet" integrity="sha384-VfCTbceqqIW41R1WpkkfzHt7obW7nf0FQ+Nfi1dpWC+TsXEfyOyMBd/b1lwDYutf" crossorigin="anonymous"><link href="https://static.nimbusmgovcloud.in/iam/v2/components/css/password_expiry.8634fa96c3b07a682f307d3ba2204885.css" rel="stylesheet" integrity="sha384-uh+ArLs3XqbyTrM2hqNAuMSzBK/Hb7k4Y5CxXPj4Psvu4hPL/wVUcior9/QkEMJK" crossorigin="anonymous"><script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/webauthn.06df631fdc240bea0a9a7bbfb0c075c7.js" integrity="sha384-hZpkdKHCiRVwOr+pn3OmFPVeWAR0MsZ1HLszAS59CBWZAVVxDYKh/3yAx6NGkWEL" crossorigin="anonymous"></script>
+        <title>NIC Accounts</title>
+	<script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/uvselect.19ecbae3dd105e8144bcc69a71134d09.js" integrity="sha384-nkDTX4mUV3D5ZpPOPtSz199wJ7+eQnpVxDkvB7OmUjUyCmL1Hrhl2v//YCCIw0SO" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/flagIcons.f41ade4e6ef135c0557bcafdf9dc17fa.js" integrity="sha384-pafPYGLU32zOLWgp2durFzzUFJsJKwhnh7xCNRWCtQ+8um9JkBKAWp5udI1JMyhp" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/common_unauth.225bb7b863d719422ccfb9529107e36d.js" integrity="sha384-E56xmz0g5Zt2wVHvXaCenW8touZIf3jDTMxNcGqRujjSpweZ0o+MjY8TqDwL/aHo" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/NIC/signin.20ef63fd0233b67f65dd8aebed034039.js" integrity="sha384-Og7IIodSlGmpyvZ0Y9YVcclP8nX561+2Uf2QooFrPqhV0Fxm5/x+JpTCoqHU7VTU" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/wmsliteimpl.efaa4455019a9d4ba555e47c8a86ed1f.js" integrity="sha384-q2ibggHHysLJK+Kq7o/YD8yca6A9SxrS23oOhxwOkG9rhZ3Q5hGgM0kP/sn7+STv" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/splitField.4f9032f7364f82f01a3a97fa6ab6a192.js" integrity="sha384-4pBdv9AczEoVWP0xxBd58ITkcdQTVUR6LOTpnVnidFsZpOQcEtkO4X/qHNUeMEYX" crossorigin="anonymous"></script><script src="https://static.nimbusmgovcloud.in/iam/v2/components/js/NIC/password_expiry.aeba594cc75e106b02ae56ef1b88751a.js" integrity="sha384-FKzzjO960jGUEy52mIIlcJaK2plRXonYqgpXKHWU03KqAWy8Q6h3BsKUtbETNs04" crossorigin="anonymous"></script><script type="text/javascript" src="https://static.nimbusmgovcloud.in/zmac/assets/js/chatBot.s106.8.js" integrity="sha384-Uw4twzMEOnSyudFIh8tWebSiihRhyDt+N6Jrs4uMKV8pE9EV0ajInv0YRd4JOP2N" crossorigin="anonymous"></script><link rel="stylesheet" type="text/css" href="https://static.nimbusmgovcloud.in/zmac/assets/css/vendors-node_modules_zohomail_alerts_lib_js_init_css-node_modules_zohomail_badge_lib_js_init_-4531bd.d76d7685feb76dfe1432.css" crossorigin="anonymous" integrity="sha384-YgBBTrWbca/pnvO0xhwuFGFh0xVLQGtVjEdWHYA3jWs0X0HXpvELvQ564s2BJ7Xr"><link rel="stylesheet" type="text/css" href="https://static.nimbusmgovcloud.in/zmac/assets/css/raiseTicketJS.b76e7c25af393313397a.css" crossorigin="anonymous" integrity="sha384-Q512QBALJPHGPEUH9NMfVADlpNfJe+hfFLvG51g20QcuAYlCNF+Iy7lNbyklQ+AM"><link rel="stylesheet" type="text/css" href="https://static.nimbusmgovcloud.in/zmac/assets/css/chatBotSCSS.67071613d940fc2c9d81.css" crossorigin="anonymous" integrity="sha384-G8Dto0MMaLBqCsZosVAx0iKjZt9aZj8QRq4fPSQ9M2RLAgaz/IuNc+7DlHXc0pyw"><link rel="stylesheet" type="text/css" href="https://static.nimbusmgovcloud.in/zmac/assets/css/node_modules_zohomail_focus-visible_index_js.a76af8349b72b4f10280.css" crossorigin="anonymous" integrity="sha384-+Ta1dFwS2o9OBYURruOeTm6tX70JK2U82dpdhC9vM0Y6F+BxyzRWrOoNF2cyEvv9"><link rel="stylesheet" type="text/css" href="https://static.nimbusmgovcloud.in/zmac/assets/css/chatJS.b76e7c25af393313397a.css" crossorigin="anonymous" integrity="sha384-Q512QBALJPHGPEUH9NMfVADlpNfJe+hfFLvG51g20QcuAYlCNF+Iy7lNbyklQ+AM"></head>
+	<body>
+<style>
+	 .load-bg{
+	 	background-color: #FFFFFF;
+	 	width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 100;
+		opacity: 1;
+		transition: opacity .2s linear;
+		top: 0;
+		left: 0;
+	 }
+	 .load-fade{
+		opacity: 0;
+	 }
+	 .basic-box-s {
+		display: block;
+		position: absolute;
+	    top: 0px;
+	    left: 0px;
+	    right: 0px;
+	    bottom: 0px;
+	    width: 50px;
+	    height: 50px;
+	    margin: auto;
+     }
+      .box-anim {
+        animation: load-anim 2s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+      }
+       @keyframes load-anim {
+        0% {
+          transform: rotate(0deg);
+        }
+        10% {
+          transform: rotate(-30deg);
+        }
+        50%{
+            transform: rotate(180deg);
+        }
+        60%{
+            transform: rotate(165deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+       .path {
+        stroke-dasharray: 150px;
+        stroke-dashoffset: 150px;
+        stroke-linecap: round;
+      }
+      .path1-anim {
+        animation: stroke-anim1 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+      }
+      .path2-anim {
+        animation: stroke-anim2 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+      }
+      .path3-anim {
+        animation: stroke-anim3 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+      }
+      .path4-anim {
+        animation: stroke-anim4 4s cubic-bezier(0.83, -0.01, 0.22, 1) infinite;
+      }
+       @keyframes stroke-anim1 {
+        0% {
+          stroke-opacity: 1;
+          stroke-dashoffset: 150px;
+        }
+        3% {
+          stroke-dashoffset: 150px;
+        }
+        21%,
+        25% {
+          stroke-dashoffset: 0;
+        }
+        50% {
+          stroke-opacity: 1;
+        }
+        100% {
+          stroke-dashoffset: 0px;
+          stroke-opacity: 0;
+        }
+      }
+      @keyframes stroke-anim2 {
+        0% {
+          stroke-dashoffset: 150px;
+        }
+        25% {
+          stroke-opacity: 1;
+          stroke-dashoffset: 150px;
+        }
+        28% {
+          stroke-dashoffset: 150px;
+        }
+        46%,
+        50% {
+          stroke-dashoffset: 0px;
+        }
+        75% {
+          stroke-dashoffset: 0px;
+          stroke-opacity: 1;
+        }
+        100% {
+          stroke-dashoffset: 0px;
+          stroke-opacity: 0;
+        }
+      }
+      @keyframes stroke-anim3 {
+        0% {
+          stroke-opacity: 0;
+          stroke-dashoffset: 150px;
+        }
+        49% {
+          stroke-opacity: 0;
+        }
+        50% {
+          stroke-opacity: 1;
+          stroke-dashoffset: 150px;
+        }
+        53% {
+          stroke-dashoffset: 150px;
+        }
+        71%,
+        75% {
+          stroke-dashoffset: 0;
+        }
+        100% {
+          stroke-dashoffset: 0;
+          stroke-opacity: 1;
+        }
+      }
+      @keyframes stroke-anim4 {
+        0% {
+          stroke-dashoffset: 150px;
+          stroke-opacity: 0;
+        }
+        74% {
+          stroke-opacity: 1;
+        }
+        75% {
+          stroke-opacity: 1;
+          stroke-dashoffset: 150px;
+        }
+        78% {
+          stroke-dashoffset: 150px;
+        }
+        96%,
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+</style>
+
+		<div class="load-bg fade load-fade" style="display: none;">
+		<div class="basic-box-s box-anim">
+        <svg width="50" height="50" style="shape-rendering: geometricPrecision;" class="line_loader">
+          <rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path" style="stroke: rgb(36, 131, 197); stroke-width: 5.4; stroke-opacity: 1; fill: transparent; stroke-dasharray: 384px; stroke-dashoffset: 0px"></rect>
+          <rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path1 path1-anim" style="stroke: rgb(19, 49, 160); stroke-width: 5; stroke-opacity: 1; fill: transparent"></rect>
+          <rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path2 path2-anim" style="stroke: rgb(36, 131, 197); stroke-width: 5; stroke-opacity: 1; fill: transparent"></rect>
+          <rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path3 path3-anim" style="stroke: rgb(19, 49, 160); stroke-width: 5; stroke-opacity: 1; fill: transparent"></rect>
+          <rect x="5" y="5" rx="6" ry="6" width="40" height="40" class="path path4 path4-anim" style="stroke: rgb(36, 131, 197); stroke-width: 5.4; stroke-opacity: 1; fill: transparent"></rect>
+        </svg>
+      </div>
+      </div>			<div class="bg_one"></div>
+			<div class="blurscreen"></div>
+    		<div class="Alert"> <span class="tick_icon"></span> <span class="alert_message"></span> </div>
+    		<div class="Errormsg"> <div style="position:relative;display:flex;align-items:center;"> <span class="error_icon"></span> <span class="error_message"></span> <a class="error_help" href="#"></a> <div class="topErrClose hide"></div> </div> </div>
+			<div class="NIC_topNavBar">
+				<div class="RightElements">
+					<main class="language iconnic-Language">
+						<select class="service_language addtabindex" id="top_lang" tabindex="0" aria-label="Change language">
+								<option value="doi">Dogri </option>
+								<option value="en">English </option>
+								<option value="kok">Konkani </option>
+								<option value="mai">Maithili </option>
+								<option value="mni">Manipuri </option>
+								<option value="sa">Sanskrit </option>
+								<option value="sat">Santali </option>
+								<option value="ur">اردو ( Urdu )</option>
+								<option value="sd">سنڌي ( Sindhi )</option>
+								<option value="ks">کٲشُر ( Kashmiri )</option>
+								<option value="ne">नेपाली ( Nepali )</option>
+								<option value="brx">बड़ो ( Bodo )</option>
+								<option value="mr">मराठी ( Marathi )</option>
+								<option value="hi">हिन्दी ( Hindi )</option>
+								<option value="as">অসমীয়া ( Assamese )</option>
+								<option value="bn">বাংলা ( Bangla )</option>
+								<option value="pa">ਪੰਜਾਬੀ ( Punjabi )</option>
+								<option value="gu">ગુજરાતી ( Gujarati )</option>
+								<option value="or">ଓଡ଼ିଆ ( Odia )</option>
+								<option value="ta">தமிழ் ( Tamil )</option>
+								<option value="te">తెలుగు ( Telugu )</option>
+								<option value="kn">ಕನ್ನಡ ( Kannada )</option>
+								<option value="ml">മലയാളം ( Malayalam )</option>
+						</select>
+					</main>
+					<span class="lineV"></span>
+					<div class="navbar iconnic-Menu addtabindex" aria-label="View resources" role="tree" tabindex="0"></div>
+				</div>
+			</div>
+			<div class="Navigation_bar">
+				<div class="closenav NIC_close"></div>
+				<main class="nav_op navbarRedirection" data-val="https://eforms.nic.in/docs/policy.html" aria-label="View email policies and guidelines">
+					<div class="iconnic-navmail"></div>
+					<div class="navcontent1">Email Policies &amp; Guidelines</div>
+				</main>
+				<main class="nav_op navbarRedirection" data-val="https://www.cert-in.org.in/guidelinesgovtentities.jsp " aria-label="View information security practice guidelines">
+					<div class="iconnic-sheild"></div>
+					<div class="navcontent1">Information Security Practices Guidelines</div>
+				</main>
+				<main class="nav_op navbarRedirection" data-val="https://eforms.nic.in/OnlineForms/update-mobile " aria-label="Update mobile number and profile">
+					<div class="iconnic-account"></div>
+					<div class="navcontent1">Update Mobile and Profile</div>
+				</main>
+				<main class="nav_op navbarRedirection" data-val="https://www.mgovcloud.in/mail/help/getting-started.html" aria-label="View help guide">
+					<div class="iconnic-exclamatory"></div>
+					<div class="navcontent1">Help guide</div>
+				</main>
+				<main class="nav_op navbarRedirection" data-val="https://www.mgovcloud.in/mail/help/faq-nicemailservices.html" aria-label="View FAQs">
+					<div class="iconnic-FAQ"></div>
+					<div class="navcontent1">FAQ</div>
+				</main>
+				<main class="nav_op navbarRedirection" data-val="https://www.mgovcloud.in/mail/videos/english/login-first-time.html" aria-label="View video tutorials">
+					<div class="iconnic-video"></div>
+					<div class="navcontent1">Video Tutorials</div>
+				</main>
+			</div>
+			<div class="contact_navigation">
+				<div class="nav_header">
+					<div class="nav_head_title">Other Help Options</div>
+					<div class="closenav NIC_close contact_all"></div>
+				</div>
+				<div class="contact_card" style="display: none;">
+					<div class="card_header">
+						<div class="card_name">__NAME__</div>
+						<div class="contact_timing">__TIMING__</div>
+					</div>
+					<div class="card_email">
+						<a href="__EMAILURL__">
+							<div class="iconnic-mail"></div>
+							<div class="card_email_data">__EMAIL__</div>
+						</a>
+					</div>
+					<div class="card_number">
+						<a href="__MOBILEURL__">
+							<div class="iconnic-phone"></div>
+							<div class="card_phone_data">__NUMBER__</div>
+						</a>
+					</div>
+				</div>
+			<div class="contact_card">
+					<div class="card_header">
+						<div class="card_name">ZScaler</div>
+						<div class="contact_timing">Mon - Fri, 09:00 - 17:00 hrs</div>
+					</div>
+					<div class="card_email">
+						<a href="mailto:support-zta@supportgov.in">
+							<div class="iconnic-mail"></div>
+							<div class="card_email_data">support-zta@supportgov.in</div>
+						</a>
+					</div>
+					<div class="card_number">
+						<a href="tel:011-2430 5068">
+							<div class="iconnic-phone"></div>
+							<div class="card_phone_data">011-2430 5068</div>
+						</a>
+					</div>
+				</div><div class="contact_card">
+					<div class="card_header">
+						<div class="card_name">Pehchaan</div>
+						<div class="contact_timing">Mon - Fri, 09:00 - 17:00 hrs</div>
+					</div>
+					<div class="card_email">
+						<a href="mailto:support-parichay@nic.in">
+							<div class="iconnic-mail"></div>
+							<div class="card_email_data">support-parichay@nic.in</div>
+						</a>
+					</div>
+					<div class="card_number">
+						<a href="tel:011-2290 2494">
+							<div class="iconnic-phone"></div>
+							<div class="card_phone_data">011-2290 2494</div>
+						</a>
+					</div>
+				</div><div class="contact_card">
+					<div class="card_header">
+						<div class="card_name">E-forms</div>
+						<div class="contact_timing">Mon - Fri, 09:00 - 17:00 hrs</div>
+					</div>
+					<div class="card_email">
+						<a href="mailto:eforms@nic.in">
+							<div class="iconnic-mail"></div>
+							<div class="card_email_data">eforms@nic.in</div>
+						</a>
+					</div>
+					<div class="card_number">
+						<a href="tel:011-2290 2451">
+							<div class="iconnic-phone"></div>
+							<div class="card_phone_data">011-2290 2451</div>
+						</a>
+					</div>
+				</div><div class="contact_card">
+					<div class="card_header">
+						<div class="card_name">Gov Drive</div>
+						<div class="contact_timing">Mon - Fri, 09:00 - 17:00 hrs</div>
+					</div>
+					<div class="card_email">
+						<a href="mailto:support-govdrive@nic.in">
+							<div class="iconnic-mail"></div>
+							<div class="card_email_data">support-govdrive@nic.in</div>
+						</a>
+					</div>
+					<div class="card_number">
+						<a href="tel:011-2290 2486">
+							<div class="iconnic-phone"></div>
+							<div class="card_phone_data">011-2290 2486</div>
+						</a>
+					</div>
+				</div></div>
+			<div class="NIC_logo navbarRedirection" data-val="https://www.nic.in">
+				<div class="nic_img"></div>
+				<div class="nic_content">
+					<div>NATIONAL</div>
+					<div>INFORMATICS</div>
+					<div>CENTRE</div>
+				</div>
+			</div>
+			<div class="container">
+			<div class="up-arrow">
+				<div class="uparrow_container">
+					<div class="tooltip_header">
+						<span class="tooltip_DC">Signing in to multiple accounts</span>
+					</div>
+					<div class="tooltip_con">Currently signed-in accounts will be listed here. You can keep multiple accounts signed-in on a browser as long as each of them are in different data centers.</div>
+					<div class="tooltip_con tooltip_dc-header">Signed-in data centers</div>
+				</div>
+				<div class="info_line"></div>
+				<div class="info_DC-details">
+					<div class="DC-details"></div>
+				</div>
+			</div>
+    		<div class="signin_container" style="visibility: visible; max-width: 577px;">
+    			<div class="loader"></div>
+    			<div class="blur_elem blur"></div>
+    			<div class="signin_box" id="signin_flow">
+						<div class="NIC_title" aria-label="Sign in to NICeMail Services" role="button">NICeMail Services</div>
+	    				<div id="signin_div">
+	    					<div class="hellouser">
+								<div class="username addtabindex" tabindex="0"></div>
+								<span class="lineV linechange"></span>
+								<span class="Notyou bluetext addtabindex" aria-label="Change entered email address" tabindex="0">Change</span>
+							</div>
+							<form name="login" id="login" method="post" novalidate="">
+ 	    						<div class="signin_head">
+			    					<span id="headtitle" class="addtabindex" tabindex="0">Sign in</span>
+			    					<span id="trytitle" class="addtabindex" tabindex="0"></span>
+									<div class="service_name addtabindex" to="" access="" <span="" tabindex="0">Accounts</div>
+									<div class="fielderror" role="alert"></div>
+								</div>
+								<div id="multiDC_container">
+									<div class="multiDC_header">
+										<span>Signed-in accounts</span>
+										<div class="multiDC_info tooltip icon-questionmark"></div>
+									</div>
+									<div id="account_details"></div>
+									<div class="line"></div>
+									<div class="login_another">
+										<span class="icon-addprofile">
+											<span class="path1"></span>
+										</span>
+										<span>Sign in to another account</span>
+									</div>
+								</div>
+								<div class="fieldcontainer">
+									<div class="searchparent" id="login_id_container">
+									<div class="textbox_div" id="getusername">
+									<span>
+										<select id="country_code_select" name="countryselect" placeholder="" embed-icon-class="flagIcons" tabindex="-1" style="visibility: hidden; height: 0px; width: 0px; border: none; float: left; padding: 0px; display: none;"></select><div class="uvselect select_container country_code_select select_container--country_implement select_container_cntry_code" jsid="country_code_select" style="width: fit-content; display: none;"><div class="selectbox basic_selectbox selectbox--country_implement selectbox_cntry_code" jsid="country_code_select" tabindex="0"><span class="selectbox_overlay"></span><i class="leading_icon select_icon select_icon--country_implement flagIcons"></i><input class="select_input select_input--country_implement select_input_cntry_code" jsid="country_code_select" selected-value="" placeholder="" country-flag="true" disabled="true" style="width: 1ch;"><span class="selectbox_arrow selectbox_arrow--country_implement"><b></b></span></div><div class="input_error input_error--country_implement"></div></div>
+										<input id="login_id" placeholder="Email Address" value="" type="text" name="LOGIN_ID" class="textbox addtabindex" required="" autocapitalize="off" autocomplete="off" autocorrect="off" aria-label="Enter email address" tabindex="0" jsid="country_code_select"> 
+										<span class="doaminat hide">@</span>
+										<div class="textbox hide" id="portaldomain">
+										<select class="domainselect" id="domaincontainer"></select>
+										</div>
+										<div class="fielderror" role="alert"></div>		
+									</span>				
+									</div>
+									</div>
+									<div class="getpassword zeroheight" id="password_container">
+										<div class="NICtitle_content addtabindex" aria-label="Enter your account password to sign in" tabindex="0">Enter your account password to sign-in.</div>
+										<div class="textbox_div">
+											<input id="password" placeholder="Enter password" name="PASSWORD" type="password" class="textbox addtabindex" required="" autocapitalize="off" autocomplete="off" autocorrect="off" maxlength="250" aria-label="Enter password here" tabindex="0">
+											<span class="icon-hide show_hide_password addtabindex" aria-label="Show the entered password" tabindex="0"></span>
+											<div class="fielderror" role="alert"></div>
+										</div>
+										<div class="btn blue" id="Set_password_btn">
+											<span class="">Set Password</span>
+										</div>
+										<div class="textbox_actions" id="enableotpoption">
+											<span class="bluetext_action addtabindex" id="signinwithotp" aria-label="Sign in using email OTP instead of password" tabindex="0"></span>
+										</div>
+										
+									</div>
+							<div class="textbox_div" id="mfa_device_container">
+								<div class="devices">
+									<select class="secondary_devices"></select>
+									<div class="deviceparent">
+										<span class="deviceinfo icon-Mobile"></span>
+										<div class="devicetext"></div>
+										<span class="mobile_dev_arrow"><span>
+									</span></span></div>
+								</div>
+								<div class="rnd_container">
+									<div id="rnd_num"></div>
+									<div class="bluetext_action rnd_resend resendotp">Resend Push</div>
+								</div>
+							</div>
+								<div id="otp_container">
+									<div class="NICtitle_content addtabindex" aria-label="Please enter the OTP sent to your mobile number" tabindex="0">Please enter the OTP sent to your mobile number</div>
+									<div class="textbox_div">
+										<input id="otp" placeholder="Enter OTP" type="text" name="OTP" class="textbox" required="" onkeydown="clearCommonError('otp')" autocapitalize="off" autocorrect="off" aria-label="Enter OTP">
+										<div class="fielderror" role="alert"></div>
+										<div class="textbox_actions otp_actions">
+											<span class="bluetext_action signinusepassword addtabindex" id="signinwithpass" tabindex="0">Sign in using password</span>
+											<span class="bluetext_action showmoresigininoption addtabindex" tabindex="0">Sign in another way</span>
+											<span class="bluetext_action bluetext_action_right resendotp resendotpC addtabindex" id="resendforotp" tabindex="0">Resend OTP</span>
+										</div>
+									</div>
+								</div>
+							<div class="textbox_div" id="mfa_otp_container">
+								<div class="NICtitle_content addtabindex" aria-label="Enter the OTP sent to your mobile." tabindex="0">Enter the OTP sent to your mobile.</div>
+								<input id="mfa_otp" placeholder="Enter OTP" type="text" name="MFAOTP" class="textbox addtabindex" required="" onkeydown="clearCommonError('mfa_otp')" autocapitalize="off" autocomplete="one-time-code" inputmode="numeric" autocorrect="off" aria-label="Enter OTP" tabindex="0">
+								<div class="fielderror" role="alert"></div>
+								<div class="textbox_actions">
+									<span class="bluetext_action bluetext_action_right resendotp resendotpC addtabindex" tabindex="0">Resend OTP via</span>
+									<span class="multiMediumResend_container">
+										<span id="resend_otp_sms" class="otp-medium-option" aria-label="Resend OTP via SMS">SMS</span>
+										<span class="separator">•</span>
+										<span id="resend_otp_whatsapp" class="otp-medium-option" aria-label="Resend OTP via WhatsApp">WhatsApp</span>
+									</span>
+								</div>
+							</div>
+							<!-- MNV Choose Medium Container -->
+							<div class="textbox_div" id="mfa_mnv_medium_container">
+								<div class="mnvHeader addtabindex" aria-label="Mobile Number Verification" tabindex="0">Mobile Number Verification</div>
+								<div class="textbox_div">
+									<div class="NICtitle_content addtabindex mnv_desc" aria-label="An OTP will be sent to your mobile number <b>{0}</b>. Choose how you want to receive the OTP." tabindex="0">
+An OTP will be sent to your mobile number <b>{0}</b>. Choose how you want to receive the OTP.									</div>
+									<div class="mnv-medium-btns">
+										<button id="mnvSmsBtn" class="btn blue mnv-btn addtabindex" type="button" aria-label="Via SMS" tabindex="0">
+											<span class="iconnic-sms mnv-btn-icons" aria-hidden="true"></span>
+Via SMS										</button>
+										<button id="mnvWaBtn" class="btn blue mnv-btn addtabindex" type="button" aria-label="Via WhatsApp" tabindex="0">
+											<span class="iconnic-whatsapp mnv-btn-icons" aria-hidden="true"></span>
+Via WhatsApp										</button>
+									</div>
+								</div>
+								<!-- MNV Choose Medium Container -->
+							</div>
+							<div class="textbox_div" id="mfa_email_container">
+								<div id="mfa_email" class="textbox textbox_otp"></div>
+								<div class="fielderror" role="alert"></div>
+								<div class="textbox_actions">
+									<span class="bluetext_action bluetext_action_right resendotp resendotpC">Resend OTP</span>
+								</div>
+							</div>
+							<div class="textbox_div" id="mfa_totp_container">
+								<div class="NICtitle_content addtabindex" aria-label="Enter the MFA OTP generated on your authenticator app" tabindex="0">Enter the MFA OTP generated on your authenticator app</div>
+								<input id="mfa_totp" placeholder="Enter TOTP" type="text" name="TOTP" class="textbox addtabindex" required="" onkeydown="clearCommonError('mfa_totp')" autocapitalize="off" autocomplete="off" autocorrect="off" tabindex="0">
+								<div class="fielderror" role="alert"></div>
+							</div>
+							
+							<div class="qrcodecontainer" id="mfa_scanqr_container">
+								<span class="qr_before"></span>
+							    <img id="qrimg" src="">
+							    <span class="qr_after"></span>
+							</div>
+							<div class="textbox_div" id="captcha_container">
+								<input id="captcha" placeholder="Enter CAPTCHA" type="text" name="captcha" class="textbox addtabindex" required="" autocapitalize="off" autocomplete="off" autocorrect="off" maxlength="8" tabindex="0">
+								<div id="captcha_img" name="captcha" class="textbox"></div>
+								<span class="reloadcaptcha icon-Reload addtabindex" tabindex="0"></span>
+								<div class="fielderror" role="alert"></div> 
+							</div>
+							<div id="yubikey_container">
+								<div class="fielderror" role="alert"></div>
+							</div>
+							<button class="btn blue waitbtn" id="waitbtn">
+									<span class="loadwithbtn"></span>
+									<span class="waittext">Waiting for approval</span>
+							</button>
+							</div>
+							<div class="textbox_actions_more" id="enablemore">
+								<span class="bluetext_action showmoresigininoption">Sign in another way</span>
+								<span class="bluetext_action bluetext_action_right resendotp resendotpC" id="resendotp">Resend OTP</span>
+								
+								<div id="enableoptionsoneauth">
+									<span class="signinoptiononeauth signinusepassword" id="signinwithpassoneauth">Sign in using password</span>
+									<span class="signinoptiononeauth" id="passlessemailverify"></span>
+									<span class="signinoptiononeauth" id="signinwithotponeauth"></span>
+									<span class="signinwithfedoneauth signinoptiononeauth">Sign in using linked accounts</span>
+								</div>
+							</div>	
+							<div class="addaptivetfalist">
+									<div class="signin_head verify_title">Sign in another way</div>
+									<div class="optionstry optionmod" id="trytotp">
+										<div class="img_option_try img_option icon-totp"></div>
+										<div class="option_details_try">
+											<div class="option_title_try">Offline TOTP verification</div>
+											<div class="option_description try_option_desc">Open OneAuth, tap <span class="trydesc">Sign in another way</span>, and enter it here to verify your sign-in.</div>
+										</div>
+										<div class="mfa_totp_verify verify_totp" id="verify_totp_container"> 
+											<div id="verify_totp" name="MFATOTP" class="textbox textbox_otp"></div>
+											<button class="btn blue" id="totpverifybtn">
+												<span class="loadwithbtn"></span>
+												<span class="waittext">Verify</span>
+											</button>
+											<div class="fielderror" role="alert"></div>
+										</div>
+									</div>
+									<div class="optionstry optionmod addtabindex" id="tryscanqr" aria-label="Scan QR code to verify. Open the OneAuth app, tap the &quot;Sign in another way&quot; button. Then, tap the &quot;Scan QR instead&quot; button to open code scanner. Scan the below code to verify and sign in." tabindex="0">
+										<div class="img_option_try img_option icon-qr"></div>
+										<div class="option_details_try">
+											<div class="option_title_try">Scan QR verification</div>
+											<div class="option_description try_option_desc">Open OneAuth and tap <span class="trydesc">Sign in another way</span>. Tap <span class="trydesc">Scan QR instead</span> to open code scanner. Scan the below code to verify sign-in.</div>
+										</div>
+										<div class="verify_qr" id="verify_qr_container">
+											<div class="qrcodecontainer">
+												<div>
+													<span class="qr_before"></span>
+												    <img id="verify_qrimg" src="">
+												   	<span class="qr_after"></span>
+												   	<div class="loader"></div>
+												   	<div class="blur_elem blur"></div>
+											   	</div>
+											</div>
+										</div>
+									</div>
+									<span class="close_icon error_icon" id="hideTryanotherWay"></span>
+									<div class="text16 pointer nomargin showCantAccessDevice addtabindex" id="recoverybtn_mob" tabindex="0">Can't access your device?</div>
+									<div class="text16 pointer nomargin showproblemsignin addtabindex" id="problemsignin_mob" tabindex="0">Problem signing in?</div>
+							</div>
+							<div id="problemsigninui"></div>
+							
+							<button class="btn blue addtabindex" id="nextbtn" aria-label="Submit email address" tabindex="0"><span>Next</span></button>
+							<div class="flexElem">
+								<div class="btn borderless" id="hideBackupOptions">Back</div>
+								<div class="text16 pointer nomargin showCantAccessDevice addtabindex" id="recoverybtn" aria-label="Use recovery options if you dont have your device" tabindex="0" style="right: 0px;">Try other options</div>
+								<div class="text16 pointer nomargin showproblemsignin addtabindex" id="problemsignin" aria-label="Use alternate options if theres a problem" tabindex="0" style="right: 0px;">Problem signing in?</div>
+								<div class="tryanother text16 addtabindex" tabindex="0" style="right: 0px;">Sign in another way</div>
+								<div class="pointer navbarRedirection usermanual_option addtabindex" id="usermanualoption" data-val="https://www.mgovcloud.in/mail/help/onboarding-guide.html" aria-label="View user manual" tabindex="0">User Manual</div>
+							</div>
+	    					</form>
+	    					<div class="externaluser_container"></div>
+	    					<button class="btn blue externaluser_container_submit" id="continuebtn"><span>Continue</span></button>
+	    					<div id="recovery_container">
+								<div class="signin_head recoveryhead">
+									<span class="icon-backarrow backoption addtabindex" id="goBackToProblemSignin" aria-label="Return to previous page" tabindex="0"></span><span class="rec_head_text addtabindex" aria-label="Recovery options" tabindex="0">Can't access your device?</span><table id="recoverytitle"></table>
+									</div>
+									<div id="recoverymodeContainer"></div>
+									<div class="recoverymodes">
+										<div class="options options_hover showBackupVerificationCode addtabindex" id="recoverOption" aria-label="Sign in using backup verification code. Backup codes are 12-digit codes that you are given when you set up multi-factor authentication." tabindex="0">
+											<div class="img_option icon-backup"></div>
+											<div class="option_details">
+												<div class="option_title">Use backup verification code</div>
+												<div class="option_description">Backup verification codes are 12-digit codes that are given to you when you set up multi-factor authentication.</div>
+											</div>
+										</div>
+										<div class="options options_hover addtabindex" id="passphraseRecover" aria-label="Sign in using the passphrase you have set up in your OneAuth app" tabindex="0">
+											<div class="img_option icon-saml"></div>
+											<div class="option_details">
+												<div class="option_title">Sign in using passphrase</div>
+												<div class="option_description">Use passphrase to sign in to your OneAuth app</div>
+											</div>
+										</div>
+										<div class="options contact_support addtabindex" tabindex="0">
+											<div class="img_option icon-support"></div>
+											<div class="option_details">
+												<div class="option_title">Contact Support</div>
+												<div class="option_description contactsuprt">Please send us an email at <a href="mailto:helpdesk-email@gov.in" style="color:#696969;text-decoration:none;">helpdesk-email@gov.in</a> describing your issue so we can assist you.</div>
+										</div>
+									</div>
+								</div>
+								<div class="btn greytext"></div>
+						   </div>
+						   <form id="backup_container" novalidate="" name="backup_container">
+								<div class="signin_head backuphead">
+									<div class="backup_desc addtabindex" tabindex="0">Backup verification codes are 12-digit codes that are given to you when you set up multi-factor authentication.</div>
+								</div>
+								<div class="textbox_div" id="backupcode_container">
+									<input id="backupcode" placeholder="Backup verification code" type="text" name="backupcode" class="textbox addtabindex" required="" autocapitalize="off" autocomplete="off" autocorrect="off" maxlength="15" aria-label="Enter passphrase" tabindex="0">
+									<div class="fielderror" role="alert"></div>
+									<span class="bluetext_action changeRecoverOption addtabindex" id="recovery_passphrase" aria-label="Sign in using passphrase instead" tabindex="0">Sign in using passphrase</span>
+								</div>
+								<div class="textbox_div" id="passphrase_container">
+									<input id="passphrase" placeholder="Enter passphrase" type="password" name="PASSPHRASE" class="textbox addtabindex" required="" autocapitalize="off" autocomplete="off" autocorrect="off" aria-label="Enter the backup code you generated from your NIC account" tabindex="0">
+									<span class="icon-hide show_hide_password" aria-label="Show entered passphrase"></span>
+									<div class="fielderror" role="alert"></div>
+									<span class="bluetext_action changeRecoverOption addtabindex" id="recovery_backup" aria-label="Sign in using backup code instead" tabindex="0">Sign in using backup codes</span>
+								</div>
+								<div class="textbox_div" id="bcaptcha_container">
+									<input id="bcaptcha" placeholder="Enter CAPTCHA" type="text" name="captcha" class="textbox" required="" autocapitalize="off" autocomplete="off" autocorrect="off" maxlength="8">
+									<div id="bcaptcha_img" name="captcha" class="textbox"></div>
+									<span class="reloadcaptcha addtabindex icon-Reload" tabindex="0"> </span>
+									<div class="fielderror" role="alert"></div> 
+								</div>
+								<button class="btn blue addtabindex" id="backupVerifybtn" tabindex="0"><span>Verify</span></button>
+								<div class="flexElem">
+									<div class="pointer" id="backmode"></div>
+								</div>
+								<div class="btn borderlessbtn back_btn"></div>
+							</form>
+							<form id="emailcheck_container" novalidate="" name="emailcheck_container">
+								<div class="signin_head emailcheck_head">
+									<span id="backup_title"><span class="icon-backarrow backoption hideEmailOTPInitiate"></span>Sign-in via email OTP</span>
+									<div class="backup_desc extramargin" id="emailverify_desc">Please enter your registered email address <b>{0}</b> to receive the OTP.</div>
+								</div>
+								<div class="textbox_div" id="emailvalidate_container">
+									<input id="emailcheck" placeholder="Enter Email Address" name="EMAILCHECK" type="text" class="textbox" required="" autocapitalize="off" autocomplete="off" autocorrect="off" maxlength="250">
+									<div class="fielderror" role="alert"></div>
+								</div>
+								<button class="btn blue">Next</button>
+							</form>
+							<form id="emailverify_container" novalidate="" name="emailverify_container">
+								<div class="signin_head emailverify_head">
+									<span id="backup_title"><span class="icon-backarrow backoption"></span>Sign-in via email OTP</span>
+									<div class="backup_desc extramargin" id="emailverify_desc">Please enter your registered email address <b>{0}</b> to receive the OTP.</div>
+								</div>
+								<div class="textbox_div" id="emailotpverify_container">
+									<div id="emailverify" class="textbox textbox_otp"></div>
+									<div class="fielderror" role="alert"></div>
+								</div>
+								
+								<span class="bluetext_action signinusepassword" id="signinwithpass">Sign in using password</span>
+								<span class="bluetext_action bluetext_action_right resendotp resendotp_mb resendotpC">Resend OTP</span>
+								<div class="textbox_actions_more" id="enablemore">
+									<span class="bluetext_action showmoresigininoption getbackemailverify addtabindex" tabindex="0">Sign in another way</span>
+										<span class="bluetext_action blueforgotpassword navbarRedirection" id="blueforgotpassword" data-redirect="iamrecovery" data-val="https://passapp.nic.in/passapp/">Forgot Password?</span>
+									<span class="bluetext_action bluetext_action_right resendotp resendotpC addtabindex" id="resendotp" tabindex="0">Resend OTP</span>
+								</div>	
+								<button class="btn blue addtabindex" tabindex="0">Verify</button>
+							</form> 
+							<div class="usermanual">
+									<div class="pointer navbarRedirection addtabindex" id="forgotpassword" data-redirect="iamrecovery" data-val="https://passapp.nic.in/passapp/" aria-label="Reset password if forgotten" role="button" tabindex="0">Forgot Password?</div>
+								<div class="pointer navbarRedirection addtabindex" id="usermanual" data-val="https://www.mgovcloud.in/mail/help/onboarding-guide.html" aria-label="View user manual" role="button" tabindex="0">User Manual</div>
+							</div>
+							<div class="fed_2show">
+								<span id="fed_signin_options"></span>
+							</div>
+    			</div>
+    			<div class="nopassword_container nopassword_container_web">
+    				<div class="nopassword_icon icon-hint"></div>
+    				<div class="nopassword_message">
+    					<div class="setpass_dessc">You haven't set a password for your account yet. Setting one up will make signing in faster and easier.</div>
+    					<div class="setpassword_redirection">Set Password</div>
+    				</div>
+    				<div class="setpassword_close setpass_close"></div>
+    			</div>
+    			<div class="go_to_bk_code_container">
+    				<div class="close_btn hideBkCodeRedirection"></div>
+    				<div class="nopassword_icon icon-hint"></div>
+    				<div class="backup_info_tab">
+    					<div style="font-size:12px;font-weight:500;">Try Backup Verification Code</div>
+    					<div style="margin-top: 5px;color: #000000BF;">If you are unable to sign in using SMS-based OTP, you can use backup verification codes to sign in.</div>
+    				</div>
+    				<div class="button_parent"><span class="backup_action showBackupVerificationCode">Try Now</span></div>
+    			</div>
+    			
+
+<div class="password_expiry_container">
+	<div class="passexpsuccess"></div>
+		<div class="signin_head">
+			<span id="headtitle">Change Password</span>
+			<div class="pass_name extramargin" id="password_desc"></div>
+		</div>
+		<div class="textbox_div" id="npassword_container">
+				<input id="new_password" class="npassinput textbox" placeholder="Enter new password" name="newPassword" type="password" data-val="npassword" required="" autocapitalize="off" autocomplete="off" autocorrect="off">
+				<span class="icon-hide show_hide_Confpassword" data-id="#new_password"></span>
+		</div>
+		<div class="textbox_div" id="rpassword_container">
+				<input id="new_repeat_password" class="npassinput textbox" placeholder="Confirm Password" name="cpwd" type="password" data-val="rpassword" required="" autocapitalize="off" autocomplete="off" autocorrect="off"> 
+				<span class="icon-hide show_hide_Confpassword" data-id="#new_repeat_password"></span>
+				<span class="icon-successTick show_Success"></span>
+		</div>
+		<button class="btn blue" id="changepassword"><span>Set Password</span></button>
+	</div>
+
+<div class="terminate_session_container">
+    				<div class="signin_head">
+							<span id="headtitle">Terminate Sessions</span>
+							<div class="pass_name extramargin" id="password_desc">Apart from changing your password, you can perform the following action if you feel your account is compromised.</div>
+					</div>
+					<form id="terminate_session_form" name="terminate_session_container" novalidate="">
+						<div class="checkbox_div" id="terminate_web_sess" style="padding: 10px;margin-top:10px;">
+							<input id="termin_web" name="signoutfromweb" class="checkbox_check" type="checkbox">
+							<span class="checkbox">
+								<span class="checkbox_tick"></span>
+							</span>
+							<label for="termin_web" class="session_label">
+								<span class="checkbox_label">Terminate all the browsers sessions.</span>
+								<span id="terminate_session_web_desc" class="session_terminate_desc">This will sign you out of all your NIC account sessions that are active in browsers.</span>
+							</label>
+						</div>
+						<div class="checkbox_div" id="terminate_mob_apps" style="padding: 10px;margin-top:10px">
+							<input id="termin_mob" name="signoutfrommobile" class="checkbox_check" type="checkbox">
+							<span class="checkbox">
+								<span class="checkbox_tick"></span>
+							</span>
+							<label for="termin_mob" class="session_label big_checkbox_label">
+								<span class="checkbox_label">Terminate all the desktop and mobile app sessions.</span>
+								<span id="terminate_session_weband_mobile_desc" class="session_terminate_desc">This will sign you out of all the NIC apps that are installed on devices. You will need to sign in to them again.</span>
+							</label>
+						</div>
+						<div class="oneAuthLable">
+							<div class="oneauthdiv"> 
+								<span class="oneauth_icon one_auth_icon_v2"></span>
+								<span class="text_container">
+									<div class="text_header">Include OneAuth</div>
+									<div class="text_desc">If enabled, you need to verify your new password in OneAuth app installed on your Primary Device.</div>
+								</span>
+								<div class="togglebtn_div include_oneAuth_button">
+									<input class="real_togglebtn" id="include_oneauth" type="checkbox">
+									<div class="togglebase">
+										<div class="toggle_circle"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="checkbox_div" id="terminate_api_tok" style="padding: 10px;margin-top:10px">
+							<input id="termin_api" name="signoutfromapiToken" class="checkbox_check" type="checkbox">
+							<span class="checkbox">
+								<span class="checkbox_tick"></span>
+							</span>
+							<label for="termin_api" class="session_label big_checkbox_label">
+								<span class="checkbox_label">Revoke connected app's access to your account.</span>
+								<span id="terminate_session_web_desc_apitoken" class="session_terminate_desc">This will revoke all the permissions you’ve granted to any third-party apps/extensions for fetching information from your account.</span>
+							</label>
+						</div>
+						<div class="terminate_session_button">
+							<button class="btn blue checkbox_mod skipbtn" id="terminate_session_skip"><span>Skip</span></button>
+							<button class="btn blue checkbox_mod" id="terminate_session_submit" disabled="true"><span>Continue</span></button>
+						</div>
+					</form>
+    			</div>
+    			<div id="success_pcontainer">
+					<div class="pptick_icon"></div>
+					<div class="ppsuccess_head">Sessions Terminated</div>
+					<div class="ppsuccess_desc">Your NIC account's old sessions were logged out as per your preference. Please sign-in with your new password to access your account.</div>
+					<button class="ppsuccess_button">Go to Sign-in</button>
+					<div class="ppsuccess_timer">You will be automatically re-directed to sign-in page in <b><span></span>s</b></div>
+				</div>
+    			
+    			<div class="resetIP_container">
+    				<div class="signin_head_ip">
+							<span id="headtitle addtabindex">Sign-in restricted</span>
+							<div class="pass_name extramargin addtabindex" id="ip_desc" tabindex="0">You're are not allowed to sign in from this website. Please go to your designated website to sign in.</div>
+					</div>
+					<div class="text16 pointer nomargin resetipreset" id="goto_resetIP">Remove IP restriction?</div>
+    			</div>
+    			<form name="DAContact" id="DAContact" novalidate="">
+    				<div class="signin_head show">
+						<span id="headtitle" class="addtabindex" tabindex="0">Know your DA</span>
+						<div class="service_name mod_sername addtabindex" tabindex="0">Provide your email address and the mobile number associated with the account to view your department's Delegated Administrator details.</div>
+					</div>
+					<div class="textbox_div" id="DAC_email_container">
+	    				<input id="DAC_email" class="addtabindex textbox" tabindex="0" placeholder="Enter email address" type="text" name="DAC_email" required="" autocapitalize="off" autocomplete="off" autocorrect="off">
+	    				<div class="fielderror" role="alert"></div>
+	    			</div>
+	    			<div class="textbox_div" id="DAC_mobile_container">
+	    				<input id="DAC_mobile" class="addtabindex textbox" tabindex="0" placeholder="Enter recovery mobile number" type="text" name="DAC_mobile" required="" autocapitalize="off" autocomplete="off" autocorrect="off">
+	    				<div class="fielderror" role="alert"></div>
+	    			</div>
+	    			<button class="btn blue" tabindex="0" id="DACbtn"><span>Send OTP</span></button>
+	    			<div class="usermanualDAContact">
+						<div class="pointer backtosignin addtabindex" id="backtosignin" role="button" tabindex="0">Go to sign-in page</div>
+						<div class="pointer navbarRedirection addtabindex" id="usermanual" data-val="https://www.mgovcloud.in/mail/help/onboarding-guide.html" aria-label="View user manual" role="button" tabindex="0">User Manual</div>
+					</div>
+    			</form>
+    			
+    			<form name="DAContactOTP" id="DAContactOTP" novalidate="">
+					<div class="DA_username hellouser">
+						<div class="username addtabindex" tabindex="0"></div>
+						<span class="lineV linechange"></span>
+						<span class="DA_Notyou bluetext addtabindex" aria-label="Change entered email address" tabindex="0">Change</span>
+					</div>
+    				<div class="signin_head show">
+						<span id="headtitle" class="addtabindex" tabindex="0">Know your DA</span>
+						<div class="service_name mod_sername addtabindex" tabindex="0">Enter the OTP sent to your mobile number {0}.</div>
+					</div>
+	    			<div id="otp_container">
+						<div class="textbox_div">
+						    <div class="da_otp_content addtabindex" tabindex="0">Didn't get the OTP? Check your credentials and try again.</div>
+							<input id="otp" placeholder="Enter OTP" type="text" name="OTP" class="textbox" required="" autocapitalize="off" autocorrect="off" aria-label="Enter OTP">
+							<div class="fielderror" role="alert"></div>
+							<div class="textbox_actions otp_actions">
+								<span class="bluetext_action bluetext_action_left resendotp addtabindex DAresend" id="resendforotp" tabindex="0">Resend OTP</span>
+							</div>
+							<button class="btn blue" tabindex="0" id="DACbtnOTP"><span>Verify</span></button>
+							<div class="usermanualDAContact">
+								<div class="pointer backtosignin addtabindex" id="backtosignin" role="button" tabindex="0">Go to sign-in page</div>
+								<div class="pointer navbarRedirection addtabindex" id="usermanual" data-val="https://www.mgovcloud.in/mail/help/onboarding-guide.html" aria-label="View user manual" role="button" tabindex="0">User Manual</div>
+							</div>
+						</div>
+					</div>
+					<div id="DACDetails">
+						<div class="DAC_section"></div>
+						<div class="usermanualDAContact">
+							<div class="pointer backtosignin addtabindex" id="backtosignin" role="button" tabindex="0">Go to sign-in page</div>
+							<div class="pointer navbarRedirection addtabindex" id="usermanual" data-val="https://www.mgovcloud.in/mail/help/onboarding-guide.html" aria-label="View user manual" role="button" tabindex="0">User Manual</div>
+						</div>
+					</div>
+				</form>
+    			
+    				<div class="trustbrowser_ui">
+						<div class="signin_head">
+							<span id="headtitle">Trust this browser?</span>
+							<div class="service_name mod_sername"></div>
+						</div>
+						<button class="btn blue trustdevice trustbtn">
+							<span class="loadwithbtn"></span>
+							<span class="waittext">Trust</span>
+						</button>
+						<button class="btn grey trustdevice notnowbtn">
+							<span class="loadwithbtn"></span>
+							<span class="waittext">Not now</span>
+						</button>
+				</div>
+				<div id="restict_signin">
+					<div class="signin_head restrict_head addtabindex" tabindex="0">Access Denied</div>
+					<div class="restrict_icon"></div> 
+					<div class="restrict_desc service_name addtabindex" tabindex="0">You've enabled Restrict Sign-in for your NIC account. You can disable it in the OneAuth app.</div>
+					<button class="btn blue trybtn addtabindex" id="restict_btn" tabindex="0">Try Again</button>
+				</div>
+				<div class="NIC_contactus">
+					<div class="NIChelp_1 addtabindex" aria-label="Need assistance? View contact details" role="tree" tabindex="0">
+						<div class="NICcontent">
+							<span class="needassistance">Need Assistance?</span>
+							<span class="contact_content">Contact Us</span>
+							<span class="linecontact"></span>
+							<span id="contactDA">Know your DA</span>
+						</div>
+					</div>
+				</div>
+				<div class="fed_posi">
+					<div class="NIC_federated_list">
+						<div class="iconnic-X navbarRedirection addtabindex" data-val="https://twitter.com/NICMeity" aria-label="Go to our X page" role="button" tabindex="0"></div>
+						<div class="iconnic-Facebook navbarRedirection addtabindex" data-val="https://facebook.com/NICIndia" aria-label="Go to our Facebook page" role="button" tabindex="0"></div>
+						<div class="iconnic-Youtube navbarRedirection addtabindex" data-val="https://www.youtube.com/nationalinformaticscentre" aria-label="Go to our Youtube page" role="button" tabindex="0"></div>
+						<div class="iconnic-Instagram navbarRedirection addtabindex" data-val="https://www.instagram.com/nicmeity/" aria-label="Go to our Instagram page" role="button" tabindex="0"></div>
+					</div>
+				</div>
+    		</div>
+    		
+	    		<div class="rightside_box" style="display: none;">
+	    			<div class="mfa_panel hide">
+	    				<div class="product_img" id="product_img"></div>
+							<div class="product_head">Keep your account secure</div>	
+							<div class="product_text">Gov OneAuth is our new in-house multi-factor authentication app. Shield your NIC account with <a style="color:#309FF4;text-decoration:none;" href="https://www.zoho.com/accounts/oneauth.html?utm_source=tfa-banner-accounts&amp;utm_medium=web&amp;utm_campaign=oenauth-ms" target="_blank" rel="noreferrer">OneAuth</a> now.</div>
+	    			</div>
+				</div>
+    		</div>
+			<div id="enableCookie" style="display:none;text-align:center">
+	                   <div class="zoho_logo AaaServer zoho_logo_position_center"></div>
+            <div style="text-align: center;padding: 10px;color:#FFFFFF;">Cookies are disabled for your browser. Please enable cookies to continue.</div>
+	    </div>
+		</div> 
+		<div class="NIChelp_2 opacity0 removetabindex webview" tabindex="-1">
+			<div class="triangle"></div>
+			<div class="NIC_num_mail">
+				<div class="NIC_help_num removetabindex" aria-label="Call us at the mobile number 18005719646" tabindex="-1">
+					<a class="removetabindex" href="tel:18005719646" tabindex="-1">
+						<span class="iconnic-phone"></span>
+						<div class="NIC_Snumber">18005719646</div>
+					</a>
+				</div>
+				<div class="NIC_help_mail removetabindex" aria-label="Email to us at 18005719646" tabindex="-1">
+					<a class="removetabindex" href="mailto:helpdesk-email@gov.in" tabindex="-1">
+						<span class="iconnic-mail"></span>
+						<div class="NIC_Smail">helpdesk-email@gov.in</div>
+					</a>
+				</div>
+				<div class="NIC_raise_ticket removetabindex" aria-label="Raise a support ticket" tabindex="-1">
+					<span class="iconnic-raiseticket"></span>
+					<div class="raise_ticket">Raise ticket</div>
+				</div>
+				<div class="other_contact">
+					<span>Other help options</span>
+				</div>
+			</div>
+		</div> 
+		<div class="CS_container">
+    		<div class="Mobi_cs_container" style="visibility: visible;">
+    			<div class="NICcontent margin12">
+					<span>Need Assistance?</span>
+				</div>
+				<div class="NICcontent margin8 NICcontentstyle">
+					<span class="contact_content">Contact Us</span>
+					<span class="nic_arrow downarrow"></span>
+				</div>
+				<div class="NICcontent margin8 NICcontentstyle ">
+					<span class="contact_content" id="contactDAMobile">Know your DA</span>
+				</div>
+			</div>
+    	</div>
+	    	<div class="migrration_banner_container" style="bottom: 32px;">
+	    		<div class="close_migration closeMig addtabindex" tabindex="0"></div>
+	    		<img src="https://static.nimbusmgovcloud.in/zmail-public/static/public/gov/awareness/slide2.png" class="navbarRedirection addtabindex" data-val="https://accounts.mgovcloud.in/signin" aria-label="Cybersecurity awareness tip" alt="Cybersecurity awareness tip" role="button" tabindex="0">
+	    	</div>
+    	<div class="nopassword_container nopassword_container_mobile">
+			<div class="nopassword_icon icon-hint"></div>
+			<div class="nopassword_message">
+				<div class="setpass_dessc">You haven't set a password for your account yet. Setting one up will make signing in faster and easier.</div>
+				<div class="setpassword_redirection">Set Password</div>
+			</div>
+			<div class="setpassword_close setpass_close"></div>
+		</div>
+		<div class="mobile_social_media">
+    		<div class="NIC_federated_list_mobile">
+    			<div class="floowus">Follow us on</div>
+				<div class="iconnic-X navbarRedirection" data-val="https://twitter.com/NICMeity"></div>
+				<div class="iconnic-Facebook navbarRedirection" data-val="https://facebook.com/NICIndia"></div>
+				<div class="iconnic-Youtube navbarRedirection" data-val="https://www.youtube.com/nationalinformaticscentre"></div>
+				<div class="iconnic-Instagram navbarRedirection" data-val="https://www.instagram.com/nicmeity/"></div>
+			</div>
+		</div> 
+	    <noscript>
+		    <style type="text/css">
+				.load-bg{display:none;}
+			</style>
+		    <div style="position: fixed; top: 0px; left: 0px; z-index: 3;height: 100%; width: 100%; background-color: #FFFFFF">
+		    	<div id="enableCookie" style='text-align:center'>
+		                   <div class='zoho_logo AaaServer zoho_logo_position_center'></div>
+		            <div style="text-align: center;padding: 10px;color:#FFFFFF;">JavaScript is disabled for your browser. Please enable it in your browser settings and try again.</div>
+	    		</div>
+		    </div>
+		</noscript>
+		
+	
+<input type="checkbox" id="i18n_onclick_handler" style="display: none;"><div style="width: 100%; height: 100%;"><div class="zmcchatbot"><button data-tooltip-pos="left" class="zmbtn__1hk71hr zmbtn--btn__1hk71hr zmbtn--filled__1hk71hr zmbtn--color__1hk71hr zmbtn--size__1hk71hr zmcchatbot-btn" aria-label="Chat with us" data-tooltip="Chat with us"><i class="zmci-comment__1v7ydot" aria-hidden="true"></i><span class="zmbtn__text__1hk71hr">Need Assistance?</span></button></div></div></body></html>

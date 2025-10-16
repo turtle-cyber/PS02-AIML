@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank of Baroda - Important Notice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 670px;
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: #f26522;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .logo-placeholder {
+            width: 200px;
+            height: auto;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+        }
+
+        .bank-name {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .notice {
+            background: #fff9e6;
+            border-left: 5px solid #ffcc00;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #162b75;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        p {
+            color: #444;
+            line-height: 1.6;
+            font-size: 18px;
+        }
+
+        .domain {
+            font-weight: 700;
+            color: #162b75;
+            font-size: 20px;
+            margin: 20px 0;
+            display: block;
+        }
+
+        .redirect-button {
+            display: inline-block;
+            background: #f26522;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 18px;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(138, 21, 56, 0.3);
+        }
+
+        .redirect-button:hover {
+            background: #a31b43;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(138, 21, 56, 0.4);
+        }
+
+        .countdown {
+            margin-top: 25px;
+            font-size: 16px;
+            color: #666;
+        }
+
+        .footer {
+            background: #f1f3f5;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                border-radius: 10px;
+            }
+
+            .header {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+
+            .bank-name {
+                font-size: 24px;
+            }
+
+            .content {
+                padding: 25px;
+            }
+
+            .domain {
+                font-size: 18px;
+            }
+
+            .redirect-button {
+                padding: 15px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo-placeholder">
+                <img src="/image-css-js/bob-logo.svg" alt="Bank of Baroda">
+            </div>
+        </div>
+
+        <div class="content">
+            <h2>Important Security Update</h2>
+
+            <div class="notice">
+                <p> As an enhanced security measure, our official Corporate Website has migrated to a new domain:</p>
+            </div>
+
+            <span class="domain">https://bankofbaroda.bank.in</span>
+
+            <p>You will be redirected in a few seconds.</p>
+
+
+            <a href="https://bankofbaroda.bank.in" class="redirect-button">
+                Click here to continue
+            </a>
+
+            <div class="countdown">
+                <p>Redirecting in <span id="countdown">4</span> seconds...</p>
+            </div>
+            <br>
+            <p>Please ensure you access only our new domain going forward for a safe banking experience.</p>
+        </div>
+
+        <!-- <div class="footer">
+            <p>Copyright © 2025 Bank of Baroda. All Rights Reserved.</p>
+        </div> -->
+    </div>
+
+    <script>
+        // Countdown timer for redirect
+        let timeLeft = 4;
+        const countdownElement = document.getElementById('countdown');
+
+        const countdown = setInterval(function() {
+            timeLeft--;
+            countdownElement.textContent = timeLeft;
+
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = "https://bankofbaroda.bank.in";
+            }
+        }, 1000);
+    </script>
+
+
+</body></html>

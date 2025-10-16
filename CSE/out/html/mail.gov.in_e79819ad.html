@@ -1,0 +1,590 @@
+<!DOCTYPE html><html lang="en"><!--<![endif]--><!-- BEGIN HEAD --><head>
+  <meta charset="utf-8">
+  <title>Login page</title>
+  <link rel="shortcut icon" href="/mfid/web/img/favicon.ico" type="image/ico">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+  <meta content="" name="description">
+  <meta content="" name="author">
+  <link href="/mfid/web/assets/bootstrap/css/bootstrap.min.login.css" rel="stylesheet">
+  <link href="/mfid/web/assets/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="/mfid/web/css/style.css" rel="stylesheet">
+  <link href="/mfid/web/css/style_responsive.css" rel="stylesheet">
+  <link href="/mfid/web/css/style_default.css" rel="stylesheet" id="style_color">
+  	<script src="/mfid/web/js/jquery.alerts.js" type="text/javascript"></script>
+  <link href="/mfid/web/css/jquery.alerts.css" rel="stylesheet" type="text/css">
+  
+  <link href="/mfid/web/css/custom.css" rel="stylesheet">
+  <!-- inculding js file for user defined scripting  start-->  
+  <script src="/mfid/web/js/custom/fetch_data.js"> </script>
+   <!-- inculding js file for custom scripting  end-->  
+  <style type="text/css">
+  form.hilight{
+  background: yellow;
+  }
+  </style>
+
+<script> 
+     var globalSecureToken='ib7igvblnu1ekf259d0bde359e';
+       var globalSecureTokenOTP='c4q60df001nc728c9155e7o8bh';
+       var globalCaptchaToken='null';
+       var globalCaptchaFlag=false;
+       var mobileNumAlert='Mobile number is not mapped with your email account please contact servicedesk@nic.in to update.';
+   </script></head>
+<!-- END HEAD -->
+<!-- BEGIN BODY -->
+
+
+  
+  
+<body id="login-body" style="opacity: 1;">
+  <div class="login-header">
+      <!-- BEGIN LOGO -->
+      <div id="logo" class="center">
+          <img src="/mfid/web/img/logo.png" alt="logo" class="center">
+      </div>
+      <!-- END LOGO -->
+  </div>
+
+
+<div id="loading" style="display: none; width: 100%; height: 550px; position: fixed; top: 50%; left: 50%; z-index: 25;">
+	<img src="/mfid/web/img/ajax_loader_gray_64.gif" width="64" height="64"><br>Loading..
+</div>
+
+
+  <!-- BEGIN LOGIN -->
+  <div id="login">
+    <!-- BEGIN LOGIN FORM -->
+    <set name="SecureLoginAuth" value="secureLoginAuth">
+       <div class="lock lock-center">
+          <i class="icon-lock"></i>
+      </div>
+    <form id="loginform" class="form-vertical no-padding no-margin ">
+
+      <div class="control-wrap" id="secure_login_id">
+      <h4>Secure User Login</h4>    
+          
+          
+          
+          <div id="org1" style="display:none" class="control-group">
+              <div class="controls">
+                  <div class="input-prepend">
+                      <span class="add-on"><i class="icon-sitemap"></i></span>
+                      <select name="organisationName" id="id1" class="input-large m-wrap login-form-control" onchange="fetchSecureDomain()">
+    <option value="-1">-- Select Organization --</option>
+    <option value="MEITY">MEITY</option>
+
+
+</select>
+
+
+                  </div>
+              </div>
+          </div>
+          
+          
+         <div id="dom1" style="display:none" class="control-group">
+              <div class="controls">
+                    <div class="input-prepend">
+                      <span class="add-on"><i class="icon-globe"></i></span>
+                      <select name="domain" id="id2" class="input-large m-wrap login-form-control" onchange="fetchApplication()">
+    <option value="-1">-- Select Domain --</option>
+
+
+<option value="NIC">NIC</option></select>
+
+
+                  </div>
+              </div>
+        </div>
+        
+        <div id="app1" style="display:none" class="control-group">
+              <div class="controls">
+              <div class="input-prepend">
+                      <span class="add-on"><i class="icon-cog"></i></span>
+                      <select name="application" id="id3" class="input-large m-wrap login-form-control">
+    
+
+
+<option value="-1">-- Select Application --</option><option value="webmail">webmail</option><option value="imap">imap</option></select>
+
+
+                  </div>
+                  
+              </div>
+          </div>
+          
+          
+          <div class="control-group">
+              <div class="controls">
+                  <div class="input-prepend">
+                      <span class="add-on"><i class="icon-user"></i></span>
+                      <input id="input-username" type="text" class="login-form-control" placeholder="Username" name="userName" autocomplete="off">
+                  </div>
+              </div>
+          </div>
+          
+            <div class="control-group">
+              <div class="controls">
+                  <div class="input-prepend">
+                      <span class="add-on"><i class="icon-key"></i></span>
+                      <input id="input-password" type="password" class="login-form-control" placeholder="Password" name="password" autocomplete="off">
+                  </div>
+              </div>
+          </div>
+ 
+          <div class="control-group" style="margin-top: 7px; display: none; " id="captchaFlagBlockDiv1">
+           
+            <div class="captcha-div">
+   			 	<div id="divGenerateRandomValues"></div>
+        		<img class="refresh_captcha captcha-refresh" id="refresh_captcha_id" src="/mfid/web/img/refresh_captcha.png" style="">
+    		</div> 
+            
+            <div class="controls">
+                  <div class="input-prepend" style="">
+                      <span class="add-on"><i class="icon-key"></i></span>
+                      <input id="input-captcha" type="text" class="login-form-control" placeholder="enter captcha" name="captcha" maxlength="6" autocomplete="off">
+                  </div>
+                  <div class="mtop10">
+                      <div class="block-hint pull-left small">
+                       <font color="red" size="3"> </font>
+                      </div>
+                      <div class="block-hint pull-right">
+                         
+                      </div>
+                  </div>
+                  <div class="clearfix space5"></div>
+              </div>
+          </div>
+         
+           
+              <div class="control-group" id="captchaFlagBlockDiv2" style="display: block;">
+             <div class="controls">
+                   
+                  <div class="mtop10">
+                      <div class="block-hint pull-left small">
+                       <font color="red" size="3"> </font>
+                      </div>
+                      <div class="block-hint pull-right">
+                         
+                      </div>
+                  </div>
+
+                  <div class="clearfix space5"></div>
+              </div>
+              </div>
+           
+      </div>
+ 
+            <div class="control-wrap" id="secure_otp_login_id" style="display: none;">
+          <h4>Secure User Login</h4>
+
+          <div class="control-group">
+              <div class="controls">
+                  <div class="input-prepend">
+                      <span class="add-on"><i class="icon-user"></i></span>
+                      <input id="userOtpId" type="text" placeholder="Enter OTP" class="login-form-control" name="userOtp">
+                  </div>
+              </div>
+             
+ 
+ 
+
+
+                  <span id="show_mobile_no_text"></span>       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+            &nbsp;&nbsp;
+                  <a href="#" id="reSendOTPID" onclick="reSendOTP()">Resend otp</a>  <b id="counterOTP"></b>
+              
+          </div>
+         
+      </div>
+
+      <input type="button" id="next-login-btn" class="btn btn-block btn-primary" value="Login">
+    <input type="hidden" name="as_sfid" value="AAAAAAUdvyzYDjfStMBzR9uElL7KiN2yJxAE7SdoOYE16cwPsZHzENlCNRAW7PHuK6v0lal0twm2w6R9t8oCm_480ZDk_nd1Wus37XNxBkJXdqMtFqSjKTHcnK0E3URp66VmQUOuW8JqWgceCE29aqLXgPVJjZZinleN8XFl87cvo-dGAQ=="><input type="hidden" name="as_fid" value="3ed972cbfc4377f7ffbabf931d3fe0bc0f01391a"></form>
+    <!-- END LOGIN FORM -->    
+        
+    <!-- BEGIN FORGOT PASSWORD FORM -->
+    <form id="forgotform" class="form-vertical no-padding no-margin hide" action="">
+      <p class="center">Enter your Username.</p>
+      
+    
+      <center>
+      
+      <div class="control-group">
+        <div class="controls">
+          <div class="input-prepend">
+            <span class="add-on"><i class="icon-user"></i></span><input id="userName_resPass" type="text" placeholder="Username">
+          </div>
+        </div>
+       
+      </div>
+      
+   <div id="org2" class="control-group">
+              <div class="controls">
+                  <div class="input-prepend">
+                      <span class="add-on"><i class="icon-sitemap"></i></span>
+                      <select name="organisationName" id="id1a" class="input-large m-wrap" onchange="fetchDomainForForgotPassword()">
+    <option value="-1">-- Select Organization --</option>
+    <option value="MEITY">MEITY</option>
+
+
+</select>
+
+
+                    
+                  </div>
+              </div>
+          </div>
+          <div id="dom2" class="control-group">
+              <div class="controls">
+                  <div class="input-prepend">
+                      <span class="add-on"><i class="icon-globe"></i></span>
+                      <select name="domain" id="id2a" class="input-large m-wrap">
+    <option value="-1">-- Select Domain --</option>
+
+
+</select>
+
+
+                  </div>
+              </div>
+               <div class="space20"></div>
+          </div> 
+          
+          
+     </center>         
+      
+      
+      
+      <input type="button" id="forget-btn" onclick="resetPassword()" class="btn btn-block btn-primary" value="Submit" style="">
+      <div class="clearfix space10"></div>
+      <div class="align_center"><a href="javascript:;" id="login-btn-back">Back to Login</a></div>
+    <input type="hidden" name="as_sfid" value="AAAAAAW71vJtsHmbpdEYnoS1mSJQDUkCDWdiZhUhFizt6YbHyI-IdWZyHJ0k58PWQVp6ZMwzoyCG2fqk5H0s9LAQ85NmrzV2lFdPtCwMj1C6hqeVmrCgyFY-u76vdrE6mPu9jwsXTX_fyP25Be9gC_MKOfu0euKyV8OsGyJP0Epmcnz9pw=="><input type="hidden" name="as_fid" value="c561bb81dbd3c6e166a571a85f5c3b7a21ddff54"></form>
+    
+       <form id="reset_otp_form" class="form-vertical no-padding no-margin hide" action="">
+    <input type="hidden" name="domainResPass" id="domainResPassId">
+			<p class="center">Enter otp for reset password.</p>
+
+				<div class="control-group">
+					<div class="controls">
+						<div class="input-prepend">
+							<span class="add-on"><i class="icon-user"></i></span><input id="userOtpId" type="text" placeholder="otp" name="userOtp">
+						</div>
+					</div>
+
+						<span id="show_mobile_no_text"></span>
+					
+					&nbsp;&nbsp; <a href="#" id="reSendOTPID" onclick="reSendOTPResPass()">Resend
+						otp</a> <b id="counterOTP"></b>
+
+				</div>
+				<div class="clearfix space20"></div>
+				<input type="button" id="forget-btn" onclick="validateOtpResPass()" class="btn btn-block btn-primary" value="Submit">
+      <div class="clearfix space10"></div>
+<div class="align_center"><a href="javascript:;" id="login-btn-back2">Back to Login</a></div>
+			
+		<input type="hidden" name="as_sfid" value="AAAAAAURuOP_7RjamnMeDoeovSqDtyKK6Iy_JxUutVclvY5uNqDL7r9B8Eu69vS1OrBq3HFMj04LrU99qoJCmEmtVdCTJNmHsPysFkaG_RjIK67zNModm-CmfTIz7MucE1zMjqcwPc52PTLdsKj34QpHtXFJp6p9I5TQABuE53hVc2rVfg=="><input type="hidden" name="as_fid" value="ee456f8d7f65fa57b00dc75e33c6a4ef263ef518"></form>
+    <!-- END FORGOT PASSWORD FORM -->
+    
+    <!-- BEGIN Choose Application FORM -->
+ 
+    <!-- END Choose Application FORM -->
+    
+  </set></div>
+  <!-- END LOGIN -->
+  <!-- BEGIN COPYRIGHT -->
+  <div id="login-copyright">
+    2022 © Kavach Authentication.
+    
+  </div>
+  <input type="hidden" name="csrfPreventionSalt" id="csrfPreventionSaltId" value="tEk8rMQYzwNzwFht0dNh">
+  <!-- END COPYRIGHT -->
+  <!-- BEGIN JAVASCRIPTS -->
+  <script src="/mfid/web/js/jquery-3.3.1.min.js"></script>
+  <script src="/mfid/web/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="/mfid/web/js/jquery.blockui.js"></script>
+  <script src="/mfid/web/js/scripts.js"></script>
+  <script> var contextPath ='/mfid'; </script>
+ 
+    <script type="text/javascript" src="/mfid/web/js/custom/secureLogin.js"></script>
+  
+  <script> 
+ 
+      jQuery(document).ready(function() {     
+     // App.initLogin();
+      handleLoginForm();
+
+      	$("#alert_button").click( function() {
+					jAlert('This is a custom jAlert box', 'jAlert Dialog');
+				});
+   	 	});
+    
+      function resendOtpCounter() {
+    	  // var elem = document.getElementById("myBar");   
+    	  
+    	  var width = 1;
+    	  var counterOtp=30;
+    	  var id = setInterval(frame, 1000);
+    	  function frame() {
+    		  if(counterOtp == 0 || counterOtp < 0  )
+    		    { $("#reSendOTPIDId").html('<a href="#" id="reSendOTPID" onclick="reSendOTP()">Resend otp</a>');
+    		      $("#counterOTP").html("");
+    			  clearInterval(id);
+    		      return true;
+    		    }
+    		  else{
+    		 	 $("#counterOTP").html("(0:"+counterOtp+")");
+    		 	 counterOtp--;
+    	   			 if (width >= 100) {
+    	    			  clearInterval(id);
+    	   			 } else {
+    	    			  width=width+3.33; 
+    	    			// elem.style.width = width + '%'; 
+    	    			  counterOTP
+    	   				 }
+    		  } 
+    	    
+    	  }
+    	}
+    
+    
+    $(document).ajaxStart(function(){
+  
+    $("#loading").css("display","block");
+     $( "#forget-btn").hide();
+    $('body').css("opacity","0.8");
+     $( ".log" ).text( "Triggered ajaxStart handler." );
+     // alert("start");
+  });
+  
+  $(document).ajaxComplete(function(){
+  
+    $("#loading").css("display","none");
+     $('body').css("opacity","1");
+     $( "#forget-btn").show();
+     // alert("complete");
+  });  
+   
+ 
+  jQuery(document).ready(function() {  
+ setDefaultValueAfterPageLoad();  
+function setDefaultValueAfterPageLoad()
+{
+  try{
+
+     $("#id1").val("MEITY");
+   fetchSecureDomain();
+
+    $("#id2").val("NIC");
+   fetchApplication();
+ 
+    $("#id3").val("webmail");
+  
+  
+  }
+   catch(err){
+	   alert(err);
+	   
+   }
+ 
+}
+});
+
+function reSendOTP()
+{
+	var clientName= "Nic";
+	if(clientName.toLowerCase() !== "nic")
+	    resendOtpCounter();
+   $("#reSendOTPID").removeAttr("href").removeAttr("a").removeAttr("onclick");
+   $("#reSendOTPID").replaceWith(function(){
+      return $("<span id='reSendOTPIDId'>" + $(this).html() + "</span>");
+  });
+   $.post("secureLogin_reSendOTP.action",function(result){});
+}
+  </script>
+  <script type="text/javascript" language="javascript">
+        $(function() {
+            $(this).bind("contextmenu", function(e) {
+                e.preventDefault();
+            });
+        }); 
+        
+        $(document).ready(function(){
+     	 $('#input-password').bind("cut copy paste",function(e) {
+          e.preventDefault();
+      });
+    });
+    
+    
+        if(!!window.performance && window.performance.navigation.type == 2)
+        {     window.location=contextPath+"/secureLogin_showSecureLogin.action";
+        }
+
+        if (window.top !== window.self) {
+            window.top.location.replace(window.self.location.href);
+          //  alert('For security reasons, frames are not allowed.');
+            setInterval(function(){document.body.innerHTML='';},1);
+        }
+        if (!navigator.onLine) {
+        	document.body.innerHTML = 'Loading...';
+        	window.location = 'ErrorPage.html';
+        	}
+        	  
+        	  
+        	  
+        (function (global) { 
+
+            if(typeof (global) === "undefined") {
+                throw new Error("window is undefined");
+            }
+
+            var _hash = "!";
+            var noBackPlease = function () {
+                global.location.href += "#";
+
+                // making sure we have the fruit available for juice (^__^)
+                global.setTimeout(function () {
+                    global.location.href += "!";
+                }, 50);
+            };
+
+            global.onhashchange = function () {
+                if (global.location.hash !== _hash) {
+                    global.location.hash = _hash;
+                }
+            };
+
+            global.onload = function () {            
+                noBackPlease();
+
+                // disables backspace on page except on input fields and textarea..
+                document.body.onkeydown = function (e) {
+                    var elm = e.target.nodeName.toLowerCase();
+                    if (e.which === 8 && (elm !== 'input' && elm  !== 'textarea')) {
+                        e.preventDefault();
+                    }
+                    // stopping event bubbling up the DOM tree..
+                    e.stopPropagation();
+                };          
+            }
+
+        })(window);
+
+
+
+
+
+
+$("#refresh_captcha_id").click(function(){
+    refreshCaptcha(true);
+    
+});
+
+if(globalCaptchaFlag)
+refreshCaptcha(true);
+
+</script>
+
+<style>
+#modalContainer {
+	background-color:rgba(0, 0, 0, 0.3);
+	position:fixed;
+	width:100%;
+	height:100% !important;
+	top:0px;
+	left:0px;
+	z-index:10000;
+}
+div#alertBox {
+    width: 350px;
+    background: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50% !important;
+    transform: translate(-50%, -50%);
+}  
+#alertBox h1 {
+    font-size: 20px;
+    padding: 0 20px;
+    margin: 0;
+    background: #039cea;
+    color: #fff;
+}
+#alertBox p {
+    font-size: 16px;
+    padding: 15px;
+}
+#alertBox a#closeBtn {
+    background: #039cea;
+    padding: 5px;
+    font-size: 13px;
+    width: 50px;
+    display: block;
+    color: #fff;
+    text-align: center;
+    float: right;
+    margin: 10px;
+}
+</style>
+
+<script>
+var ALERT_TITLE = "Alert !";
+var ALERT_BUTTON_TEXT = "Ok";
+
+var mobileNumAlert='Mobile number is not mapped with your email account please contact servicedesk@nic.in to update.';
+
+if(document.getElementById) {
+	window.alert = function(txt) {
+		createCustomAlert(txt);
+	}
+}
+
+function createCustomAlert(txt) {
+	d = document;
+
+	if(d.getElementById("modalContainer")) return;
+
+	mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+	mObj.id = "modalContainer";
+	mObj.style.height = d.documentElement.scrollHeight + "px";
+	
+	alertObj = mObj.appendChild(d.createElement("div"));
+	alertObj.id = "alertBox";
+	if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+	alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+	alertObj.style.visiblity="visible";
+
+	h1 = alertObj.appendChild(d.createElement("h1"));
+	h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+	msg = alertObj.appendChild(d.createElement("p"));
+	//msg.appendChild(d.createTextNode(txt));
+	msg.innerHTML = txt;
+
+	btn = alertObj.appendChild(d.createElement("a"));
+	btn.id = "closeBtn";
+	btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+	btn.href = "#";
+	btn.focus();
+	btn.onclick = function() { removeCustomAlert();return false; }
+
+	alertObj.style.display = "block";
+	
+}
+
+function removeCustomAlert() {
+	document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+}
+function ful(){
+alert('Alert this pages');
+}
+</script>
+
+
+  <!-- END JAVASCRIPTS -->
+
+
+</body><!-- END BODY --></html>

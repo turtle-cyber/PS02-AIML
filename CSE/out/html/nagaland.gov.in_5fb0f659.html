@@ -1,0 +1,884 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nagaland State Portal | Government of Nagaland</title>
+    <link rel="icon" type="image/x-icon" href="https://nagaland.gov.in/assets/img/gon-logo.png">
+    <meta name="keywords" content="Nagaland, State Portal, Government of Nagaland, Official Website, Information Technology, Communication">
+    <meta name="description" content="Official State Portal of Nagaland, providing information and services from the Government of Nagaland.">
+    <link rel="preload" as="style" href="https://nagaland.gov.in/build/assets/app-DOf7BZfX.css"><link rel="modulepreload" as="script" href="https://nagaland.gov.in/build/assets/app-hZqE1SfW.js"><link rel="modulepreload" as="script" href="https://nagaland.gov.in/build/assets/bootstrap-I5i9CKeh.js"><link rel="stylesheet" href="https://nagaland.gov.in/build/assets/app-DOf7BZfX.css" data-navigate-track="reload"><script type="module" src="https://nagaland.gov.in/build/assets/app-hZqE1SfW.js" data-navigate-track="reload"></script></head>
+
+<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+    <div class="bg-fixed banner">
+        <!-- Gradient overlay -->
+        <div class="relative z-50 hidden py-3 border-b bg-slate-800 bg-opacity-20 border-b-slate-100 border-opacity-10 md:block">
+            <div class="container flex items-center justify-between mx-auto text-sm text-slate-100">
+                <div>
+                    <p>Government of Nagaland</p>
+                </div>
+                <ul class="flex space-x-4">
+                    <li class="relative z-50">
+                        <!-- Trigger -->
+                        <button id="accessibilityBtn" class="flex items-center gap-1 hover:underline">
+                            <i class="bi bi-universal-access-circle text-rose-500"></i>
+                            Accessibility
+                            <i class="text-xs bi bi-caret-down-fill"></i>
+                        </button>
+
+                        <!-- Dropdown -->
+                        <div id="accessibilityDropdown" class="absolute right-0 z-50 hidden w-56 p-2 mt-2 bg-white border rounded-md shadow-lg">
+
+                            <button id="decreaseFont" class="block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 text-slate-800">
+                                <i class="bi bi-dash-circle"></i> Decrease Font
+                            </button>
+
+                            <button id="increaseFont" class="block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 text-slate-800">
+                                <i class="bi bi-plus-circle"></i> Increase Font
+                            </button>
+
+                            <button id="resetFont" class="block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 text-slate-800">
+                                <i class="bi bi-arrow-counterclockwise"></i> Reset Font
+                            </button>
+
+                            <button id="toggleContrast" class="block w-full px-4 py-2 text-sm text-left hover:bg-gray-100 text-slate-800">
+                                <i class="bi bi-eye-fill"></i> High Contrast
+                            </button>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="https://socialjustice.gov.in/screen-reader" class="hover:underline ext-link">
+                            <i class="bi bi-ear text-rose-500"></i> Screen Reader
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/MyGovNagaland" class="hover:underline ext-link">
+                            <i class="bi bi-twitter-x text-xs bg-slate-700 rounded-full px-[1px] text-white"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/NagalandMyGov/" class="hover:underline ext-link">
+                            <i class="bi bi-facebook text-md"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/mygovnagaland/?hl=en" class="hover:underline ext-link">
+                            <i class="bi bi-instagram text-md"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/channel/UCYpIWIAk_KPBdqvToVHmB6g" class="hover:underline ext-link">
+                            <i class="text-lg leading-tight bi bi-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="relative z-40">
+            <div id="main-header" class="fixed top-0 z-10 flex items-center justify-center w-full transition-all border-b bg-slate-800 md:bg-transparent md:mt-10 duration-900 border-b-slate-50 border-opacity-10">
+    <div class="container flex items-center justify-between w-full px-3 py-4 transition-all duration-300 md:px-0">
+        <!-- Logo -->
+        <a class="flex items-center" href="https://nagaland.gov.in">
+            <img src="https://nagaland.gov.in/assets/img/gon-logo.png" class="h-[80px] transition-all duration-300">
+            <div>
+                <h1 class="mt-2 ml-6 text-2xl font-bold uppercase text-slate-50 leading-0" id="site-text">State Portal
+                </h1>
+                <span class="block ml-6 text-sm font-normal text-slate-200" id="gov-text">Government of Nagaland</span>
+            </div>
+        </a>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden mt-6 text-sm font-bold uppercase md:block text-slate-50" id="main-menu">
+            <ul class="flex space-x-2">
+                <li class="inline-block px-4 py-3"><a href="https://nagaland.gov.in">Home</a></li>
+
+                <!-- About -->
+                <li class="relative inline-block px-4 py-3 dropdown">
+                    <button class="uppercase dropdown-toggle">About
+                        <i class="ml-2 text-sm bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="absolute bg-white text-xs text-gray-600 shadow-sm p-3 w-[200px] mt-10
+                   border border-gray-100 border-t-red-600 border-t-4 hidden dropdown-menu">
+                        <li><a href="https://nagaland.gov.in/nagaland-profile" class="block px-4 py-1 rounded-md hover:bg-gray-100">Profile</a></li>
+                        <li><a href="https://nagaland.gov.in/people-culture" class="block px-4 py-2 rounded-md hover:bg-gray-100">People &amp; Culture</a></li>
+                        <li><a href="https://nagaland.gov.in/districts" class="block px-4 py-2 rounded-md hover:bg-gray-100">Districts</a></li>
+                    </ul>
+                </li>
+
+                <!-- Government -->
+                <li class="relative inline-block px-4 py-3 dropdown">
+                    <button class="uppercase dropdown-toggle">Government
+                        <i class="ml-2 text-sm bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="absolute bg-white text-xs text-gray-600 shadow-sm p-3 w-[200px] mt-10
+                   border border-gray-100 border-t-red-600 border-t-4 hidden dropdown-menu">
+                        <li><a href="https://nagaland.gov.in/governors" class="block px-4 py-1 rounded-md hover:bg-gray-100">Governor</a></li>
+                        <li><a href="https://nagaland.gov.in/chief-ministers" class="block px-4 py-2 rounded-md hover:bg-gray-100">Chief Minister</a></li>
+                        <li><a href="https://lokayukta.nagaland.gov.in" class="block px-4 py-2 rounded-md hover:bg-gray-100 ext-link">Lokayukta</a></li>
+                        <li><a href="https://nagaland.gov.in/ministers" class="block px-4 py-2 rounded-md hover:bg-gray-100">Council of Ministers</a></li>
+                        <li><a href="https://nagaland.gov.in/advisors" class="block px-4 py-2 rounded-md hover:bg-gray-100">Advisors to Chief Ministers</a>
+                        </li>
+                        <li><a href="https://nagaland.gov.in/legislatures" class="block px-4 py-2 rounded-md hover:bg-gray-100">State Legislature</a></li>
+                        <li><a href="https://nagaland.gov.in/ahods" class="block px-4 py-2 rounded-md hover:bg-gray-100">AHoDs</a></li>
+                        <li><a href="https://nagaland.gov.in/hods" class="block px-4 py-2 rounded-md hover:bg-gray-100">HoDs</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Services -->
+                <li class="relative inline-block px-4 py-3 dropdown">
+                    <button class="uppercase dropdown-toggle">Services
+                        <i class="ml-2 text-sm bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="absolute bg-white text-xs text-gray-600 shadow-sm p-3 w-[200px] mt-10
+                   border border-gray-100 border-t-red-600 border-t-4 hidden dropdown-menu">
+                        <li><a href="https://nagaland.gov.in/e-services" class="block px-4 py-1 rounded-md hover:bg-gray-100">eServices</a></li>
+                        <li><a href="https://nagaland.gov.in/apps" class="block px-4 py-2 rounded-md hover:bg-gray-100">App
+                                Store</a></li>
+                        <li><a href="https://ilp.nagaland.gov.in" class="block px-4 py-2 rounded-md hover:bg-gray-100 ext-link">Online
+                                ILP</a></li>
+                        <li><a href="https://scholarship.nagaland.gov.in" class="block px-4 py-2 rounded-md hover:bg-gray-100 ext-link">Common Scholarship
+                                Portal</a></li>
+                        <li><a href="https://cmhis.nagaland.gov.in" class="block px-4 py-2 rounded-md hover:bg-gray-100 ext-link">CM Health Insurance
+                                Scheme</a></li>
+                    </ul>
+                </li>
+
+                <!-- Resources -->
+                <li class="relative inline-block px-4 py-3 dropdown">
+                    <button class="uppercase dropdown-toggle">Resources
+                        <i class="ml-2 text-sm bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="absolute bg-white text-xs text-gray-600 shadow-sm p-3 w-[200px] mt-10
+                   border border-gray-100 border-t-red-600 border-t-4 hidden dropdown-menu">
+                        <li><a href="https://nagaland.gov.in/act-rules" class="block px-4 py-1 rounded-md hover:bg-gray-100">Act
+                                &amp; Rules</a></li>
+                        <li><a href="https://nagaland.gov.in/ogd" class="block px-4 py-2 rounded-md hover:bg-gray-100">Open
+                                Government Data</a></li>
+                        <li><a href="https://nagaland.gov.in/policies" class="block px-4 py-2 rounded-md hover:bg-gray-100">Policies</a></li>
+                        <li><a href="https://nagaland.gov.in/utility-forms" class="block px-4 py-2 rounded-md hover:bg-gray-100">Utility Forms</a></li>
+                        
+                        <li><a href="https://nagaland.gov.in/document-repository" class="block px-4 py-2 rounded-md hover:bg-gray-100">Document Repository</a></li>
+                        <li><a href="https://dpar.nagaland.gov.in/civil-list/" class="block px-4 py-2 rounded-md hover:bg-gray-100 ext-link">Civil List</a></li>
+                        <li><a href="https://govtpress.nagaland.gov.in/egazette/" class="block px-4 py-2 rounded-md hover:bg-gray-100 ext-link">e-Gazette</a></li>
+                    </ul>
+                </li>
+
+                <li class="inline-block px-4 py-3"><a href="https://nagaland.gov.in/news">News</a></li>
+                <!-- Business -->
+                <li class="relative inline-block px-4 py-3 dropdown">
+                    <button class="uppercase dropdown-toggle">Business
+                        <i class="ml-2 text-sm bi bi-chevron-down"></i>
+                    </button>
+                    <ul class="absolute bg-white text-xs text-gray-600 shadow-sm p-3 w-[200px] mt-10
+                   border border-gray-100 border-t-red-600 border-t-4 hidden dropdown-menu">
+                        <li><a href="https://nagaland.gov.in/tenders" class="block px-4 py-1 rounded-md hover:bg-gray-100">Tenders</a></li>
+                        <li><a href="https://ebiz.nagaland.gov.in" class="block px-4 py-1 rounded-md hover:bg-gray-100 ext-link">Ease of Doing Business</a>
+                        </li>
+                        <li><a href="https://nglemployeedirectory.in" class="block px-4 py-1 rounded-md hover:bg-gray-100 ext-link">Nagaland Employee
+                                Lookup</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="inline-block px-4 py-3"><a href="https://nagaland.gov.in/pages/contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Mobile Hamburger -->
+        <button id="mobile-menu-toggle" class="text-3xl md:hidden text-slate-50">
+            <i class="bi bi-list"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="fixed top-0 left-0 z-50 w-64 h-full overflow-y-auto transition-transform duration-300 transform -translate-x-full bg-white shadow-lg">
+        <div class="flex items-center justify-between p-4 border-b">
+            <span class="text-lg font-bold text-gray-700">Menu</span>
+            <button id="mobile-menu-close" class="text-2xl text-gray-600">
+                <i class="bi bi-x"></i>
+            </button>
+        </div>
+        <ul class="p-4 space-y-2 font-medium text-gray-700">
+            <!-- Home -->
+            <li>
+                <a href="https://nagaland.gov.in" class="block px-2 py-2 rounded hover:bg-gray-100">Home</a>
+            </li>
+
+            <!-- About -->
+            <li>
+                <button class="flex items-center justify-between w-full px-2 py-2 rounded hover:bg-gray-100 dropdown-toggle">
+                    About <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="hidden pl-4 space-y-1 dropdown-menu">
+                    <li><a href="https://nagaland.gov.in/nagaland-profile" class="block px-2 py-2 rounded hover:bg-gray-100">Profile</a></li>
+                    <li><a href="https://nagaland.gov.in/people-culture" class="block px-2 py-2 rounded hover:bg-gray-100">People &amp; Culture</a></li>
+                    <li><a href="https://nagaland.gov.in/districts" class="block px-2 py-2 rounded hover:bg-gray-100">Districts</a></li>
+                </ul>
+            </li>
+
+            <!-- Government -->
+            <li>
+                <button class="flex items-center justify-between w-full px-2 py-2 rounded hover:bg-gray-100 dropdown-toggle">
+                    Government <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="hidden pl-4 space-y-1 dropdown-menu">
+                    <li><a href="https://nagaland.gov.in/governors" class="block px-2 py-2 rounded hover:bg-gray-100">Governor</a></li>
+                    <li><a href="https://nagaland.gov.in/chief-ministers" class="block px-2 py-2 rounded hover:bg-gray-100">Chief Minister</a></li>
+                    <li><a href="https://nagaland.gov.in/districts" class="block px-2 py-2 rounded hover:bg-gray-100">Lokayukta</a></li>
+                    <li><a href="https://nagaland.gov.in/ministers" class="block px-2 py-2 rounded hover:bg-gray-100">Council
+                            of Ministers</a></li>
+                    <li><a href="https://nagaland.gov.in/advisors" class="block px-2 py-2 rounded hover:bg-gray-100">Advisors
+                            to Chief Ministers</a></li>
+                    <li><a href="https://nagaland.gov.in/legislatures" class="block px-2 py-2 rounded hover:bg-gray-100">State
+                            Legislature</a></li>
+                    <li><a href="https://nagaland.gov.in/ahods" class="block px-2 py-2 rounded hover:bg-gray-100">AHoDs</a>
+                    </li>
+                    <li><a href="https://nagaland.gov.in/hods" class="block px-2 py-2 rounded hover:bg-gray-100">HoDs</a></li>
+                </ul>
+            </li>
+
+            <!-- Services -->
+            <li>
+                <button class="flex items-center justify-between w-full px-2 py-2 rounded hover:bg-gray-100 dropdown-toggle">
+                    Services <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="hidden pl-4 space-y-1 dropdown-menu">
+                    <li><a href="https://nagaland.gov.in/e-services" class="block px-2 py-2 rounded hover:bg-gray-100">eServices</a></li>
+                    <li><a href="https://nagaland.gov.in/ogd" class="block px-2 py-2 rounded hover:bg-gray-100">Open
+                            Government Data</a></li>
+                    <li><a href="https://nagaland.gov.in/apps" class="block px-2 py-2 rounded hover:bg-gray-100">App Store</a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Resources -->
+            <li>
+                <button class="flex items-center justify-between w-full px-2 py-2 rounded hover:bg-gray-100 dropdown-toggle">
+                    Resources <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="hidden pl-4 space-y-1 dropdown-menu">
+                    <li><a href="https://nagaland.gov.in/act-rules" class="block px-2 py-2 rounded hover:bg-gray-100">Act &amp;
+                            Rules</a></li>
+                    <li><a href="https://nagaland.gov.in/ogd" class="block px-2 py-2 rounded hover:bg-gray-100">Open
+                            Government Data</a></li>
+                    <li><a href="https://nagaland.gov.in/policies" class="block px-2 py-2 rounded hover:bg-gray-100">Policies</a></li>
+                    <li><a href="https://nagaland.gov.in/utility-forms" class="block px-2 py-2 rounded hover:bg-gray-100">Utility Forms</a></li>
+                    <li><a href="https://nagaland.gov.in/media" class="block px-2 py-2 rounded hover:bg-gray-100">Media
+                            Gallery</a></li>
+                    <li><a href="https://nagaland.gov.in/document-repository" class="block px-2 py-2 rounded hover:bg-gray-100">Document Repository</a></li>
+                    <li><a href="https://dpar.nagaland.gov.in/civil-list/" class="block px-2 py-2 rounded hover:bg-gray-100">Civil List</a></li>
+                    <li><a href="https://govtpress.nagaland.gov.in/egazette/" class="block px-2 py-2 rounded hover:bg-gray-100">e-Gazette</a></li>
+                </ul>
+            </li>
+
+            <!-- News -->
+            <li>
+                <a href="https://nagaland.gov.in/news" class="block px-2 py-2 rounded hover:bg-gray-100">News</a>
+            </li>
+
+            <!-- Business -->
+            <li>
+                <button class="flex items-center justify-between w-full px-2 py-2 rounded hover:bg-gray-100 dropdown-toggle">
+                    Business <i class="bi bi-chevron-down"></i>
+                </button>
+                <ul class="hidden pl-4 space-y-1 dropdown-menu">
+                    <li><a href="https://nagaland.gov.in/tenders" class="block px-2 py-2 rounded hover:bg-gray-100">Tenders</a></li>
+                    <li><a href="https://ebiz.nagaland.gov.in" class="block px-2 py-2 rounded hover:bg-gray-100">Ease
+                            of Doing Business</a></li>
+                    <li><a href="https://nglemployeedirectory.in" class="block px-2 py-2 rounded hover:bg-gray-100">Nagaland Employee Lookup</a></li>
+                </ul>
+            </li>
+
+            <!-- Contact -->
+            <li>
+                <a href="#" class="block px-2 py-2 rounded hover:bg-gray-100">Contact</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<script nonce="">
+    document.addEventListener("DOMContentLoaded", function() {
+        const mobileToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileClose = document.getElementById("mobile-menu-close");
+
+        // Open menu
+        mobileToggle.addEventListener("click", () => {
+            mobileMenu.classList.remove("-translate-x-full");
+        });
+
+        // Close menu
+        mobileClose.addEventListener("click", () => {
+            mobileMenu.classList.add("-translate-x-full");
+        });
+
+        // Mobile dropdown toggle
+        document.querySelectorAll("#mobile-menu .dropdown-toggle").forEach(btn => {
+            btn.addEventListener("click", function() {
+                const menu = this.nextElementSibling;
+                menu.classList.toggle("hidden");
+            });
+        });
+    });
+</script>
+
+
+
+<!-- Logo and Header Section -->
+
+
+<style nonce="">
+    #main-header {
+        z-index: 9999 !important;
+    }
+
+    .shrink {
+        padding-top: 0.25rem !important;
+        padding-bottom: 0.25rem !important;
+        margin-top: 0px !important;
+    }
+
+    .shrink img {
+        height: 55px !important;
+    }
+
+    .dropdown-menu.show {
+        display: block !important;
+    }
+</style>
+
+<script nonce="">
+    // Dropdown logic
+    document.addEventListener("DOMContentLoaded", function() {
+        const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
+        const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener("click", function(e) {
+                e.stopPropagation();
+                const parent = this.closest(".dropdown");
+                const menu = parent.querySelector(".dropdown-menu");
+
+                // Close all other menus
+                dropdownMenus.forEach(m => {
+                    if (m !== menu) m.classList.remove("show");
+                });
+
+                // Toggle current menu
+                menu.classList.toggle("show");
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener("click", function() {
+            dropdownMenus.forEach(menu => menu.classList.remove("show"));
+        });
+    });
+
+    // Shrink header on scroll
+    document.addEventListener("scroll", function() {
+        const header = document.getElementById("main-header");
+        const govText = document.getElementById("gov-text");
+        const siteText = document.getElementById("site-text");
+        const mainMenu = document.getElementById("main-menu");
+
+        const isScrolled = window.scrollY > 50;
+        header.classList.toggle("shrink", isScrolled);
+        header.classList.toggle("shadow-md", isScrolled);
+        header.classList.toggle("border-b-slate-500", !isScrolled);
+        header.classList.toggle("md:bg-slate-50", isScrolled);
+        header.classList.toggle("md:bg-transparent", !isScrolled);
+        govText.classList.toggle("text-slate-800", isScrolled);
+        siteText.classList.toggle("text-xl", isScrolled);
+        siteText.classList.toggle("mt-2", !isScrolled);
+        siteText.classList.toggle("text-slate-800", isScrolled);
+        mainMenu.classList.toggle("mt-6", !isScrolled);
+        mainMenu.classList.toggle("text-slate-50", !isScrolled);
+    });
+</script>
+        </div>
+        <div class="absolute top-0 left-0 z-10 w-full h-full bg-gradient-to-b from-gray-900/20 to-transparent"></div>
+        <!-- Hero section -->
+                    <div class="container mx-auto ease-out duration-900 h-[85vh] flex items-center relative z-20">
+                <div class="px-10 hero-section">
+                    <div class="hero-content">
+                        <p class="text-2xl text-gray-200 md">Welcome to the</p>
+                        <h1 class="mb-10 text-5xl font-bold tracking-tighter text-white uppercase md:text-6xl">
+                            <span class="block mb-2">State Portal of</span>
+                            <span class="block">Nagaland</span>
+                        </h1>
+                        <a href="https://nagaland.gov.in/nagaland-profile" class="inline-flex items-center gap-2 px-8 py-3 font-semibold text-white transition-all bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 text-md">
+                            About Nagaland
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="container pb-20 mx-auto">
+        <div class="relative z-20 py-10 -mt-20 bg-white shadow-lg rounded-2xl">
+            <div class="grid grid-cols-1 gap-1 md:grid-cols-5">
+                <div class="p-5 text-center md:border-r">
+                    <a href="https://nagaland.gov.in/government">
+                        <i class="bi bi-newspaper text-white px-5 py-[18px] bg-red-500 rounded-full text-2xl shadow"></i>
+                        <h1 class="mt-10 font-semibold uppercase text-md">Government</h1>
+                        <p class="text-sm text-gray-600">Ministers,Advisors &amp; Bureaucrats</p>
+                    </a>
+                </div>
+                <div class="p-5 text-center md:border-r">
+                    <a href="https://nagaland.gov.in/webServices">
+
+                        <i class="bi bi-pc-display-horizontal text-rose-500 px-5 py-[18px] bg-slate-100 rounded-full text-2xl shadow"></i>
+                        <h1 class="mt-10 font-semibold uppercase text-md">Web Services</h1>
+                        <p class="text-sm text-gray-600">Websites &amp; Online Services</p>
+                    </a>
+                </div>
+                <div class="p-5 text-center md:border-r">
+                    <a href="https://nagaland.gov.in/business">
+                        <i class="bi bi-briefcase text-rose-500 px-5 py-[18px] bg-slate-100 rounded-full text-2xl shadow"></i>
+                        <h1 class="mt-10 font-semibold uppercase text-md">Business</h1>
+                        <p class="text-sm text-gray-600">Ease of doing business</p>
+                    </a>
+                </div>
+                <div class="p-5 text-center md:border-r">
+                    <a href="https://nagaland.gov.in/news">
+                        <i class="bi bi-newspaper text-rose-500 px-5 py-[18px] bg-slate-100 rounded-full text-2xl shadow"></i>
+                        <h1 class="mt-10 font-semibold uppercase text-md">News</h1>
+                        <p class="text-sm text-gray-600">Latest news &amp; updates</p>
+                    </a>
+                </div>
+                <div class="p-5 text-center">
+                    <a href="https://pgportal.gov.in" target="_blank" class="ext-link">
+                        <i class="bi bi-info-circle text-rose-500 px-5 py-[18px] bg-slate-100 rounded-full text-2xl shadow"></i>
+                        <h1 class="mt-10 font-semibold uppercase text-md">Grievances</h1>
+                        <p class="text-sm text-gray-600">CPGRAMS</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="pb-20">
+        <div class="container grid grid-cols-1 gap-6 mx-auto md:grid-cols-3">
+            <!-- Column 1: Latest News -->
+            <div class="flex flex-col h-full p-6 bg-white rounded-2xl shadow-lg border">
+                <!-- Header -->
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-slate-800">Latest Updates</h2>
+                    <p class="mt-1 text-sm text-gray-500">News &amp; Events</p>
+                </div>
+
+                <!-- News List -->
+                <div class="space-y-4">
+                                            
+                        
+                        <a href="#" target="_blank" class="flex items-center gap-4 p-3 transition-all duration-300 border border-gray-200 rounded-xl group hover:shadow-md hover:border-indigo-300 hover:bg-gray-50">
+
+                            
+                            <img src="https://nagaland.gov.in/assets/img/placeholder.webp" alt="Notice inviting e-Tenders for selection of System Integrator" class="object-cover w-16 h-16 rounded-lg flex-shrink-0">
+
+                            
+                            <div class="flex-1">
+                                <p class="font-semibold text-slate-700 group-hover:text-indigo-600">
+                                    Notice inviting e-Tenders for selection of System Integrator
+                                </p>
+                                <span class="flex items-center mt-1 text-xs text-gray-500">
+                                    <i class="mr-1.5 bi bi-calendar3"></i> 09 Oct 2025
+                                </span>
+                            </div>
+
+                            
+                                                    </a>
+                                            
+                        
+                        <a href="/storage/PostFiles/Procedures And Guidelines For Lien On Post And Technical Resignation.pdf" target="_blank" class="flex items-center gap-4 p-3 transition-all duration-300 border border-gray-200 rounded-xl group hover:shadow-md hover:border-indigo-300 hover:bg-gray-50">
+
+                            
+                            <img src="https://nagaland.gov.in/assets/img/placeholder.webp" alt="Procedures And Guidelines For Lien On Post And Technical Resignation" class="object-cover w-16 h-16 rounded-lg flex-shrink-0">
+
+                            
+                            <div class="flex-1">
+                                <p class="font-semibold text-slate-700 group-hover:text-indigo-600">
+                                    Procedures And Guidelines For Lien On Post And Technical Resignation
+                                </p>
+                                <span class="flex items-center mt-1 text-xs text-gray-500">
+                                    <i class="mr-1.5 bi bi-calendar3"></i> 09 Jul 2025
+                                </span>
+                            </div>
+
+                            
+                                                    </a>
+                                            
+                        
+                        <a href="/storage/PostFiles/Extraordinary Leave Benefit.pdf" target="_blank" class="flex items-center gap-4 p-3 transition-all duration-300 border border-gray-200 rounded-xl group hover:shadow-md hover:border-indigo-300 hover:bg-gray-50">
+
+                            
+                            <img src="https://nagaland.gov.in/assets/img/placeholder.webp" alt="Extraordinary Leave Benefit new Government appointees" class="object-cover w-16 h-16 rounded-lg flex-shrink-0">
+
+                            
+                            <div class="flex-1">
+                                <p class="font-semibold text-slate-700 group-hover:text-indigo-600">
+                                    Extraordinary Leave Benefit new Government appointees
+                                </p>
+                                <span class="flex items-center mt-1 text-xs text-gray-500">
+                                    <i class="mr-1.5 bi bi-calendar3"></i> 09 Jul 2025
+                                </span>
+                            </div>
+
+                            
+                                                    </a>
+                                            
+                        
+                        <a href="/storage/PostFiles/OM on handling official files in CM office.pdf" target="_blank" class="flex items-center gap-4 p-3 transition-all duration-300 border border-gray-200 rounded-xl group hover:shadow-md hover:border-indigo-300 hover:bg-gray-50">
+
+                            
+                            <img src="https://nagaland.gov.in/assets/img/placeholder.webp" alt="Office Memorandum on handling official files." class="object-cover w-16 h-16 rounded-lg flex-shrink-0">
+
+                            
+                            <div class="flex-1">
+                                <p class="font-semibold text-slate-700 group-hover:text-indigo-600">
+                                    Office Memorandum on handling official files.
+                                </p>
+                                <span class="flex items-center mt-1 text-xs text-gray-500">
+                                    <i class="mr-1.5 bi bi-calendar3"></i> 17 Jun 2025
+                                </span>
+                            </div>
+
+                            
+                                                    </a>
+                                    </div>
+
+                <!-- View All Link -->
+                <div class="pt-6 mt-auto text-center">
+                    <a href="/news" class="inline-flex items-center gap-2 px-6 py-2 text-sm font-semibold text-white transition-all bg-rose-600 rounded-lg shadow-sm hover:bg-rose-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">
+                        View All Updates
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+
+
+            <div class="p-6 bg-white rounded-2xl shadow-lg border">
+                <!-- Header -->
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-slate-800">Platform Statistics</h2>
+                    <p class="mt-1 text-sm text-gray-500">Government Web Services Overview</p>
+                </div>
+
+                <!-- Grid for Stat Cards (single column with reduced gap) -->
+                <div class="grid grid-cols-1 gap-5">
+
+                    <!-- Item 1: Websites -->
+                    <a href="https://nagaland.gov.in/gov-websites" class="flex items-center gap-5 p-4 transition-all duration-300 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-blue-300">
+                        <!-- Icon -->
+                        <div class="flex items-center justify-center flex-shrink-0 w-16 h-16 bg-blue-100 rounded-full">
+                            <i class="text-3xl text-blue-600 bi bi-globe"></i>
+                        </div>
+                        <!-- Text Content -->
+                        <div>
+                            <div class="text-3xl font-bold text-slate-800">112</div>
+                            <div class="text-sm font-medium text-gray-500">Websites Hosted</div>
+                        </div>
+                    </a>
+
+                    <!-- Item 2: Web Applications -->
+                    <a href="https://nagaland.gov.in/e-services" class="flex items-center gap-5 p-4 transition-all duration-300 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-green-300">
+                        <!-- Icon -->
+                        <div class="flex items-center justify-center flex-shrink-0 w-16 h-16 bg-green-100 rounded-full">
+                            <i class="text-3xl text-green-600 bi bi-window-stack"></i>
+                        </div>
+                        <!-- Text Content -->
+                        <div>
+                            <div class="text-3xl font-bold text-slate-800">27</div>
+                            <div class="text-sm font-medium text-gray-500">Web Applications</div>
+                        </div>
+                    </a>
+
+                    <!-- Item 3: Mobile Apps -->
+                    <a href="https://nagaland.gov.in/apps" class="flex items-center gap-5 p-4 transition-all duration-300 bg-white border border-gray-200 rounded-xl hover:shadow-md hover:border-purple-300">
+                        <!-- Icon -->
+                        <div class="flex items-center justify-center flex-shrink-0 w-16 h-16 bg-purple-100 rounded-full">
+                            <i class="text-3xl text-purple-600 bi bi-phone"></i>
+                        </div>
+                        <!-- Text Content -->
+                        <div>
+                            <div class="text-3xl font-bold text-slate-800">25</div>
+                            <div class="text-sm font-medium text-gray-500">Mobile Apps</div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+            <!-- Column 3: Who's Who -->
+            <div class="flex flex-col h-full p-6 bg-white rounded-2xl shadow-lg border">
+                <!-- Header -->
+                <div class="mb-6 text-center">
+                    <h2 class="text-2xl font-bold text-slate-800">Who's Who</h2>
+                    <p class="mt-1 text-sm text-gray-500">Functionaries &amp; Dignitaries</p>
+                </div>
+
+                <!-- VIP List -->
+                <div class="space-y-4">
+                                            <div class="flex items-center justify-between gap-4 p-3 transition-all duration-300 border border-gray-200 rounded-xl hover:shadow-md hover:border-indigo-300 hover:bg-gray-50">
+
+                            <!-- Person Info -->
+                            <div class="flex items-center flex-1 gap-4">
+                                <img src="/storage/vips/CADnHfMFLsLgsN0VSXtfhH9QDLB4hkYxgxZeiHZH.webp" alt="Shri. Ajay Kumar Bhalla" class="object-cover w-20 h-20 rounded-full flex-shrink-0 ring-2 ring-white">
+                                <div class="flex-1">
+                                    <p class="font-semibold text-slate-700">Shri. Ajay Kumar Bhalla</p>
+                                    <p class="text-sm text-gray-500">Governor of Nagaland</p>
+                                </div>
+                            </div>
+
+                            <!-- Action Links -->
+                            <div class="flex items-center flex-shrink-0 gap-2">
+                                <a href="governors" title="View Profile" class="flex items-center justify-center w-10 h-10 text-gray-500 transition bg-gray-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600">
+                                    <i class="bi bi-person-vcard"></i>
+                                </a>
+                                                                    <a href="https://twitter.com/RajBhavanKohima" target="_blank" rel="noopener" title="View on X (Twitter)" class="flex items-center justify-center w-10 h-10 text-gray-500 transition bg-gray-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600">
+                                        <i class="bi bi-twitter-x"></i>
+                                    </a>
+                                                            </div>
+
+                        </div>
+                                            <div class="flex items-center justify-between gap-4 p-3 transition-all duration-300 border border-gray-200 rounded-xl hover:shadow-md hover:border-indigo-300 hover:bg-gray-50">
+
+                            <!-- Person Info -->
+                            <div class="flex items-center flex-1 gap-4">
+                                <img src="/storage/vips/Nagaland-cm.jpg" alt="Shri. Neiphiu Rio" class="object-cover w-20 h-20 rounded-full flex-shrink-0 ring-2 ring-white">
+                                <div class="flex-1">
+                                    <p class="font-semibold text-slate-700">Shri. Neiphiu Rio</p>
+                                    <p class="text-sm text-gray-500">Chief Minister of Nagaland</p>
+                                </div>
+                            </div>
+
+                            <!-- Action Links -->
+                            <div class="flex items-center flex-shrink-0 gap-2">
+                                <a href="chief-ministers" title="View Profile" class="flex items-center justify-center w-10 h-10 text-gray-500 transition bg-gray-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600">
+                                    <i class="bi bi-person-vcard"></i>
+                                </a>
+                                                                    <a href="https://twitter.com/Neiphiu_Rio" target="_blank" rel="noopener" title="View on X (Twitter)" class="flex items-center justify-center w-10 h-10 text-gray-500 transition bg-gray-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600">
+                                        <i class="bi bi-twitter-x"></i>
+                                    </a>
+                                                            </div>
+
+                        </div>
+                                            <div class="flex items-center justify-between gap-4 p-3 transition-all duration-300 border border-gray-200 rounded-xl hover:shadow-md hover:border-indigo-300 hover:bg-gray-50">
+
+                            <!-- Person Info -->
+                            <div class="flex items-center flex-1 gap-4">
+                                <img src="/storage/vips/chief-secy-2.jpg" alt="Shri. Sentiyanger Imchen" class="object-cover w-20 h-20 rounded-full flex-shrink-0 ring-2 ring-white">
+                                <div class="flex-1">
+                                    <p class="font-semibold text-slate-700">Shri. Sentiyanger Imchen</p>
+                                    <p class="text-sm text-gray-500">Chief Secretary of Nagaland</p>
+                                </div>
+                            </div>
+
+                            <!-- Action Links -->
+                            <div class="flex items-center flex-shrink-0 gap-2">
+                                <a href="https://chiefsecretary.nagaland.gov.in" title="View Profile" class="flex items-center justify-center w-10 h-10 text-gray-500 transition bg-gray-100 rounded-full hover:bg-indigo-100 hover:text-indigo-600">
+                                    <i class="bi bi-person-vcard"></i>
+                                </a>
+                                                            </div>
+
+                        </div>
+                                    </div>
+            </div>
+
+        </div>
+    </div>
+
+    <section class="bg-slate-50">
+        <div class="container px-6 mx-auto md:px-0">
+            <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+                <div class="py-20">
+                    <div class="mb-10">
+                        <h1 class="text-4xl font-bold">Nagaland</h1>
+                        <p class="text-gray-500">The land of festivals</p>
+                    </div>
+                    <p class="mb-10 text-lg text-gray-500">
+                        A land engulfed in mystery, inhabited by vibrant
+                        people zealously guarding their culture – dancers, warriors, head-hunters; mountains,
+                        valleys, forests – all these form the portrait of Nagaland the moment the word is uttered.
+                        But, from extreme mystery to hosting a globally famous cultural festival, Nagaland has come
+                        a long way over the years and etched a name for itself in the world’s tourist destination
+                        map.
+                    </p>
+                    <i class="bi bi-map-fill rounded-full px-[10px] py-2 bg-slate-500 text-white mr-2"></i><a href="https://tourism.nagaland.gov.in/how-to-get-there/" class="font-semibold text-slate-700 ext-link">
+                        How to
+                        get there</a> <br> <br>
+                    <a href="https://tourism.nagaland.gov.in/entry-permits/" class="font-semibold text-slate-700 ext-link"><i class="bi bi-file-earmark-check  rounded-full px-[10px] py-2 bg-slate-500 text-white mr-2"></i>
+                        Entry Permit</a> <br> <br><br><br>
+                    <a href="https://tourism.nagaland.gov.in" class="inline-flex items-center gap-2 px-8 py-3 text-sm font-semibold text-white transition-all bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700 ext-link">
+                        Discover Nagaland
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+                <div class="relative z-10 hidden md:block ">
+                    <div class="absolute inset-0 bg-top bg-cover naga-back">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 text-gray-800" id="contact">
+        <div class="container px-6 mx-auto md:px-0">
+            <section class="grid h-full bg-white md:grid-cols-2">
+                <!-- Contact Info -->
+                <div class="p-6">
+                    <h2 class="text-lg font-semibold text-rose-500">Contact</h2>
+
+                    <h2 class="mb-4 text-3xl font-bold text-gray-800">Get in Touch</h2>
+                    <p class="mb-6 text-gray-600">We’d love to hear from you. Reach out to us for queries, support,
+                        <br>or
+                        collaboration opportunities.
+                    </p>
+
+                    <div class="space-y-4 text-sm text-gray-700">
+                        <div class="flex items-start gap-3">
+                            <i class="text-xl bi bi-geo-alt text-rose-600"></i>
+                            <span><b>Department of Information Technology &amp; Communication</b>,<br> Kohima, Nagaland -
+                                797001</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="text-xl bi bi-telephone text-rose-600"></i>
+                            <span>+91 370 2274169</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="text-xl bi bi-envelope text-rose-600"></i>
+                            <span>dit-ngl(AT)nic(DOT)in</span>
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="https://www.google.com/maps?q=Department+of+Information+Technology+and+Communication,+Kohima,+Nagaland+797001" target="_blank" class="inline-flex items-center px-5 py-3 text-sm font-medium text-white transition rounded-full shadow bg-gradient-to-r from-rose-500 to-rose-600 hover:from-rose-600 hover:to-rose-700">
+                            <i class="bi bi-geo-alt-fill me-2"></i> View Location on Map
+                        </a>
+                    </div>
+                </div>
+                <!-- Left: Background Image -->
+                <div class="bg-cover bg-center min-h-[300px] md:min-h-[500px] hero-map">
+                </div>
+            </section>
+
+        </div>
+        <style nonce="">
+            .hero-map {
+                background-image: url('https://nagaland.gov.in/assets/img/map.webp');
+            }
+        </style>
+    </section>
+        <footer class="pt-12 text-gray-300 bg-slate-800">
+        <div class="container grid grid-cols-1 gap-10 px-6 pb-10 mx-auto md:grid-cols-3">
+
+            <!-- Address Section -->
+            <div>
+                <div class="flex">
+                    <img src="https://nagaland.gov.in/assets/img/gon-logo.png" class="h-[80px]">
+                    <div>
+                        <h1 class="mt-4 ml-6 text-xl font-bold uppercase text-gray-50 leading-0">Official State Portal
+                        </h1>
+                        <span class="block mt-0 ml-6 text-xs font-normal text-gray-200 leading-0">Government of
+                            Nagaland</span>
+                    </div>
+                </div>
+                <p class="mt-6 text-sm leading-relaxed text-slate-400">
+                    Department of Information Technology &amp; Communication<br>
+                    Thizama Road, Kohima 292001<br>
+                    Nagaland<br>
+                    Phone: +91 370 2274169<br>
+                    Email: <a href="mailto:dit-ngl@nic.in" class="text-rose-400 hover:text-rose-500">dit-ngl@nic.in</a>
+                </p>
+            </div>
+
+            <!-- Latest Updates -->
+            <div>
+                <h4 class="mb-4 text-lg font-semibold text-white">Latest Updates</h4>
+                <ul class="space-y-2 text-sm">
+                                            <li>
+                                                        <span class="text-sm text-slate-400 block">5 days ago</span>
+                        </li>
+                                            <li>
+                                                            <a href="/storage/PostFiles/Procedures And Guidelines For Lien On Post And Technical Resignation.pdf" target="_blank" class="font-semibold hover:underline hover:text-rose-700">Procedures And Guidelines For Lien On Post And Technical Resignation</a>
+                                                        <span class="text-sm text-slate-400 block">3 months ago</span>
+                        </li>
+                                            <li>
+                                                            <a href="/storage/PostFiles/Extraordinary Leave Benefit.pdf" target="_blank" class="font-semibold hover:underline hover:text-rose-700">Extraordinary Leave Benefit new Government appointees</a>
+                                                        <span class="text-sm text-slate-400 block">3 months ago</span>
+                        </li>
+                                    </ul>
+            </div>
+
+            <!-- Visitor Count -->
+            <div>
+                <h4 class="mb-4 text-lg font-semibold text-white">Visitor Count</h4>
+                <p class="text-sm">Total Visitors: <span class="font-bold text-rose-400">123456</span></p>
+                <p class="mt-2 text-sm">Last Updated: <span class="text-rose-400">07-Aug-2025</span></p>
+                <div class="flex mx-auto mt-6 space-x-4">
+                    <a href="https://www.facebook.com/NagalandMyGov/#" class="bg-rose-500 text-white px-2 py-[4px] rounded-full hover:bg-rose-600 transition ext-link">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="https://twitter.com/MyGovNagaland" class="bg-rose-500 text-white px-2 py-[4px] rounded-full hover:bg-rose-600 transition ext-link">
+                        <i class="bi bi-twitter-x"></i>
+                    </a>
+                    <a href="https://www.instagram.com/mygovnagaland/?hl=en" class="bg-rose-500 text-white px-2 py-[4px] rounded-full hover:bg-rose-600 transition ext-link">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCYpIWIAk_KPBdqvToVHmB6g" class="bg-rose-500 text-white px-2 py-[4px] rounded-full hover:bg-rose-600 transition extlink">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Social Media -->
+        <div class="container px-6 pt-6 pb-10 mx-auto text-center border-t border-gray-700">
+            <p class="text-sm text-slate-400">For best experience view site in 1024 X 1080 resolution. Supports all
+                modern browsers
+                Chrome v84+, Safari
+                4+,
+                Mozilla Firefox v90+.<br>
+                The Nagaland State Portal is W3C, GIGW and WCAG 2.0 compliant <br><br>
+
+                Copyrights © 2021 All Rights Reserved by Department of Information Technology &amp; Communication</p>
+            <p class="text-sm text-slate-400">
+                <a href="https://nagaland.gov.in/pages/terms-of-use" class="underline hover:text-rose-400">Terms of
+                    Use</a> /
+                <a href="https://nagaland.gov.in/pages/privacy-policy" class="underline hover:text-rose-400">Privacy
+                    Policy</a> /
+                <a href="https://nagaland.gov.in/pages/copyright-statement" class="underline hover:text-rose-400">Copyright Statement</a> /
+                <a href="https://nagaland.gov.in/pages/disclaimer" class="underline hover:text-rose-400">Disclaimer</a>
+                /
+                <a href="https://nagaland.gov.in/pages/accessibility-statement" class="underline hover:text-rose-400">Accessibility Statement</a> /
+                <a href="https://nagaland.gov.in/pages/site-map" class="underline hover:text-rose-400">Site Map</a> /
+                <a href="/faqs" class="underline hover:text-rose-400">FAQS</a>
+            </p>
+        </div>
+    </footer>
+    <button id="scrollToTopBtn" class="fixed hidden px-3 py-2 text-white transition-all duration-300 bg-red-500 rounded-full shadow-lg bottom-6 right-6 hover:bg-red-600" aria-label="Scroll to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script nonce="">
+        // Toggle contrast
+        document.getElementById("toggleContrast").addEventListener("click", function() {
+            document.body.classList.toggle("invert");
+        });
+    </script>
+
+
+
+</body></html>

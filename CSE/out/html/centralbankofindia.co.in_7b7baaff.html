@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en"><head>
+        <meta charset="UTF-8">
+        <title>Redirecting to new domain</title>
+        <style>
+            :root {
+                --ruddy-blue: #7FAED9;
+                --cardinal: #CB063B;
+                --united-nations-blue: #5292CE;
+                --amaranth-pink: #E89DAE;
+                --rose-red: #C72C59;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: #fff;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .redirect-box {
+                background: #ffffff;
+                border-radius: 12px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+                display: flex;
+                max-width: 720px;
+                width: 95%;
+                overflow: hidden;
+            }
+
+            .redirect-left {
+                background-color: #7faed917;
+                padding: 30px 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 35%;
+                min-width: 180px;
+            }
+
+            .redirect-left img {
+                max-width: 200px;
+                height: auto;
+            }
+
+            .redirect-divider {
+                width: 2px;
+                background-color: #e0e0e0;
+            }
+
+            .redirect-right {
+                padding: 30px;
+                width: 65%;
+                text-align: left;
+                background: #fff;
+            }
+
+            .redirect-right h2 {
+                color: var(--cardinal);
+                font-size: 22px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
+            .redirect-right p {
+                color: #444;
+                font-size: 16px;
+                margin-bottom: 10px;
+            }
+
+            .redirect-right a {
+                color: var(--united-nations-blue);
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+            .redirect-right a:hover {
+                text-decoration: underline;
+            }
+
+            .spinner {
+                margin-top: 20px;
+                width: 30px;
+                height: 30px;
+                border: 4px solid #f3f3f3;
+                border-top: 4px solid var(--rose-red);
+                border-radius: 50%;
+                animation: spin 1s linear infinite;
+            }
+
+            @keyframes spin {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .timer {
+                margin-top: 15px;
+                font-size: 14px;
+                color: #666;
+            }
+
+            @media (max-width: 600px) {
+                .redirect-box {
+                    flex-direction: column;
+                }
+
+                .redirect-left,
+                .redirect-right {
+                    width: 100%;
+                }
+
+                .redirect-divider {
+                    display: none;
+                }
+
+                .redirect-left {
+                    padding: 20px 10px;
+                }
+
+                .redirect-right {
+                    padding: 20px;
+                }
+
+                .redirect-right h2 {
+                    text-align: center;
+                }
+
+                .redirect-right p,
+                .timer {
+                    text-align: center;
+                }
+
+                .spinner {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        </style>
+        <!-- <script>
+            let countdown = 120;
+            function updateTimer() {
+                document.getElementById("timer").innerText = countdown;
+                if (countdown === 0) {
+                    window.location.href = "https://centralbank.bank.in/";
+                }
+                countdown--;
+            }
+            window.onload = function () {
+                updateTimer();
+                setInterval(updateTimer, 1000);
+            };
+
+        </script> -->
+
+        <script>
+            // Disable right-click context menu
+            window.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+
+            // Disable keydown for common devtools shortcuts
+            window.addEventListener('keydown', function (e) {
+                // Disable F12
+                if (e.key === 'F12') {
+                    e.preventDefault();
+                }
+
+                // Disable Ctrl+Shift+I/J/C/U
+                if (e.ctrlKey && e.shiftKey && ['I', 'J', 'C'].includes(e.key.toUpperCase())) {
+                    e.preventDefault();
+                }
+
+                // Disable Ctrl+U (view source)
+                if (e.ctrlKey && e.key.toUpperCase() === 'U') {
+                    e.preventDefault();
+                }
+
+                // Disable Ctrl+Shift+K (Firefox Web Console)
+                if (e.ctrlKey && e.shiftKey && e.key.toUpperCase() === 'K') {
+                    e.preventDefault();
+                }
+            });
+
+            // Optional: Detect if devtools is open (basic, can be bypassed)
+            let devtoolsOpen = false;
+            const threshold = 160;
+            setInterval(() => {
+                const widthThreshold = window.outerWidth - window.innerWidth > threshold;
+                const heightThreshold = window.outerHeight - window.innerHeight > threshold;
+                if (widthThreshold || heightThreshold) {
+                    if (!devtoolsOpen) {
+                        devtoolsOpen = true;
+                        alert('Developer tools are disabled on this page.');
+                        window.location.href = "https://centralbank.bank.in/"; // Redirect away if devtools open
+                    }
+                } else {
+                    devtoolsOpen = false;
+                }
+            }, 1000);
+
+            // Your existing redirect timer function below (keep this!)
+            let countdown = 5;
+            function updateTimer() {
+                document.getElementById("timer").innerText = countdown;
+                if (countdown === 0) {
+                    window.location.href = "https://centralbank.bank.in/";
+                }
+                countdown--;
+            }
+            window.onload = function () {
+                updateTimer();
+                setInterval(updateTimer, 1000);
+            };
+        </script>
+
+    </head>
+
+    <body>
+        <div class="redirect-box">
+            <div class="redirect-left">
+                <img src="https://centralbankofindia.co.in/sites/default/files/cbi-logo.jpg" alt="J&amp;K Bank Logo">
+            </div>
+            <div class="redirect-divider"></div>
+            <div class="redirect-right">
+                <h2>Important Update</h2>
+                <p>Our website domain has changed to</p>
+                <p>
+                    <a href="https://centralbank.bank.in" target="_blank">https://centralbank.bank.in</a>
+                </p>
+                <div class="spinner"></div>
+                <div class="timer">
+                    You will be redirected to the new domain in <span id="timer">5</span> seconds...
+                </div>
+            </div>
+        </div>
+    
+
+    
+    </body></html>

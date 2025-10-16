@@ -1,0 +1,1232 @@
+<!DOCTYPE html><html><head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" sizes="16x16" href="/content/images/favicon.ico">
+    <meta name="robots" content="noindex, nofollow">
+    <!--<link rel="stylesheet" type="text/css" href="/content/css/products-style.min.css">
+    <link rel="stylesheet" type="text/css" href="/content/css/home-styles-new-v2.min.css">-->
+    <script type="text/javascript" src="/Content/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/Content/js/common-home-min.js?ref="></script>
+    <link media="all" href="/content/css/header_css.min.css?v=1" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/Content/css/bootstrap533.min.css" type="text/css">
+    <link rel="stylesheet" href="/Content/css/theme-style.min.css?v=1 " type="text/css">
+    <link href="/Content/css/footer-new.min.css" rel="stylesheet">
+    <style>
+        /* Font */
+        @font-face {
+            font-family: "Mulish";
+            font-style: normal;
+            font-weight: 200 1000;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/mulish/v13/1Ptvg83HX_SGhgqk0QotcqA.woff2)format("woff2");
+            unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF
+        }
+
+        @font-face {
+            font-family: "Mulish";
+            font-style: normal;
+            font-weight: 200 1000;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/mulish/v13/1Ptvg83HX_SGhgqk3wot.woff2)format("woff2");
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        .horizontal-scroller.with_shadow .scroll_item {
+            flex: 0 0 270px;
+        }
+
+       /* .top-section {
+            min-height: calc(100vh - 52px);
+        }*/
+
+        @media (max-width: 991px) {
+            .top-section {
+                min-height: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header1">
+        <div class="header_top">
+            <div class="container">
+                <a href="https://www.icicidirect.com" class="logo_wrap">
+                    <img class="desk_logo" src="/Content/images/ICICI-logo-white.svg" alt="ICICI-logo" width="260" height="52">
+                    <img class="mob_logo" src="/Content/images/ICICI-logo-mob.svg" alt="ICICI-logo" width="75" height="34">
+                </a>
+                <ul class="main_menu level_1">
+                    <li>
+                        <a href="javascript:void(0)" class="">Invest</a>
+                        <div class="menu_dropdown" style="display: none;">
+                            <div class="left">
+                                <ul class="level_2">
+                                    <li class="">
+                                        <a href="/stocks">Stocks</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/stocks">Why Choose Us</a></li>
+                                            <li><a href="/equity-products/margin-trading">Buy Now, Pay Later (MTF)</a></li>
+                                            <li><a href="/research/equity">Stock Investing ideas</a></li>
+                                            <li><a href="/equity-products/stock-sip">Stock SIPs</a></li>
+                                            <li><a href="/equity-products/one-click">Basket Investing</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="active">
+                                        <a href="/mutual-funds">Mutual Funds</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/mutual-funds">All About Mutual Funds</a></li>
+
+                                            <li><a href="/mutual-funds/products/sip">Start SIP</a></li>
+                                            <li><a href="/mutual-funds/new-fund-offering-nfo/existing">Explore NFOs</a></li>
+                                            <li><a href="/mutual-funds/idirect-one-click">One-Click MF Baskets</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/ipo">IPO</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/ipo">Explore IPOs</a></li>
+                                            <li><a href="/ipo/upcoming-ipos">Upcoming IPOs</a></li>
+                                            <li><a href="/ipo/closed-ipos">Closed IPOs</a></li>
+                                            <li><a href="/ipo/current-ipos">Current IPOs</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/exchange-traded-funds-etf">ETF</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/exchange-traded-funds-etf">Invest in Exchange Traded Funds</a></li>
+
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/fd-and-bonds/icici-bank-fd">FD &amp; Bonds</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/fd-and-bonds/icici-home-finance-fd">ICICI Home Finance FD</a></li>
+                                            <li><a href="/fd-and-bonds/icici-bank-fd">ICICI Bank FD</a></li>
+                                            <li><a href="/fd-and-bonds/rbi-bonds">RBI Floating Rate Bonds</a></li>
+                                            <li><a href="/fd-and-bonds/sovereign-gold-bond">Sovereign Gold Bonds</a></li>
+                                            <li><a href="/fd-and-bonds/government-securities">Government Securities</a></li>
+                                            <!--<li><a href="/fd-and-bonds/real-estate-investment-trust">Real Estate Investment Trusts (REITs)</a></li>-->
+                                            <li><a href="/bonds/exchange-traded-bonds-ncds">Exchange Traded Bonds</a></li>
+                                            <li><a href="/bonds/">54EC Capital Gain Bonds</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/national-pension-scheme">NPS</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/national-pension-scheme">Explore NPS</a></li>
+                                            <li><a href="/national-pension-scheme/corporate-nps">Corporate NPS</a></li>
+                                        </ul>
+                                    </li>
+				    <li>
+                                        <a href="/fd-and-bonds/real-estate-investment-trust">REITs</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/fd-and-bonds/real-estate-investment-trust">Explore Real Estate Investment Trusts (REITs)</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="level_3 level_3_append"><li><a href="/mutual-funds">All About Mutual Funds</a></li><li><a href="/mutual-funds/products/sip">Start SIP</a></li><li><a href="/mutual-funds/new-fund-offering-nfo/existing">Explore NFOs</a></li><li><a href="/mutual-funds/idirect-one-click">One-Click MF Baskets</a></li></ul>
+                            </div>
+                            <div class="right">
+                                <a class="menu_banner" target="_blank" href="https://opendemat.icicidirect.com/demataccountopening?id_source=ICICIdirect&amp;id_medium=topmenu&amp;id_campaign=OAO2.0&amp;id_content=header">
+                                    <img src="/Content/images/instant-cash-eATM-banner1.webp" alt="latest IPO" width="292" height="330" loading="lazy">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="">Trade</a>
+                        <div class="menu_dropdown" style="display: none;">
+                            <div class="left">
+                                <ul class="level_2">
+                                    <li class="active">
+                                        <a href="/stocks">Stocks</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/equity-products/intraday-trading">Intraday</a></li>
+                                            <li><a href="/equity-products/margin-trading">Margin Trading Facility</a></li>
+                                            <li><a href="/equity/i-lens/expert-screeners/by-tag/most-popular">Screeners</a></li>
+                                            <li><a href="/equity-products/shares-as-margin">Shares as Margin</a></li>
+                                            <li><a href="/stocks#TradingFeatures">Overview</a></li>
+                                            <!-- <li><a href="javascript:void(0)">Charting Tools</a></li> -->
+
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="/futures-and-options">F&amp;O</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/futures-and-options">Overview</a></li>
+                                            <li><a href="/futures-and-options/products">Smart Tools</a></li>
+                                            <li><a href="/futures-and-options/fno-execution">APIs &amp; Algorithmic Trading</a></li>
+                                            <li><a href="/research/derivative">F&amp;O Research Products</a></li>
+                                            <li><a href="/calculators/margin-calculator">Margin Calculator</a></li>
+                                            <li><a href="/futures-and-options/options-stocks-list">Pledge List</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="/commodities-market">Commodities</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/commodities-market">Commodity Trading</a></li>
+                                            <li><a href="/commodities-market/top-gainer/mcx/futcom">Top Gainers- Commodity</a></li>
+                                            <li><a href="/commodity-market/products">Commodity Products</a></li>
+                                            <li><a href="/commodities-market/active-by-value/mcx/futcom">Most Active Commodity Contracts</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                                <ul class="level_3 level_3_append"><li><a href="/equity-products/intraday-trading">Intraday</a></li><li><a href="/equity-products/margin-trading">Margin Trading Facility</a></li><li><a href="/equity/i-lens/expert-screeners/by-tag/most-popular">Screeners</a></li><li><a href="/equity-products/shares-as-margin">Shares as Margin</a></li><li><a href="/stocks#TradingFeatures">Overview</a></li></ul>
+                            </div>
+                            <div class="right">
+                                <a class="menu_banner" target="_blank" href="https://opendemat.icicidirect.com/demataccountopening?id_source=ICICIdirect&amp;id_medium=topmenu&amp;id_campaign=OAO2.0&amp;id_content=header">
+                                    <img src="/Content/images/pay-later-MTF-banner1.webp" alt="latest IPO" width="292" height="330" loading="lazy">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="">Markets</a>
+                        <div class="menu_dropdown" style="display: none;">
+                            <div class="left">
+                                <ul class="level_2">
+                                    <li class="active">
+                                        <a href="/share-market-today">Market Update</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/share-market-today">Share Market Today</a></li>
+                                            <li><a href="/share-market-today/top-gainers-nse">Top Gainers &amp; Losers</a></li>
+                                            <li><a href="/share-market-today/52-week-high-nse">52 Week High &amp; Low</a></li>
+                                            <li><a href="/share-market-today/most-active-by-value/nse/nifty-50/intraday">Market Movers</a></li>
+                                            <li><a href="/share-market-today/news">Market News</a></li>
+                                            <li><a href="/research/equity/finace">FinAce</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/share-market-today/indices">Indices</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/share-market-today/indices">Explore All Indices</a></li>
+                                            <li><a href="/equity/index/nse/nifty-50/20559">Nifty 50</a></li>
+                                            <li><a href="/equity/index/bse/bse-sensex/20558">Sensex</a></li>
+                                            <li><a href="/equity/index/nse/nifty-bank/26753">Bank Nifty</a></li>
+                                            <li><a href="/share-market-today/global-indices">Global Indices</a></li>
+                                            <li><a href="/equity/market-today/index-contributors">Index Contribution</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/research/equity">Research</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/research">Explore Research Ideas</a></li>
+                                            <li><a href="/research/equity">Investing Ideas</a></li>
+                                            <!-- <li><a href="javascript:void(0)">Intraday Trading Ideas</a></li> -->
+                                            <li><a href="/equity/i-lens/expert-screeners/by-tag/most-popular/">Stock Screener</a></li>
+                                            <!-- <li><a href="javascript:void(0)">One-Click Portfolios</a></li>  -->
+                                            <li><a href="/research/derivative">F&amp;O Trading Ideas</a></li>
+                                            <!-- <li><a href="javascript:void(0)">Mutual Fund Recommendations</a></li>  -->
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/stock/companies">Explore Stocks</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/stock/companies">Stock Directory</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="level_3 level_3_append"><li><a href="/share-market-today">Share Market Today</a></li><li><a href="/share-market-today/top-gainers-nse">Top Gainers &amp; Losers</a></li><li><a href="/share-market-today/52-week-high-nse">52 Week High &amp; Low</a></li><li><a href="/share-market-today/most-active-by-value/nse/nifty-50/intraday">Market Movers</a></li><li><a href="/share-market-today/news">Market News</a></li><li><a href="/research/equity/finace">FinAce</a></li></ul>
+                            </div>
+                            <div class="right">
+                                <a class="menu_banner" target="_blank" href="https://opendemat.icicidirect.com/demataccountopening?id_source=ICICIdirect&amp;id_medium=topmenu&amp;id_campaign=OAO2.0&amp;id_content=header">
+                                    <img src="/Content/images/stocks-recommdtn-banner1.webp" alt="latest IPO" width="292" height="330" loading="lazy">
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="javascript:void(0)" class="">Learning</a>
+                        <div class="menu_dropdown" style="display: none;">
+                            <div class="left">
+                                <ul class="level_2">
+                                    <li class="active">
+                                        <a href="/ilearn">iLearn</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/ilearn">iLearn- Learning Platform</a></li>
+                                            <li><a href="/ilearn/all/courses">Explore Learning Modules</a></li>
+                                            <li><a href="/ilearn/all/articles">Read Articles</a></li>
+                                            <li><a href="/ilearn/all/videos">Watch Videos</a></li>
+                                            <li><a href="/ilearn/all/infographics">Learn Through Infographics</a></li>
+                                            <li><a href="/ilearn/all/podcasts">Listen to Podcast</a></li>
+                                            <li><a href="/ilearn/about-icicidirect/videos">Know More About ICICI Direct</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/calculators">Calculators</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/calculators/cagr-calculator">CAGR Calculator</a></li>
+                                            <li><a href="/calculators/sip-calculator">SIP Calculator</a></li>
+                                            <li><a href="/calculators/margin-calculator">Margin Calculator</a></li>
+                                            <li><a href="/calculators/emi-calculator">EMI Calculator</a></li>
+                                            <li><a href="/calculators/lumpsum-calculator">Lumpsum Calculator</a></li>
+                                            <li><a href="/calculators/gratuity-calculator">Gratuity Calculator</a></li>
+                                            <li><a href="/calculators">More Calculators</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="level_3 level_3_append"><li><a href="/ilearn">iLearn- Learning Platform</a></li><li><a href="/ilearn/all/courses">Explore Learning Modules</a></li><li><a href="/ilearn/all/articles">Read Articles</a></li><li><a href="/ilearn/all/videos">Watch Videos</a></li><li><a href="/ilearn/all/infographics">Learn Through Infographics</a></li><li><a href="/ilearn/all/podcasts">Listen to Podcast</a></li><li><a href="/ilearn/about-icicidirect/videos">Know More About ICICI Direct</a></li></ul>
+                            </div>
+                            <div class="right">
+                                <div class="features_menu">
+                                    <div class="heading">Quick Access</div>
+                                    <div class="f_list">
+                                        <a href="/3-in-1-account">
+                                            <i class="icon"><img src="/Content/images/f_icon1.svg" alt="" width="" height="" loading="lazy"></i>
+                                            <div>
+                                                <span>Account Opening Steps</span>
+                                                <p>Learn the steps &amp; benefits of opening a 3-in-1 account</p>
+                                            </div>
+                                        </a>
+                                        <a href="/ilearn/stocks/courses">
+                                            <i class="icon"><img src="/Content/images/f_icon2.svg" alt="" width="" height="" loading="lazy"></i>
+                                            <div>
+                                                <span>Learn Stock Market</span>
+                                                <p>Made by experts, it covers everything about stock market</p>
+                                            </div>
+                                        </a>
+                                        <a href="/ipo">
+                                            <i class="icon"><img src="/Content/images/f_icon3.svg" alt="" width="" height="" loading="lazy"></i>
+                                            <div>
+                                                <span>IPO Allotment Status</span>
+                                                <p>Get to know ways to check IPO allotment status</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="">Offerings</a>
+                        <div class="menu_dropdown" style="display: none;">
+                            <div class="left">
+                                <ul class="level_2">
+                                    <li class="">
+                                        <a href="https://opendemat.icicidirect.com/demataccountopening">Account Opening</a>
+                                        <ul class="level_3" style="display: none;">
+
+
+                                            <li><a href="/open-nri-account">Open NRI Account</a></li>
+                                            <li><a href="/3-in-1-account">Open ICICI 3-in-1 Account</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/wealth-management-services">Private Wealth Management</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/wealth-management-services">Manage Your Wealth</a></li>
+                                            <li><a href="/global-investment-services">Global Investment</a></li>
+                                            <li><a href="/services/portfolio-management-services">Portfolio Management Services</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="/insurance-online">Insurance</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/insurance-online">Get Insured</a></li>
+                                            <li><a href="/insurance-online/health-insurance">Health Insurance</a></li>
+                                            <li><a href="/insurance-online/term-insurance">Term Insurance</a></li>
+                                            <li><a href="/insurance-online/car-insurance">Car Insurance</a></li>
+                                            <li><a href="/insurance-online/bike-insurance">Bike Insurance</a></li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="active">
+                                        <a href="javascript:void(0)">APIs &amp; Tools</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/futures-and-options/api/breeze">Breeze API</a></li>
+                                            <li><a href="/futures-and-options/fno-execution">Execution Algos</a></li>
+                                            <li><a href="/futures-and-options/spring">Automated Trading Platform- Spring</a></li>
+                                            <li><a href="/futures-and-options/backtester">Backtesting Tools</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="">
+                                        <a href="">Web Platform</a>
+                                        <ul class="level_3" style="display: none;">
+                                            <li><a href="/futures-and-options/products/my-watchlist">Watchlist</a></li>
+                                        </ul>
+                                    </li>
+
+                                </ul>
+                                <ul class="level_3 level_3_append"><li><a href="/futures-and-options/api/breeze">Breeze API</a></li><li><a href="/futures-and-options/fno-execution">Execution Algos</a></li><li><a href="/futures-and-options/spring">Automated Trading Platform- Spring</a></li><li><a href="/futures-and-options/backtester">Backtesting Tools</a></li></ul>
+                            </div>
+                            <div class="right">
+                                <div class="features_menu">
+                                    <div class="heading">3-in-1 Account Features</div>
+                                    <div class="f_list">
+                                        <a href="/3-in-1-account">
+                                            <i class="icon"><img src="/Content/images/f_icon4.svg" alt="" width="" height="" loading="lazy"></i>
+                                            <div>
+                                                <span>One-Stop Solution</span>
+                                                <p>Link ICICI Bank Account to avail 3-in-1 account benefits</p>
+                                            </div>
+                                        </a>
+                                        <a href="/3-in-1-account">
+                                            <i class="icon"><img src="/Content/images/f_icon5.svg" alt="" width="" height="" loading="lazy"></i>
+                                            <div>
+                                                <span>Interest on Unused Funds</span>
+                                                <p>Earn interest on unused funds parked in trading account</p>
+                                            </div>
+                                        </a>
+                                        <a href="/3-in-1-account">
+                                            <i class="icon"><img src="/Content/images/f_icon6.svg" alt="" width="" height="" loading="lazy"></i>
+                                            <div>
+                                                <span>Trade Seamlessly</span>
+                                                <p>Hassle-free fund allocation during live market for trading</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="noLevel_menu">
+                        <a href="javascript:void(0)">Pricing</a>
+                        <div class="menu_dropdown">
+                            <ul class="level_3">
+                                <li><a href="/brokerage">Explore All Brokerage Plans</a></li>
+                                <li><a href="/brokerage/ivalue-plan">Plan for Traders</a></li>
+                                <li><a href="/brokerage/prime-plan">Plan for Investors</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="noLevel_menu">
+                        <a href="javascript:void(0)">NRI</a>
+                        <div class="menu_dropdown">
+                            <ul class="level_3">
+                                <li><a href="/open-nri-account">NRI Investments</a></li>
+                                <li><a href="/services/brokerage/nri-brokerage-plan">NRI Brokerage</a></li>
+                                <li><a href="/open-nri-account">RI to NRI</a></li>
+                                <li><a href="/open-nri-account">Request Callback</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="/services/customer-care" class="no-arrow hide-in-destop">Customer care</a></li>
+                </ul>
+                <a href="https://secure.icicidirect.com/customer/login" class="btn_custom btn_mob btn_outline">Login</a>
+                <a href="https://opendemat.icicidirect.com/demataccountopening?id_source=ICICIdirect&amp;id_medium=home&amp;id_campaign=OAO2.0&amp;id_content=header" class="btn_custom btn_mob" onclick="Track3in1AccountClick('header')">OPEN ICICI 3-in-1 Account</a>
+                <div class="seach_support_btn_wrap">
+                    <a href="/services/customer-care" class="btn_custom btn_rounded btn_cc"></a>
+                </div>
+                <div class="btn_wrap">
+                    <a href="https://secure.icicidirect.com/customer/login" class="btn_custom btn_outline login_btn">Login</a>
+                    <a href="https://opendemat.icicidirect.com/demataccountopening?id_source=ICICIdirect&amp;id_medium=home&amp;id_campaign=OAO2.0&amp;id_content=header" class="btn_custom openAc_btn" onclick="Track3in1AccountClick('header')">OPEN ICICI 3-in-1 Account</a>
+
+                </div>
+                <div id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <!--PRIMARY HEADER start-->
+        <!--PRIMARY HEADER end-->
+    </header>
+    <!--<div class="error-404_page_new">
+        <section class="error-404_img text-center">
+            <div class="container">
+                <h2 class="error_code">Oops! Page not found</h2>
+                <img src="/content/images/products/error-404.png" class="img-fluid" alt="Page not found">
+                <h3>Sorry, but the page you are looking for is not found. Please, make sure you have typed the correct URL</h3>
+                <a href="" class="backtoHomeLink">Back to Home</a>
+            </div>
+        </section>
+
+        <section class="product-section">
+            <div class="container">
+                <div class="title_wrap mb-2 text-center">
+                    <h2 class="sec_title text-inherit"><span>ICICIdirect</span> Products</h2>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-5 order-md-0 order-sm-last  order-xs-2">
+                        <img src="/content/images/products/error-product-image.png" alt="ICICIdirect Products" class="img-fluid mx-auto d-block prdError">
+                    </div>
+                    <div class="col-md-7 order-md-last order-sm-first order-0">
+                        <ul class="productLink">
+                            <li><a href="/research/equity">Research Equity</a></li>
+                            <li><a href="/equity-products/one-click">One-Click Equity</a></li>
+                            <li><a href="/fd-and-bonds/corporate-fixed-deposit-fd">Corporate Fixed Deposits</a></li>
+                            <li>-->
+    <!--<a href="/currency-forex-trading">Currency and</a>-->
+    <!--<a href="/commodities-market">Commodity Trading</a></li>
+                            <li><a href="/ipo">IPO</a></li>
+                            <li><a href="/mutual-funds/idirect-one-click">One-Click Mutual Fund</a></li>
+                            <li><a href="/loans">Loans</a></li>
+                            <li><a href="/futures-and-options/products/easy-options">Easy Options</a></li>
+                            <li><a href="/futures-and-options/fno-execution">Execution Algos</a></li>
+                            <li><a href="/futures-and-options/products/flash-trade">Flash Trade</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section feature-section shadow-bottom">
+            <div class="container">
+                <div class="title_wrap mb-4 text-center">
+                    <h2 class="sec_title text-inherit"><span>ICICIdirect</span> Features</h2>
+                </div>
+                <div class="row align-items-center">
+
+                    <div class="col-md-7">
+                        <ul class="featureList">
+                            <li>Zero Account Opening Charges</li>
+                            <li>Avail benefits of 45+ products</li>
+                            <li>Payouts within 5mins of selling shares with e-ATM</li>
+                            <li>Buy now, Pay later with Margin Trading Facility</li>
+                            <li>Access to award-winning research</li>
+                            <li>Choose from multiple brokerage plans</li>
+                            <li>Clean, seamless, and intuitive user interface</li>
+                            <li>Place order with a swipe – Enjoy 3 touch stock order placement</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-5">
+                        <img src="/content/images/products/icicidirect-features.png" alt="ICICIdirect Products" class="img-fluid mx-auto d-block">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section margin download_app2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div>
+                                <span>Download Our App </span>
+                                <div class="all_logo">
+                                    ICICI Direct App - All in 1
+                                </div>
+                                <p>Designed to deliver customized wealth solutions to cater all financial needs </p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="qrCode">
+                                        <img src="/content/images/ICICIdirect-app-QR-code.png" alt="ICICIdirect-app-QR-code">
+                                    </div>
+                                    <div class="storeLinks">
+                                        <a href="https://play.google.com/store/apps/details?id=com.icicidirect.idirectsuper&pli=1" class="mb-3" target="_blank"><img src="/content/images/google-store.svg" alt="google-store"></a>
+                                        <a href="https://apps.apple.com/in/app/icicidirect-stocks-f-o-mf/id1642076943" target="_blank"><img src="/content/images/app-store.svg" alt="app-store"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="app_screen">
+                                <img src="/content/images/ICICIdirect-app.png" alt="ICICIdirect-app" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div>
+                                <span>Download Our App </span>
+                                <div class="all_logo">
+                                    <img src="/content/images/ICICI_direct_App-logo.png" alt="Markets-app-logo">
+                                </div>
+                                <p>Learn all about investing in a simplified way</p>
+                                <div class="d-flex justify-content-between">
+                                    <div class="qrCode">
+                                        <img src="/content/images/Ilearn_app_QR.png" alt="market-app_QR-code">
+
+                                    </div>
+                                    <div class="storeLinks">
+                                        <a href="https://play.google.com/store/apps/details?id=com.icicidirect.ilearn" class="mb-3" target="_blank"><img src="/content/images/google-store.svg" alt="google-store"></a>
+                                        <a href="https://apps.apple.com/in/app/icicidirect-ilearn/id1619766077" target="_blank"><img src="/content/images/app-store.svg" alt="app-store"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="app_screen">
+                                <img src="/content/images/ilearn_play_store.png" alt="markets-app" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>-->
+    <section class="py-80 bg-white d-flex align-items-center top-section">
+        <div class="container container-1280">
+            <div class="d-lg-flex justify-content-center my-md-1 text-center text-lg-start">
+                <div class="px-md-40 mb-3 mb-lg-0">
+                    <img src="/Content/images/404-new.webp" alt="404 image" width="449px" height="185px" class="img-fluid" fetchpriority="high">
+                </div>
+                <div class="px-md-40 pe-0">
+                    <div>
+                        <h1 class="title-h1 color-orange fw-200 lh-120 mb-0">404</h1>
+                        <h2 class="title-h2 color-black mb-3">Page not Found</h2>
+                        <p class="color-grey fw-500 mb-0">The page you are trying to access has been moved or no longer exists.</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-80 bg-surface-base">
+        <div class="container container-1280">
+            <h3 class="title-h3 color-blue1 text-center mb-md-40 mb-4">While you're here, did you know?</h3>
+            <div class="row gy-24">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white p-3 rounded-3 fs-16 h-100 lh-20">
+                        <p class="text-grey mb-12">ICICI Direct offers a seamless 3-in-1 account for trading and investing </p>
+                        <a href="/3-in-1-account" class="text-orange fw-700">Open ICICI 3-in-1 Account</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white p-3 rounded-3 fs-16 h-100 lh-20">
+                        <p class="text-grey mb-12">Our platform provides access to equities, mutual funds, IPOs, F&amp;O, and more </p>
+                        <a href="/share-market-today" class="text-orange fw-700">Explore Investment Options</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white p-3 rounded-3 fs-16 h-100 lh-20">
+                        <p class="text-grey mb-12">Equipped with advanced tools like Flash Trade and Algo-based strategies </p>
+                        <a href="/futures-and-options/spring" class="text-orange fw-700">Explore Smart Trading Tools</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white p-3 rounded-3 fs-16 h-100 lh-20">
+                        <p class="text-grey mb-12">Backed by expert research and insights </p>
+                        <a href="/research" class="text-orange fw-700">Explore Research &amp; Insights</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-white p-3 rounded-3 fs-16 h-100 lh-20">
+                        <p class="text-grey mb-12">Buy now, Pay later with Margin Trading Facility </p>
+                        <a href="/equity-products/margin-trading" class="text-orange fw-700">Explore Margin Trading Facility </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-80 bg-white pb-md-40 pb-0">
+        <div class="container container-1280">
+            <h3 class="title-h3 text-center mb-0 color-blue1">Explore Investment Options</h3>
+            <div id="horizontal-scroller" class="horizontal-scroller px-4 with_shadow">
+                <div class="scroll_item  py-40">
+                    <a href="/stocks" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/stock-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">Stocks</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll_item  py-40">
+                    <a href="/ipo" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/ipo-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">IPO</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll_item  py-40">
+                    <a href="/futures-and-options" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/FNO-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">Future &amp; Options</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll_item  py-40">
+                    <a href="/mutual-funds" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/mf-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">Mutual Funds</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll_item  py-40">
+                    <a href="/commodities-market" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/commodities-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">Commodities</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll_item  py-40">
+                    <a href="/fd-and-bonds/icici-bank-fd" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/fixed-income-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">Fixed Income</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll_item  py-40">
+                    <a href="/insurance-online" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/insurance-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">Insurance</h3>
+                        </div>
+                    </a>
+                </div>
+                <div class="scroll_item  py-40">
+                    <a href="/national-pension-scheme" class="color_shadow h-100">
+                        <div class="box_shadow text-center h-100 px-1">
+                            <div class="d-inline-block p-2 p-md-3 rounded-circle bg-gradient mb-4">
+                                <img src="/Content/images/NPS-icon.svg" alt="icon" width="60" height="60" loading="lazy">
+                            </div>
+                            <h3 class="fs-md-24 fs-18 fw-500 color-black mb-1">NPS</h3>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-wrapper">
+        <div class="container">
+            <p class="pleaseNoteText">
+                *Please note Brokerage would not exceed the SEBI prescribed limit.
+                <br>
+                *The securities are quoted as an example and not as a recommendation.
+            </p>
+        </div>
+        <div class="container containerfooterTop">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+
+                    <img src="/Content/images/isec-footer-logo.svg" alt="ICICI Logo Footer" width="286" height="56" class="footerLogo" loading="lazy">
+                </div>
+                <div class="col-md-6 ">
+                    <div class="selectCol">
+                        <p class="mb-2 mb-0">Customer Care Number</p>
+                        <a href="tel:02233551122" class="tollFreeNumber">022 3355 1122</a>
+                    </div>
+                </div>
+                <div class="col-md-3 tollFree">
+                    <p class="mb-2">Alternate Number</p>
+                    <a href="tel:18601231122" class="tollFreeNumber">1860 123 1122</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="footer-main-wrapper">
+            <div class="container container-links">
+                <div class="row">
+                    <div class="col-md-2 col-6">
+                        <span class="linksTitle">Products</span>
+                        <div class="footerMenuLinks">
+                            <a href="/stocks" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'Equity', '');">Stocks</a>
+                            <a href="/mutual-funds" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'Mutual Funds', '');">Mutual Funds</a>
+                            <a href="/commodities-market" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'Commodity', '');">Commodity</a>
+
+                            <a href="/fd-and-bonds" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'FD and Bonds', '');">FD and Bonds</a>
+                            <a href="/insurance-online" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'Insurance', '');">Insurance</a>
+                            <a href="/exchange-traded-funds-etf" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'ETF', '');">ETF</a>
+                            <a href="/national-pension-scheme" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'NPS', '');">NPS</a>
+                            <a href="/futures-and-options" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'Derivatives', '');">Futures &amp; Options</a>
+
+                            <a href="/ipo" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'IPO', '');">IPO</a>
+                            <a href="/union-budget" onclick="trackCustomEvent('All Page Footer','footer_section', 'Products', 'Budget 25', '');">Union Budget 2025</a>
+
+                        </div>
+
+
+
+                        <span class="linksTitle">Popular Stock/Share Companies</span>
+                        <div class="footerMenuLinks">
+                            <a href="/stocks/indian-railway-catering-and-tourism-corporation-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'IRCTC Share Price', '');">IRCTC Share Price</a>
+
+                            <a href="/stocks/yes-bank-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'Yes Bank Share Price', '');">Yes Bank Share Price</a>
+
+
+                            <a href="/stocks/indian-oil-corporation-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'IOC Share Price', '');">IOC Share Price</a>
+
+
+                            <a href="/stocks/indian-railway-finance-corporation-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'IRFC Share Price', '');">IRFC Share Price</a>
+
+
+                            <a href="/stocks/tata-steel-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'Tata Steel Share Price', '');">Tata Steel Share Price</a>
+
+
+                            <a href="/stocks/reliance-industries-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'Reliance Industries Share Price', '');">Reliance Industries Share Price</a>
+
+
+                            <a href="/stocks/state-bank-of-india-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'SBI Share Price', '');">SBI Share Price</a>
+
+
+                            <a href="/stock/companies" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies', 'stock companies', '');">Company Directory</a>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-2 col-6">
+                        <span class="linksTitle">Services</span>
+                        <div class="footerMenuLinks">
+                            <a href="/services/portfolio-management-services" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'PMS', '');">PMS</a>
+                            <a href="/services/brokerage/prime-plan" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Brokerage', '');">Brokerage</a>
+                            <a href="/mutual-funds/retirement-solutions" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Retirement Planning', '');">Retirement Planning</a>
+                            <a href="/services/masters-of-the-street" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'One click Premium', '');">One click Premium</a>
+                            <a href="/open-nri-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'NRI Services', '');">NRI Services</a>
+
+
+                            <a href="/services/customer-care" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Customer Care', '');">Customer Care</a>
+                            <a href="/wealth-management-services" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Wealth', '');">Wealth</a>
+                            <a href="/services/corporate-services" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Corporate Services', '');">Corporate Services</a>
+                            <a href="/services/tax-overview" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Tax', '');">Tax</a>
+                            <a href="/aboutus/overview" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'About Us', '');">About Us</a>
+                            <a href="/mailimages/Escalation_Matrix.pdf" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Contact Us-Escalation Matrix', '');">Contact Us-Escalation Matrix</a>
+                            <a href="/Services/PrivacyPolicy" onclick="trackCustomEvent('All Page Footer','footer_section', 'Services', 'Privacy policy', '');">Privacy policy</a>
+                            <a href="https://smartodr.in/login">SMART ODR</a>
+                            <a href="/services/investor-risk-reduction-access-irra">IRRA</a>
+                            <a href="/mailimages/Cyber_Awareness_Textual_Mailer_01-MAR-2024.html">Investor alert on fraudulent practices</a>
+                            <a href="/faqs">Frequently Asked Questions(FAQs)</a>
+                            <a href="/services/features-and-products">Features &amp; Products</a>
+                            <a href="/mailcontent/disclosure.html">MF Commission Disclosure</a>
+                            <a href="/services/customer-care#icicidirectbranchlocator">ICICI Direct Branch Locator</a>
+                        </div>
+
+
+                        <span class="linksTitle">Popular Stock/Share Companies</span>
+                        <div class="footerMenuLinks">
+
+                            <a href="/stocks/icici-bank-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies 2', 'ICICI Bank Share Price', '');">ICICI Bank Share Price</a>
+
+
+                            <a href="/stocks/coal-india-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies 2', 'Coal India Share Price', '');">Coal India Share Price</a>
+
+
+                            <a href="/stocks/bharti-airtel-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies 2', 'Bharti Airtel Share Price', '');">Bharti Airtel Share Price</a>
+
+
+                            <a href="/stocks/tata-power-company-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies 2', 'TATA Power Share Price', '');">TATA Power Share Price</a>
+
+
+                            <a href="/stocks/tata-consultancy-services-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies 2', 'TCS Share Price', '');">TCS Share Price</a>
+
+
+                            <a href="/stocks/happiest-minds-technologies-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies 2', 'Happiest Minds Share Price', '');">Happiest Minds Share Price</a>
+
+
+                            <a href="/stocks/tata-motors-ltd-share-price" onclick="trackCustomEvent('All Page Footer','footer_section', 'Popular Stock/Share Companies 2', 'TATA Motors Share Price', '');">TATA Motors Share Price</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-2 col-6">
+                        <span class="linksTitle">iLearn</span>
+                        <div class="footerMenuLinks">
+                            <a href="/ilearn/stocks/articles/everything-you-need-to-know-about-demat-account-fees-and-charges" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'Demat Account Fees and Charges', '');">Demat Account Fees and Charges</a>
+                            <a href="/ilearn/stocks/articles/difference-between-dematerialisation-and-rematerialisation" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'Difference Between Dematerialisation and Rematerialisation', '');">Difference Between Dematerialisation and Rematerialisation</a>
+                            <a href="/ilearn/stocks/articles/what-is-demat-account-its-meaning-type-and-process" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'What is Demat Account', '');">What is Demat Account</a>
+                            <a href="/ilearn/stocks/articles/how-to-use-a-demat-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'How to Use Demat Account', '');">How to Use Demat Account</a>
+                            <a href="/ilearn/stocks/articles/how-to-choose-the-best-demat-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'How to Choose Best Demat Account', '');">How to Choose Best Demat Account</a>
+                            <a href="/ilearn/stocks/articles/features-and-benefits-of-a-demat-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'Features and Benefits of Demat Account', '');">Features and Benefits of Demat Account</a>
+                            <a href="/ilearn/stocks/articles/how-to-open-demat-and-trading-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'How to Open Demat Account', '');">How to Open Demat Account</a>
+                            <a href="/ilearn/stocks/articles/documents-required-to-open-a-demat-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'Documents Required To Open Demat Account', '');">Documents Required To Open Demat Account</a>
+                            <a href="/ilearn/stocks/articles/difference-between-demat-account-and-trading-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'Difference Between Demat Account and Trading Account', '');">Difference Between Demat Account and Trading Account</a>
+                            <a href="/ilearn/stocks/articles/diwali-muhurat-trading" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'Muhurat Trading', '');">Muhurat Trading</a>
+                            <a href="/investonomics/upcomingwebinar" onclick="trackCustomEvent('All Page Footer','footer_section', 'Knowledge Center', 'Muhurat Trading', '');">Webinar</a>
+                        </div>
+
+
+
+                        <!--<span class="linksTitle">Trending at ICICIdirect</span>
+                        <div class="footerMenuLinks">
+
+                            <a href="/ipo/life-insurance-corporation-ipo" onclick="trackCustomEvent('All Page Footer','footer_section', 'Trending at ICICIdirect', 'LIC IPO', '');">LIC IPO</a>
+
+
+
+
+
+                            <a href="/mutual-funds/products/sip" onclick="trackCustomEvent('All Page Footer','footer_section', 'Trending at ICICIdirect', 'SIP Investment', '');">SIP Investment</a>
+
+
+                            <a href="/products/margintrading" onclick="trackCustomEvent('All Page Footer','footer_section', 'Trending at ICICIdirect', 'MTF', '');">MTF</a>
+
+                        </div>-->
+
+
+
+                    </div>
+
+
+
+                    <div class="col-md-2 col-6">
+                        <span class="linksTitle">Calculators</span>
+                        <div class="footerMenuLinks">
+                            <a href="/calculators/simple-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Simple Interest Calculator', '');">Simple Interest Calculator</a>
+                            <a href="/calculators/compound-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Compound Interest Calculator', '');">Compound Interest Calculator</a>
+                            <a href="/calculators/ebitda-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'EBITDA Margin Calculator', '');">EBITDA Margin Calculator</a>
+                            <a href="/calculators/future-value-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Future Value Calculator', '');">Future Value Calculator</a>
+                            <a href="/calculators/lumpsum-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Lumpsum Calculator', '');">Lumpsum Calculator</a>
+                            <a href="/calculators/emi-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'EMI Calculator', '');">EMI Calculator</a>
+                            <a href="/calculators/gratuity-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Gratuity Calculator', '');">Gratuity Calculator</a>
+                            <a href="/calculators/brokerage-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Brokerage Calculator', '');">Brokerage Calculator</a>
+                            <a href="/calculators/swp-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'SWP Calculator', '');">SWP Calculator</a>
+                            <a href="/calculators/sip-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'SIP Calculator', '');">SIP Calculator</a>
+                            <a href="/calculators/cagr-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'CAGR Calculator', '');">CAGR Calculator</a>
+                            <a href="/calculators/home-loan-calculator" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Home Loan EMI Calculator', '');">Home Loan EMI Calculator</a>
+                            <a href="https://www.icicibank.com/campus-power/education-loan-calculator?utm_source=idirect_footer&amp;utm_medium=elcalculator&amp;utm_campaign=idirect-elcalcp" onclick="trackCustomEvent('All Page Footer','footer_section', 'Calculators', 'Education Loan  Calculator', '');">Education Loan Calculator</a>
+                        </div>
+                        <span class="linksTitle">Account Opening</span>
+                        <div class="footerMenuLinks">
+                            <a href="/3-in-1-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Account Opening', 'ICICI 3 in 1 Account', '');">ICICI 3 in 1 Account</a>
+                            <a href="/open-a-demat-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Account Opening', 'Demat Account', '');">Demat Account</a>
+                            <a href="/services/account-opening/open-trading-account" onclick="trackCustomEvent('All Page Footer','footer_section', 'Account Opening', 'Trading Account', '');">Trading Account</a>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-2 col-6">
+                        <span class="linksTitle">Indices</span>
+                        <div class="footerMenuLinks">
+                            <a href="/equity/index/nse/nifty-50/20559" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'Nifty 50', '');">Nifty 50</a>
+                            <a href="/equity/index/nse/nifty-bank/26753" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'Nifty Bank', '');">Nifty Bank</a>
+                            <a href="/equity/index/nse/nifty-100/27176" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'Nifty 100', '');">Nifty 100</a>
+                            <a href="/equity/index/nse/nifty-next-50/22113" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'Nifty Next 50', '');">Nifty Next 50</a>
+                            <a href="/equity/index/nse/nifty-midcap-100/26771" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'Nifty Midcap 100', '');">Nifty Midcap 100</a>
+                            <a href="/equity/index/bse/bse-sensex/20558" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'BSE Sensex', '');">BSE Sensex</a>
+                            <a href="/equity/index/bse/bse-100/21558" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'S&amp;P BSE 100', '');">S&amp;P BSE 100</a>
+                            <a href="/equity/index/bse/bse-mid-cap/26567" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'S&amp;P BSE Midcap', '');">S&amp;P BSE Midcap</a>
+                            <a href="/equity/global-indices/american-stock-markets" onclick="trackCustomEvent('All Page Footer','footer_section', 'Indices', 'Global Indices', '');">Global Indices</a>
+                        </div>
+
+
+                        <span class="linksTitle">
+                            ICICI Bank Group websites
+                        </span>
+                        <div class="footerMenuLinks">
+                            <a href="https://www.icicibank.com/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Bank', 'ICICI Bank', '');">ICICI Bank</a>
+                            <a href="https://www.icicifoundation.org/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Foundation', 'ICICI Foundation', '');">ICICI Foundation</a>
+                            <a href="https://www.icicisecurities.com/wfrmIndex.aspx" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Securities', 'ICICI Securities', '');">ICICI Securities</a>
+                            <a href="https://www.icicilombard.com/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Lombard General Insurance', 'ICICI Lombard General Insurance', '');">ICICI Lombard General Insurance</a>
+                            <a href="https://www.iciciprulife.com/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Prudential Life Insurance', 'ICICI Prudential Life Insurance', '');">ICICI Prudential Life Insurance</a>
+                            <a href="https://www.icicipruamc.com/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Prudential AMC', 'ICICI Prudential AMC', '');">ICICI Prudential AMC</a>
+                            <a href="https://www.iciciventure.com/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Venture', 'ICICI Venture', '');">ICICI Venture</a>
+                            <a href="/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Direct', 'ICICI Direct', '');">ICICI Direct</a>
+                            <a href="https://www.icicihfc.com/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Home Finance', 'ICICI Home Finance', '');">ICICI Home Finance</a>
+                            <a href="https://www.icicisecuritiespd.com/" target="_blank" onclick="trackCustomEvent('All Page Footer','footer_section', 'ICICI Securities Primary Dealership Ltd', 'ICICI Securities Primary Dealership Ltd', '');">ICICI Securities Primary Dealership Ltd</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-6">
+                        <span class="linksTitle">Learning</span>
+                        <div class="footerMenuLinks">
+                            <a href="/ilearn/all/articles" onclick="trackCustomEvent('All Page Footer','footer_section', 'Learning', 'Articles', '');">Articles</a>
+                            <a href="/ilearn/all/podcasts" onclick="trackCustomEvent('All Page Footer','footer_section', 'Learning', 'Podcast', '');">Podcast</a>
+                            <a href="/investonomics/upcomingwebinar" onclick="trackCustomEvent('All Page Footer','footer_section', 'Learning', 'Webinar', '');">Webinar</a>
+                            <a href="/investonomics" onclick="trackCustomEvent('All Page Footer','footer_section', 'Learning', 'Investonomics', '');">Investonomics</a>
+                            <a href="/ilearn/all/videos" onclick="trackCustomEvent('All Page Footer','footer_section', 'Learning', 'Videos', '');">Videos</a>
+                            <a href="/ilearn/all/courses" onclick="trackCustomEvent('All Page Footer','footer_section', 'Learning', 'Learn Hub', '');">Modules</a>
+                            <a href="https://www.multipie.co/m" onclick="trackCustomEvent('All Page Footer','footer_section', 'Learning', 'Multipie', '');">Multipie</a>
+                            <a href="/webstories" onclick="trackCustomEvent('All Page Footer', 'footer_section', 'Learning', 'Webstories', '');">Webstories</a>
+
+                        </div>
+                        <span class="linksTitle">Tools and Platforms</span>
+                        <div class="footerMenuLinks">
+
+                            <a href="/derivatives-market/trading-tools" onclick="trackCustomEvent('All Page Footer','footer_section', 'Tools and Platforms', 'i-Track', '');">i-Track</a>
+                            <a href="/oneassist" onclick="trackCustomEvent('All Page Footer','footer_section', 'Tools and Platforms', 'OneAssist', '');">OneAssist</a>
+
+                            <a href="/derivatives-market/trading-platform" onclick="trackCustomEvent('All Page Footer','footer_section', 'Tools and Platforms', 'Trading Platforms', '');">Trading Platforms</a>
+                            <a href="/services/CyberSecurity" onclick="trackCustomEvent('All Page Footer','footer_section', 'Tools and Platforms', 'Our websites / applications / social media handles', '');">Our websites / applications / social media handles</a>
+
+                            <a href="/partner-with-us/authorized-partners" onclick="trackCustomEvent('All Page Footer','footer_section', 'Tools and Platforms', 'List of Authorised Persons', '');">List of Authorised Persons</a>
+                            <a href="/mobileapp-checksum" onclick="trackCustomEvent('All Page Footer','footer_section', 'Tools and Platforms', 'Mobile Checksum', '');">Mobile Checksum</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container footerDisclaimer">
+                <div class="panel_header">
+                    <strong>Disclaimer :</strong>
+                    <i class="toggle_icon">+</i>
+                </div>
+                <div class="panel_body ">
+                    <p>
+                    </p><p>The non-broking products / services like Mutual Funds, Insurance, FD/ Bonds, PMS, Tax, Elocker, NPS, IPO, Research, Financial Learning, ESOP funding etc. are not exchange traded products / services and ICICI Securities Ltd. is just acting as a distributor/ referral Agent of such products / services and all disputes with respect to the distribution activity would not have access to Exchange investor redressal or Arbitration mechanism.<br>Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 1, 2020. Update your mobile number &amp; email Id with your stock broker/depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge. Pay minimum 20% upfront margin of the transaction value to trade in cash market segment. Investors may please refer to the Exchange's Frequently Asked Questions (FAQs) issued vide NSE circular reference NSE/INSP/45191 dated July 31, 2020; BSE Notice no. 20200731-7 dated July 31, 2020 and NSE Circular Reference No. NSE/INSP/45534 dated August 31, 2020; BSE Notice No. 20200831-45 dated August 31, 2020 and other guidelines issued from time to time in this regard. Check your Securities /MF/ Bonds in the consolidated account statement issued by NSDL/CDSL every month.</p>
+                    <p><strong>Disclaimer :&nbsp;</strong>ICICI Securities attempts to ensure the highest level of integrity, correctness and authenticity of the content and data updated on the site. However, we may have not reviewed all of the contents and data present on the site and are not responsible or we take no guarantees whatsoever as to its completeness, correctness or accuracy since these details are acquired from third party. In the event that any inaccuracy arises, we will not be liable for any loss or damage that arises from the usage of the content.</p>
+                    <p>Features such as Advanced Charts, Watchlists, F&amp;O Insights @ Fingertips, Payoff Analyzer, Basket Order, Cloud Order, Option Express, e-ATM, Systematic Equity Plan (SEP), i-Track, i-Lens, Price Improvement Order, Flash Trade, Strategy Builder etc., are offered by ICICI Securities. The securities quoted are exemplary and are not recommendatory. Such representations are not indicative of future results. ICICI Securities is not making the offer, holds no warranty &amp; is not representative of the delivery service, suitability, merchantability, availability or quality of the offer and/or products/services under the offer. Any disputes regarding delivery, services, suitability, merchantability, availability or quality of the offer and / or products / services under the offer must be addressed in writing, by the customer directly to respective merchants and ICICI Securities will not entertain any communications in this regard. The information mentioned herein above is only for consumption by the client and such material should not be redistributed.</p>
+
+
+                    <p>
+                        Name of Investment Adviser as registered with SEBI : ICICI Securities Limited <br> Type of Registration : Non Individual <br> Registration number : INA000000094 <br> BSE Membership Certificate no- 1336 <br> Validity of registration : Valid till suspended or cancelled by SEBI <br> Registered office Address : ICICI Venture House, Appasaheb Marathe Marg, Prabhadevi, Mumbai - 400025 <br> Telephone numbers : 022 - 6807 7100 <br> Email id : <a href="mailto:mfadvisory@icicisecurities.com">mfadvisory@icicisecurities.com</a> <br> Name of Principal Officer : Mr. Umesh Balani <br> Contact no : 022 - 6807 7100 <br> Email id : <a href="mailto:mfadvisory@icicisecurities.com">mfadvisory@icicisecurities.com</a> <br> Name of the Compliance officer: Mr. Akash Shah <br> Contact number: 022 - 4084 0336 <br> Email id : <a href="mailto:mfadvisory@icicisecurities.com">mfadvisory@icicisecurities.com</a> <br> Name of grievance redressal Officer:- Mr. Jeetu Jawrani <br> Telephone no. of grievance redressal Officer:- 022 - 6807 7400 <br> Email id : <a href="mailto:mfadvisory@icicisecurities.com">mfadvisory@icicisecurities.com</a> <br> Corresponding SEBI regional / local office address : Securities &amp; Exchange Board of India, Plot No.C4-A, 'G' Block Bandra-Kurla Complex, Bandra (East), Mumbai - 400051, Maharashtra<br><br>SEBI Research Analyst Registration Number - INH000000990
+
+                        Name of the Compliance officer (Research Analyst): Mr. Atul Agrawal
+                        Contact number: 022 - 40701000
+                    </p><p>Email id: <a href="mailto:complianceofficer@icicisecurities.com" target="_blank" rel="noopener noreferrer">complianceofficer@icicisecurities.com</a> </p>
+
+                    None of the research recommendations promise or guarantee any assured, minimum or risk free return to the investors.<br><br><strong>Disclaimer :&nbsp;</strong>Registration granted by SEBI, membership of BASL and certification from NISM in no way guarantee performance of the intermediary or provide any assurance of returns to investors.
+                    <p></p>
+                    <p><strong>Attention Investors :</strong> Prevent unauthorized transactions in your account. Update your mobile numbers/email IDs with your stock brokers. Receive information of your transactions directly from Exchange on your mobile/email at the end of the day.... Issued in the interest of Investors (Ref NSE : Circular No.: NSE/INSP/27346, BSE : Notice 20140822-30.) It has been observed that certain fraudsters have been collecting data from various sources of investors who are trading in Exchanges and sending them bulk messages on the pretext of providing investment tips and luring the investors to invest in bogus entities by promising huge profits. You are advised not to trade on the basis of SMS tips and to take an informed investment decision based on authentic sources.... issued in the interest of investor of investor (RefNSE : circular No.: NSE/COMP/42549, BSE:Notice 20191018-7)</p>
+                    <p><strong>ICICI Securities Limited:</strong></p>
+                    <p><strong>Registered Office:</strong> <br> ICICI Venture House, <br> Appasaheb Marathe Marg, <br> Prabhadevi, Mumbai - 400 025, India <br> Tel No: 022 - 6807 7100 <br> Fax: 022 - 6807 7803</p>
+                    <p>CIN: U67120MH1995PLC086241</p>
+
+
+                    <p>For any customer service related queries, assistance or grievances kindly Call us at 1860 123 1122 or Email id: <a href="mailto:headservicequality@icicidirect.com" target="_blank" rel="noopener noreferrer">headservicequality@icicidirect.com</a> to <a href="mailto:headservicequality@icicidirect.com" target="_blank" rel="noopener noreferrer">Mr. Jeetu Jawrani</a></p>
+                    <p><a href="/services/PrivacyPolicy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> | <a href="/services/cookieguidance" target="_blank" rel="noopener noreferrer">Cookie Policy</a> |  <a href="/mailimages/Disclaimer_Footer.pdf" target="_blank" rel="noopener noreferrer">Disclaimer</a> | <a href="/sitemap" target="_blank" rel="noopener noreferrer">Sitemap</a>| <a href="https://secure.icicidirect.com/IDirectTrading/customer/StaticData/complain.htm" target="_blank" rel="noopener noreferrer"> Investor Charter</a></p>
+                    <p><strong>ICICIdirect.com</strong> is a part of ICICI Securities and offers retail trading and investment services.&nbsp;</p>
+                    <p>Member of National Stock Exchange of India Limited (Member code: 07730), BSE Limited (Member code: 103) &amp; Metropolitan Stock Exchange (Member code: 17680),Multi Commodity Exchange of India Limited (Member code: 56250) SEBI Registration number INZ000183631</p>
+                    <p><strong>Name of Compliance Officer (Broking)</strong>&nbsp;: Ms. Mamta Shetty&nbsp;<strong>E-mail Address</strong>&nbsp;:&nbsp;<a href="mailto:complianceofficer@icicisecurities.com">complianceofficer@icicisecurities.com</a>&nbsp;/ Tel No: 022-4070 1000</p>
+                    <p><span style="font-size:14px;">Investments in securities market are subject to market risks, read all the related documents carefully before investing.</span> The contents herein above shall not be considered as an invitation or persuasion to trade or invest.&nbsp; I-Sec and affiliates accept no liabilities for any loss or damage of any kind arising out of any actions taken in reliance thereon. Please note Brokerage would not exceed the SEBI prescribed limit.</p>
+                    <p>Margin Trading is offered as subject to the provisions of SEBI Circular CIR/MRD/DP/54/2017 dated June 13, 2017 and the terms and conditions mentioned in rights and obligations statement issued by I-Sec.</p>
+                    <p>Account would be open after all procedure relating to IPV and client due diligence is completed.</p>
+                    <p>ICICI Securities Ltd. (I-Sec). Registered office of I-Sec is at ICICI Securities Ltd. - ICICI Venture House, Appasaheb Marathe Marg, Mumbai - 400025, India, Tel No: 022 - 6807 7100, Fax: 022 - 6807 7803. Composite Corporate Agent License No.CA0113. Insurance is the subject matter of solicitation. ICICI Securities Ltd. does not underwrite the risk or act as an insurer. The advertisement contains only an indication of the cover offered. For more details on risk factors, terms, conditions and exclusions, please read the sales brochure carefully before concluding a sale.</p>
+                    <p><b>Responsible Disclosure</b>: In case you discover any security bug or vulnerability on our platform or cyber-attacks on our trading platform, please report it to  ciso@icicisecurities.com or contact us on 022-40701841 to help us strengthen our cyber security.</p>
+
+
+                </div>
+            </div>
+
+<!--WhatsAppTC-Start-->
+<div class="container mb-0 border-0">
+<div>I hereby give my consent for WhatsApp notification <a href="/services/whats-app-tc" target="_blank">T&amp;C</a>
+</div><br>
+I hereby understand and agree to authorize the ICICI Securities and its affiliates/ group companies to reach me/send any communication pertaining to my Account / Investments and related services/facilities/special offers, or any other relationship held by me with ICICI Securities or in relation to various products, offers and services provided by ICICI Securities /its group companies, through registered e-mail, phone, SMS, WhatsApp messaging, or any other electronic mode or other messaging or social media platforms. ICICI Securities will be sending One Time Pin (OTP) on the registered mobile number. I understand and agree that the email provider /WhatsApp or any other service provider can review/monitor the contents shared/communicated through email provider/WhatsApp or other service provider. I understand that such electronic mode of communication(s) are subject to the terms and conditions of the respective service provider and agree to comply with the terms of use of email/ WhatsApp, SMS, or any other electronic mode, as applicable and updated/modified by the service provider from time to time. I hereby expressly authorize ICICI Securities to disclose, transfer or part with any of my information (including my sensitive personal information, location etc.) or any other device information when ICICI Securities considers such disclosure as necessary, with (i) Agents of ICICI Securities in any jurisdiction; (ii) Auditors, credit rating agencies/credit bureaus (including but not limited to CIBIL), statutory/regulatory authorities, governmental/administrative authorities, Central Know Your Customer (C-KYC) registry , exchanges or SEBI Know Your Client registration agency, having jurisdiction over ICICI Securities; (iii)Service providers, professional advisors, consultants or such person with whom ICICI Securities contracts or proposes to contract.
+</div>
+<!--WhatsAppTC-End-->
+
+            <div class="container mb-0 border-0">
+                <div class="bottomLinks">
+                    <div class="socialLinks">
+                        <h3 class="linksTitle mb-3">Get Social</h3>
+                        <a href="https://www.facebook.com/icicidirect" target="_blank"><i class="facebook"></i></a>
+                        <a href="https://www.instagram.com/icici_direct/" target="_blank"><i class="instagram"></i></a>
+                        <a href="https://x.com/ICICI_Direct" target="_blank"><i class="twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/icicidirect/?originalSubdomain=in" target="_blank"><i class="linkedin"></i></a>
+                        <a href="https://www.youtube.com/ICICIdirectOfficial" target="_blank"><i class="youtube"></i></a>
+
+                    </div>
+
+                    <div class="playStoreLinks">
+                        <h3 class="linksTitle mb-3">Download ICICI Direct App</h3>
+                        <a href="https://onelink.to/ga3g3w" target="_blank">
+                            <img src="/Content/images/ilearn/Appstore.webp" alt="App Store" loading="lazy" width="140" height="42">
+                        </a>
+                        <a href="https://onelink.to/ga3g3w" target="_blank">
+                            <img src="/Content/images/ilearn/Playstore.webp" alt="Play Store" loading="lazy" width="140" height="42">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="footerBottom">
+            Copyright© 2022. All rights Reserved. ICICI Securities Ltd. ®trademark registration in respect of the concerned mark has been applied for by ICICI Bank Limited.
+        </div>
+    </footer>
+    <script>
+        $(document).ready(function () {
+            $(".full_page_loader").addClass("d-none");
+            var obj = {
+                apiRoot: '',
+                siteRoot: '',
+                equityBuyUrl: '',
+                equitySellUrl: '',
+                mfInvestUrl: ''
+            };
+            icicid.common.init(obj);
+
+            $(document).on("click ", ".toggle_icon ", function () {
+                $(this).parents(".panel ").toggleClass("active ");
+                $(this).parents(".panel ").find(">.panel_body").slideToggle(); $(this).parents(".panel").siblings(".panel").removeClass("active"); $(this).parents(".panel").siblings(".panel").find(">.panel_body").slideUp();
+            });
+            const $backdropMob = $('<div class="menu-backdrop"></div>');
+            $('body').append($backdropMob);
+            $("#menuToggle").on("click", function () {
+                $(".main_menu, body").toggleClass("slide_menu");
+                $(this).toggleClass("crossed");
+                $backdropMob.toggleClass('visible');
+            });
+
+            $(document).on("click", ".slide_menu > li", function () {
+                // Close other active menus
+                $(".slide_menu > li.activeMenu")
+                    .not(this) // Exclude the clicked item
+                    //.removeClass("activeMenu") // Remove active class
+                    .find(".menu_dropdown") // Find their dropdown
+                //.slideUp(); // Slide up to close
+
+                // Toggle the current menu
+                $(this).toggleClass("activeMenu");
+                $(this).find(".menu_dropdown").slideToggle(300);
+            });
+            $(document).on("click ", ".exploreBtn", function () {
+                $(".linksWrapper").slideToggle();
+                $(this).toggleClass("active");
+                $(".exploreTxt").show();
+                $("html, body").animate({ scrollTop: $('.exploreIdirect').offset().top - 75 }, 300);
+            });
+            $(".menu_level_2>div").hide();
+            $(".menu_level_1 .linksList li").click(function () {
+                var index = $(".menu_level_1 .linksList li").index(this);
+                $("div.subMenuFtr").hide().eq(index).show(150);
+                $(".menu_level_2").show();
+                $(".menu_level_1, .exploreTxt").hide();
+            });
+            $(".menu_level_2 .back_to").on("click", function () {
+                event.preventDefault();
+                $(".menu_level_1, .exploreTxt").show();
+                $(".menu_level_2").hide();
+            });
+            $('.level_1 > li > a').on('mouseenter click', function () {
+                $('.level_1 > li > a').removeClass('active');
+                $(this).addClass('active');
+            });
+            //remove the active class when mouse leaves `.level_1` list
+            $('.level_1').on('mouseleave', function () {
+                $('.level_1 > li > a').removeClass('active');
+            });
+
+            let isDesktop = null; // Track the current mode (desktop or mobile)
+
+            // Function to initialize the menu functionality for desktop
+            function initializeMenu() {
+                // Create and append the backdrop to the body if it doesn't exist
+                if (!$('.menu-backdrop').length) {
+                    const $backdrop = $('<div class="menu-backdrop"></div>');
+                    $('body').append($backdrop);
+                }
+
+                const $backdrop = $('.menu-backdrop');
+
+                // Populate .level_3_append initially
+                $('.main_menu > li').each(function () {
+                    const $dropdown = $(this).find('.menu_dropdown');
+                    const $activeLevel2 = $dropdown.find('.level_2 li.active');
+                    if ($activeLevel2.length) {
+                        const $level3Items = $activeLevel2.find('.level_3 li').clone();
+                        $dropdown.find('.level_3_append').empty().append($level3Items);
+                    }
+                });
+
+                // Hover functionality for main menu
+                $('.main_menu > li').hover(
+                    function () {
+                        const $dropdown = $(this).children('.menu_dropdown');
+                        $dropdown.stop(true, true).css("display", "flex");
+
+                        // Show the backdrop
+                        $backdrop.addClass('visible');
+
+                        // Handle hover for level_2 items
+                        $dropdown.find('.level_2 li').hover(
+                            function () {
+                                // Set the active class to the hovered item and remove from siblings
+                                $(this).addClass('active').siblings().removeClass('active');
+
+                                // Find the level_3 items for the hovered level_2
+                                const $level3Items = $(this).find('.level_3 li').clone();
+
+                                // Append the level_3 items to the level_3_append container
+                                const $level3Append = $dropdown.find('.level_3_append');
+                                $level3Append.empty().append($level3Items);
+                            }
+                        );
+                    },
+                    function () {
+                        $(this).children('.menu_dropdown').stop(true, true).css("display", "none");
+
+                        // Hide the backdrop
+                        $backdrop.removeClass('visible');
+                    }
+                );
+            }
+
+            // Function to destroy menu functionality
+            function destroyMenu() {
+                // Remove backdrop and clear appended items
+                $('.menu-backdrop').remove();
+                $('.main_menu > li').off('mouseenter mouseleave'); // Remove hover event listeners
+                $('.level_2 li').off('mouseenter mouseleave'); // Remove hover events for level_2
+            }
+
+            // Function to check screen width and toggle modes
+            function checkScreenWidth() {
+                const currentIsDesktop = $(window).width() > 1023; // Check if the screen is desktop
+                if (currentIsDesktop !== isDesktop) {
+                    isDesktop = currentIsDesktop; // Update the mode
+
+                    if (isDesktop) {
+                        // Initialize for desktop
+                        destroyMenu(); // Ensure cleanup first
+                        initializeMenu();
+                    } else {
+                        // Destroy menu functionality for mobile
+                        destroyMenu();
+                    }
+                }
+            }
+            // Initial check
+            checkScreenWidth();
+            // Re-check on window resize
+            $(window).resize(function () {
+                checkScreenWidth();
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $(document).on("click ", ".footerDisclaimer .panel_header", function () {
+                $(".footerDisclaimer .panel_body").slideToggle();
+                $(this).toggleClass("active");
+                if ($(this).hasClass("active")) {
+                    $(".footerDisclaimer .toggle_icon").html("-");
+                }
+                else {
+                    $(".footerDisclaimer .toggle_icon").html("+");
+                }
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Apply to all elements with class 'horizontal-scroller'
+            $('.horizontal-scroller').each(function () {
+                const container = this;
+
+                let isDown = false;
+                let startX;
+                let scrollLeft;
+
+                container.addEventListener('mousedown', (e) => {
+                    isDown = true;
+                    container.classList.add('active');
+                    startX = e.pageX - container.offsetLeft;
+                    scrollLeft = container.scrollLeft;
+                });
+
+                container.addEventListener('mouseleave', () => {
+                    isDown = false;
+                    container.classList.remove('active');
+                });
+
+                container.addEventListener('mouseup', () => {
+                    isDown = false;
+                    container.classList.remove('active');
+                });
+
+                container.addEventListener('mousemove', (e) => {
+                    if (!isDown) return;
+                    e.preventDefault();
+                    const x = e.pageX - container.offsetLeft;
+                    const walk = (x - startX) * 1; // Scroll speed
+                    container.scrollLeft = scrollLeft - walk;
+                });
+            });
+        });
+    </script>
+
+
+<script src="/content/js/lazysizes.min.js"></script>
+<div class="menu-backdrop"></div></body></html>
