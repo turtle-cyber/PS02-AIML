@@ -1,0 +1,46 @@
+# Deep Learning
+torch>=2.0.0
+torchvision>=0.15.0
+transformers>=4.30.0
+
+# Classical ML
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+joblib>=1.3.0
+
+# Vision
+Pillow>=10.0.0
+open-clip-torch>=2.20.0
+imagehash>=4.3.0
+pytesseract>=0.3.10 (OCR)
+
+# Database
+chromadb>=0.4.0
+httpx>=0.24.0 (ChromaDB client)
+
+# NLP
+sentencepiece>=0.1.99
+tokenizers>=0.13.0
+
+# Explainability
+shap>=0.42.0
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Networking
+requests>=2.31.0
+dnspython>=2.4.0
+python-whois>=0.8.0
+
+# Web Framework (API)
+fastapi>=0.100.0 OR flask>=2.3.0
+uvicorn>=0.23.0 (if using FastAPI)
+
+# Monitoring
+prometheus-client>=0.17.0 (optional)
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
